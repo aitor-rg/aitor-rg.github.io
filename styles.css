@@ -29,6 +29,11 @@
     vertical-align: middle;
 }
 
-.li {
+li {
     float: left;
+}
+
+a {
+    text-decoration: none;
+    color: #0645AD;
 }
