@@ -135,3 +135,9 @@ body {
 .footer:after {
     content: "2021 Aitor R. Gomez";
 }
+
+@media screen and (max-width: 618px) {
+    .section.column  {
+        width: 100%;
+    }
+}
