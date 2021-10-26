@@ -74,7 +74,7 @@ body {
     margin-bottom: 2px;
 }
 
-.icon:hover{
+.icon:hover {
     background-color: #f1f1f1;
 }
 
@@ -84,17 +84,44 @@ body {
     width: 100%;
 }
 
+.section:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .section .column.img {
     float: left;
     width: 15%;
 }
 
-.section .column.intro{
+.section .column.intro {
     text-align: justify;
     float: left;
     margin-top: -35px;
-    width: 80%;
+    width: 85%;
     padding: 5px 15px;
+}
+
+.section .column.text {
+    text-align: justify;
+    float: left;
+    padding: 10px 35px;
+    margin-top: 25px;
+    width: 85%;
+}
+
+.section .subcolumn.icons {
+    float: left;
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 10%;
+}
+
+.section .subcolumn.salut {
+    margin-top: 60px;
+    padding: 20px 30px;
+    width: 75%;
 }
 
 /* Footer style */
@@ -102,8 +129,15 @@ body {
     text-align: center;
     font-size: 10pt;
     color: #999;
+    width: 100%;
 }
 
 .footer:after {
     content: "2021 Aitor R. Gomez";
+}
+
+@media screen and (max-width: 618px) {
+    .column  {
+        width: 100%;
+    }
 }
