@@ -136,7 +136,7 @@ body {
     content: "2021 Aitor R. Gomez";
 }
 
-@media screen and (max-width: 618px) {
+@media screen {
     .section. column  {
         width: 100%;
     }
