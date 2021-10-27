@@ -156,6 +156,25 @@ body {
     width: 60%;
 }
 
+.column.paper {
+    text-align: justify;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 100px;
+    width: 100%;
+}
+.papertitle {
+    font-weight: bold;
+}
+.authors {
+    margin-top:-10px;
+    margin-bottom:0px;
+    font-size: 10px;
+    font-style: italic;
+    color: #999;
+}
+
 .subcolumn.icons {
     float: left;
     vertical-align: middle;
@@ -198,6 +217,12 @@ body {
     }
     .subcolumn.salut {
         margin-left: 70px;
-        width:80%;
+        width: 80%;
+    }
+    .column.smalltext {
+        width: 100%;
+    }
+    .column.bigimg {
+        width: 100%;
     }
 }
