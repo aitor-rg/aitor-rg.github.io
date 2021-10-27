@@ -161,7 +161,6 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 20px;
-    margin-right: 100px;
     width: 100%;
 }
 .papertitle {
@@ -170,6 +169,8 @@ body {
 .authors {
     margin-top:-10px;
     margin-bottom:0px;
+    margin-left: 20px;
+    margin-right: 60px;
     font-size: 10px;
     font-style: italic;
     color: #999;
