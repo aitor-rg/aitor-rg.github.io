@@ -192,18 +192,18 @@ body {
     width: 60%;
 }
 
-.doublecolumn1{
+.double1{
     float: left;
     padding: 30px 35px;
     margin-top: 0px;
     width: 17%;
 }
-.doublecolumn2{
+.double2{
     text-align: justify;
     float: left;
     padding: 10px 35px;
     margin-top: 0px;
-    width: 82%;
+    width: 83%;
 }
 
 /* Footer style */
@@ -240,7 +240,7 @@ body {
     .column.bigimg {
         width: 100%;
     }
-    .doublecolumn1 {
+    .double1 {
         padding: 30px 2px;
     }
 }
