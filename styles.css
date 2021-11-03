@@ -176,6 +176,13 @@ body {
     color: #999;
 }
 
+.keyword {
+    color: #33b3a6;
+    margin-top: -15px;
+    font-style: italic;
+    font-size: 13px;
+}
+
 .subcolumn.icons {
     float: left;
     vertical-align: middle;
@@ -196,13 +203,14 @@ body {
     float: left;
     padding: 30px 35px;
     margin-top: 0px;
-    width: 15%;
+    width: 13%;
 }
 .double2{
     text-align: justify;
     float: left;
     padding: 10px 35px;
     margin-top: 0px;
+    margin-left: -30px;
     width: 82%;
 }
 
