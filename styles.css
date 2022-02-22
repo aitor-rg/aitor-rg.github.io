@@ -164,11 +164,11 @@ body {
     width: 100%;
 }
 .papertitle {
-    font-weight: bold;
+    font-weight: normal;
 }
 .authors {
-    margin-top:-10px;
-    margin-bottom:0px;
+    margin-top:-20px;
+    margin-bottom:-15px;
     margin-left: 20px;
     margin-right: 60px;
     font-size: 10px;
