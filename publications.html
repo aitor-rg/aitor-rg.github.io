@@ -1,51 +1,68 @@
 <!DOCTYPE html>
-
 <html>
-     <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
+    <!--Title Bar-->
+    <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
     <head>
-        <title> Aitor R. G. &ndash; Publications </title>
-        <link rel="stylesheet" href="styles.css" />
+        <title> Publications &mdash; Aitor R. Gomez </title>
+        <link rel="stylesheet" href="new_style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
     <body>
-        <ul class="navigation">
-            <li> <a class ="waiting" href="index.html">         Home        </a> </li>
-            <li> <a class = "current" href="research.html">     Research    </a> </li>
-            <li> <a class = "waiting" href="curriculum.html">   CV          </a> </li>
-            <!--li> <a href </li-->
-        </ul>
-        <ul class="subnavigation">
-            <li> <a class="subwaiting" href="research.html">    Projects    </a> </li>
-            <li> <a class="subcurrent" href="publications.html">Publications</a> </li>
-        </ul>
 
+        <!--Title-->
+        <div id="content">
 
+            <div id="header">
+                <div id="name">
+                    <h1>Aitor Ramirez Gomez</h1>
+                    <h1 style="margin-left: 20px;font-weight:bold">Spacecraft GNC Engineer</h1>
+                    <h4>Wanna say hi, hola, salut, hej, oi? 👋</h4>
+                    <div id="media">
+                        <a href="mailto:arg@es.aau.dk"><img src="./images/icons/email.png" height="16px" /></a>
+                        <a style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github.png" height="18px" /></a>
+                        <a style="margin-left:20px" href="https://www.linkedin.com/in/aitor-ramirez/"><img src="./images/icons/linkedin.png" height="20px" /></a>
 
-        <div class="section" style="margin-top: 4cm;">
-            <h2>Publications</h2>
-            <!--JOURNALS-->
-
-            <!--CONFERENCES-->
-            <div class="column paper" >
-                            <p class="papertitle"><a href="">&#8629;</a>Stochastic Safety in Short-term Space Conjunctions (to be submitted)</p>
-                            <p class="authors"><b>Gomez, A. R.</b> & Wisniewski, R., in IEEE Conference on Decision and Control 2022.</p>
+                    </div>
+                </div>
+                <div id="navigation">
+                    <ul class="navbar">
+                        <li> <a class = "waiting" href="home.html">         Home        </a> </li>
+                        <li> <a class = "waiting" href="about.html">        About       </a> </li>
+                        <li> <a class = "current" href="publications.html"> Research    </a> </li>
+                        <li> <a class = "waiting" href="fun.html">          Fun         </a> </li>
+                        <li> <a class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
+                    </ul>
+                    <ul class="subnavigation">
+                        <li> <a class="subcurrent" href="publications.html">Publications</a> </li>
+                        <li> <a class="subwaiting" href="research.html">    Projects    </a> </li>
+                        <li> <a class="subwaiting" href="awards.html">      Awards      </a> </li>
+                    </ul>
+                </div>
             </div>
 
-            <!--Drone Research Publications-->
-            <div class="column paper" >
-                <p class="papertitle"><a href="https://ieeexplore.ieee.org/document/9476792">&#8629;</a>Emergency Landing Decision Method for Unmanned Aircraft</p>
-                <p class="authors"><b>Gomez, A. R.</b> & la Cour-Harbo, A., 2021, IEEE International Conference on Unmanned Aircraft Systems (ICUAS).</p>
+            <!--HEADER-->
+            <div id="header">
+                <h2>Research / Publications</h2>
             </div>
-            <div class="column paper" >
-                <p class="papertitle"><a href="https://ieeexplore.ieee.org/document/9214073">&#8629;</a>Automated Emergency Landing System for Drones: SafeEYE Project</p>
-                <p class="authors">Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., 2020, IEEE International Conference on Unmanned Aircraft Systems (ICUAS).</p>
+
+            <div id="journals">
+                <h3>Journal papers</h3>
+                <ul>
+                    <li><b>Gomez, A. R.</b> & Wisniewski, R., “Safe Avoidance Maneuver for Multiple Upcoming Space Conjunctions”, <i>AIAA Journal of Guidance, Navigation and Control. 2023</i></li>
+                </ul>
             </div>
-            <div class="column paper">
-                <p class="papertitle"></p>
+            <div id="conferences">
+                <h3>Conference papers</h3>
+                <ul>
+                    <li><b>Gomez, A. R.</b> & Wisniewski, R., “Stochastic Safety in Short-term Space Conjunctions”, <i>IEEE Conference on Decision and Control, 2022.</i></li>
+                    <li><b>Gomez, A. R.</b> & la Cour-Harbo, A., “Emergency Landing Decision Method for Unmanned Aircraft”, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i></li>
+                    <li>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., “Automated Emergency Landing
+System for Drones: SafeEYE Project”, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i></li>
+
+                </ul>
             </div>
+
         </div>
-        <p class="footer"> &copy; </p>
     </body>
 </html>
-
