@@ -159,7 +159,9 @@ body {
     display: flex;
 }
 #media {
+    vertical-align: middle;
     margin-left: 50px;
+    margin-top: 10px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
