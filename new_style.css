@@ -261,6 +261,7 @@ body {
     margin-top: 250px;
     clear: both;
     width: 100%;
+    height: 400px;
 }
 #topic {
     margin-bottom: 50px;
@@ -281,11 +282,11 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     float: left;
-    width: auto;
-    height: 250px;
+    height: auto;
+    width: 580px;
 }
 #tikz .img {
-    height: 100%;
+    width: 100%;
 }
 #tikz p {
     text-align: center;
