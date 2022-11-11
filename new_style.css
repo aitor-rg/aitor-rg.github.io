@@ -276,6 +276,21 @@ body {
 #topic .abstract {
     width: 100%;
 }
+#tikz {
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    width: auto;
+    height: 250px;
+}
+#tikz .img {
+    height: 100%;
+}
+#tikz p {
+    text-align: center;
+    font-weight: normal;
+}
 #journals {
     margin-top: 250px;
     clear: both;
