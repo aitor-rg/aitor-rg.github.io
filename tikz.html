@@ -41,28 +41,39 @@
 
             <!--HEADER-->
             <div id="header">
-                <h2>Fun / Tikz</h2>
+                <p style="font-size:12pt"><b>Fun /</b> Tikz</p>
             </div>
-
-            <div id="grid">
-                <div id="tikz">
-                    <div class="img">
-                        <!--<p><b>LISA spacecraft</b> [spacecraft.tex]</p>-->
-                        <img src="./images/spacecraft.png" alt="photo" width=100% height=auto />
+            <div span style="clear:both; margin-top:200px; width: 100%; align-items: center">
+                <p style="font-size:12pt; text-align:center"><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> snippets available <a href="">here</a></p>
+            </div>
+            <div id="tikzgrid">
+                <div class="row">
+                    <div id="tikz">
+                        <div class="img">
+                            <img src="./images/spacecraft.png" alt="photo" width=100% height=auto />
+                        </div>
+                    </div>
+                    <div id="tikz">
+                        <div class="img">
+                            <img src="./images/lisa.png" alt="photo" width=100% height=auto />
+                        </div>
+                    </div>
+                    <div id="tikz">
+                        <div class="img">
+                            <img src="./images/collision.png" alt="photo" width=100% height=auto />
+                        </div>
                     </div>
                 </div>
-                <div id="tikz">
-                    <div class="img">
-                        <!--<p><b>LISA constellation</b> [lisa.tex]</p>-->
-                        <img src="./images/lisa.png" alt="photo" width=100% height=auto />
+                <div class="row">
+                    <div id="tikz">
+                        <span><b>LISA spacecraft</b>   [<span style="color:#aaa">spacecraft.tex</span>]</span>
                     </div>
-                </div>
-                <div id="tikz">
-                    <div class="img">
-                        <!--<p><b>Collision avoidance</b> [maneuver.tex]</p>-->
-                        <img src="./images/collision.png" alt="photo" width=100% height=auto />
+                    <div id="tikz">
+                        <span><b>LISA constellation</b>    [<span style="color:#aaa">lisa.tex</span>]</span>
                     </div>
-                </div>
+                    <div id="tikz">
+                        <span><b>Collision avoidance</b>   [<span style="color:#aaa">maneuver.tex</span>]</span>
+                    </div>
             </div>
         </div>
     </body>

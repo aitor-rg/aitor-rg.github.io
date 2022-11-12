@@ -277,18 +277,30 @@ body {
 #topic .abstract {
     width: 100%;
 }
-#tikz {
+#tikzgrid {
+    margin-top: 50px;
+    margin-right: 500px;
+    width: 100%;
+    clear: both;
+}
+#tikzgrid .row {
+    margin: auto;
     margin-bottom: 50px;
+    width: 1250px;
+    clear: both;
+}
+#tikz {
+    text-align: center;
     margin-left: 20px;
     margin-right: 20px;
     float: left;
     height: auto;
-    width: 580px;
+    width: 348px;
 }
 #tikz .img {
     width: 100%;
 }
-#tikz p {
+#tikzgrid p {
     text-align: center;
     font-weight: normal;
 }
@@ -297,8 +309,14 @@ body {
     clear: both;
     width: 100;
 }
+#journals h3 {
+    text-align: center;
+}
 #journals ul {
     counter-reset: list;
+    margin-left: 350px;
+    margin-right: 350px;
+    text-indent: -29px;
 }
 #journals li {
     list-style: none;
@@ -308,15 +326,21 @@ body {
 #journals li::before {
     content: "[J" counter(list, numeric)"]";
     position: relative;
-    left: -5px
+    left: -16px;
 }
 #conferences {
     margin-top: 250px;
     clear: both;
     width: 100;
 }
+#conferences h3 {
+    text-align: center;
+}
 #conferences ul {
     counter-reset: list;
+    margin-left: 350px;
+    margin-right: 350px;
+    text-indent: -29px;
 }
 #conferences li {
     list-style: none;
@@ -326,8 +350,30 @@ body {
 #conferences li::before {
     content: "[C" counter(list, numeric)"]";
     position: relative;
-    left: -5px
+    left: -16px
 }
+/*LATEX logo*/
+.tex sub, .latex sub, .latex sup {
+  text-transform: uppercase;
+}
+
+.tex sub, .latex sub {
+  vertical-align: -0.5ex;
+  margin-left: -0.1667em;
+  margin-right: -0.125em;
+}
+
+.tex, .latex, .tex sub, .latex sub {
+  font-size: 1em;
+}
+
+.latex sup {
+  font-size: 0.85em;
+  vertical-align: 0.15em;
+  margin-left: -0.36em;
+  margin-right: -0.15em;
+}
+
 
 /* Footer style */
 #footer {
