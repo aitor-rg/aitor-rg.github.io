@@ -278,6 +278,7 @@ body {
     width: 100%;
 }
 #tikzgrid {
+    font-size: 10pt;
     margin-top: 50px;
     margin-right: 500px;
     width: 100%;
@@ -299,6 +300,7 @@ body {
 }
 #tikz .img {
     width: 100%;
+    vertical-align: middle;
 }
 #tikzgrid p {
     text-align: center;
@@ -314,8 +316,8 @@ body {
 }
 #journals ul {
     counter-reset: list;
-    margin-left: 350px;
-    margin-right: 350px;
+    margin-left: 450px;
+    margin-right: 450px;
     text-indent: -29px;
 }
 #journals li {
@@ -338,8 +340,8 @@ body {
 }
 #conferences ul {
     counter-reset: list;
-    margin-left: 350px;
-    margin-right: 350px;
+    margin-left: 450px;
+    margin-right: 450px;
     text-indent: -29px;
 }
 #conferences li {
