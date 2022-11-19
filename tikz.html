@@ -4,77 +4,52 @@
     <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
     <head>
         <title> Tikz &mdash; Aitor R. Gomez </title>
-        <link rel="stylesheet" href="new_style.css" />
+        <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script defer src="app.js"></script>
     </head>
 
-    <body style="background-color: #fff">
 
+    <body class="tikzbg">
+        <div class="grid-container">
         <!--Title-->
-        <div id="content" style="background-color: #fff">
-
-            <div id="header">
-                <div id="name">
-                    <h1>Aitor Ramirez Gomez</h1>
-                    <h1 style="margin-left: 1vw;margin-right: 12vw;font-weight:bold">Spacecraft GNC Engineer</h1>
-                    <div id="media">
-                        <a href="mailto:arg@es.aau.dk"><img src="./images/icons/email.png" height="16px" /></a>
-                        <a style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github.png" height="18px" /></a>
-                        <a style="margin-left:20px" href="https://www.linkedin.com/in/aitor-ramirez/"><img src="./images/icons/linkedin.png" height="20px" /></a>
-
-                    </div>
-                </div>
-                <div id="navigation">
-                    <ul class="navbar">
-                        <li> <a class = "waiting" href="index.html">         Home        </a> </li>
-                        <li> <a class = "waiting" href="about.html">        About       </a> </li>
-                        <li> <a class = "waiting" href="publications.html">     Research    </a> </li>
-                        <li> <a class = "current" href="fun.html">          Fun         </a> </li>
-                        <li> <a class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                    </ul>
-                    <ul class="subnavigation">
-                        <li> <a class="subwaiting" href="fun.html">Digital Art</a> </li>
-                        <li> <a class="subcurrent" href="tikz.html">    Tikz    </a> </li>
-                    </ul>
-                </div>
+            <div class="grid-item grid-item-1">
+                <span>Aitor R. Gomez <b>Spacecraft GNC Engineer</b></span>
+            </div>
+            <div class="grid-item grid-item-2">
+                <ul class="navigation">
+                    <li> <a class = "waiting" href="index.html">      Home        </a> </li>
+                    <li> <a class = "waiting" href="publications.html">     Research    </a> </li>
+                    <li> <a class = "current" href="fun.html">          Fun         </a> </li>
+                    <li> <a class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
+                </ul>
+                <ul class="subnavigation">
+                    <li> <a class="subwaiting" href="fun.html">Digital Art</a> </li>
+                    <li> <a class="subcurrent" href="tikz.html">    Tikz    </a> </li>
+                </ul>
             </div>
 
-            <!--HEADER-->
-            <div id="header">
-                <p style="font-size:12pt"><b>Fun /</b> Tikz</p>
+                <!--HEADER-->
+            <div class="grid-item grid-item-1">
+                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;body&gt;</span></p>
+                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;h2&gt;</span> <b>Fun</b> <span class="htmlstyle">&lt;/h2&gt;</span></p>
+                <p style="margin-left: 30px; margin-bottom: 60px; font-size:12pt"><span class="htmlstyle">&lt;h3&gt;</span> Tikz <span class="htmlstyle">&lt;/h3&gt;</span></p>
             </div>
-            <div span style="clear:both; margin-top:200px; width: 100%; align-items: center">
-                <p style="font-size:12pt; text-align:center"><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> snippets available <a href="">here</a></p>
+            <div class="snippets"><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> snippets available <a href="">here</a></div>
+            <div class="grid-item grid-item-3 hidden">
+                <img src="./images/spacecraft.png" alt="photo" width=100% height=auto />
             </div>
-            <div id="tikzgrid">
-                <div class="row">
-                    <div id="tikz">
-                        <div class="img">
-                            <img src="./images/spacecraft.png" alt="photo" width=100% height=auto />
-                        </div>
-                    </div>
-                    <div id="tikz">
-                        <div class="img">
-                            <img src="./images/lisa.png" alt="photo" width=100% height=auto />
-                        </div>
-                    </div>
-                    <div id="tikz">
-                        <div class="img">
-                            <img src="./images/collision.png" alt="photo" width=100% height=auto />
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="tikz">
-                        <span>[<span style="color:#aaa">spacecraft.tex</span>]</span>
-                    </div>
-                    <div id="tikz">
-                        <span>[<span style="color:#aaa">lisa.tex</span>]</span>
-                    </div>
-                    <div id="tikz">
-                        <span>[<span style="color:#aaa">maneuver.tex</span>]</span>
-                    </div>
+            <div class="grid-item grid-item-5 hidden">
+                <img src="./images/lisa.png" alt="photo" width=100% height=auto />
+            </div>
+            <div class="grid-item grid-item-5 hidden">
+                <img src="./images/collision.png" alt="photo" width=100% height=auto />
+            </div>
+
+            <div class="grid-item grid-item-1">
+                <p style="font-size:12pt"><span class="htmlstyle">&lt;/body&gt;</span></p>
             </div>
         </div>
     </body>
+
 </html>
