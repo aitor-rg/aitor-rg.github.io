@@ -4,46 +4,41 @@
     <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
     <head>
         <title> Digital Art &mdash; Aitor R. Gomez </title>
-        <link rel="stylesheet" href="new_style.css" />
+        <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script defer src="app.js"></script>
     </head>
 
     <body>
-
+        <div class="grid-container">
         <!--Title-->
-        <div id="content">
-
-            <div id="header">
-                <div id="name">
-                    <h1>Aitor Ramirez Gomez</h1>
-                    <h1 style="margin-left: 1vw;margin-right: 12vw;font-weight:bold">Spacecraft GNC Engineer</h1>
-                    <div id="media">
-                        <a href="mailto:arg@es.aau.dk"><img src="./images/icons/email.png" height="16px" /></a>
-                        <a style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github.png" height="18px" /></a>
-                        <a style="margin-left:20px" href="https://www.linkedin.com/in/aitor-ramirez/"><img src="./images/icons/linkedin.png" height="20px" /></a>
-
-                    </div>
-                </div>
-                <div id="navigation">
-                    <ul class="navbar">
-                        <li> <a class = "waiting" href="index.html">         Home        </a> </li>
-                        <li> <a class = "waiting" href="about.html">        About       </a> </li>
-                        <li> <a class = "waiting" href="publications.html">     Research    </a> </li>
-                        <li> <a class = "current" href="fun.html">          Fun         </a> </li>
-                        <li> <a class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                    </ul>
-                    <ul class="subnavigation">
-                        <li> <a class="subcurrent" href="fun.html">Digital Art</a> </li>
-                        <li> <a class="subwaiting" href="tikz.html">    Tikz    </a> </li>
-                    </ul>
-                </div>
+            <div class="grid-item grid-item-1">
+                <span>Aitor R. Gomez <b>Spacecraft GNC Engineer</b></span>
+            </div>
+            <div class="grid-item grid-item-2">
+                <ul class="navigation">
+                    <li> <a class = "waiting" href="index.html">      Home        </a> </li>
+                    <li> <a class = "waiting" href="about.html">         About       </a> </li>
+                    <li> <a class = "waiting" href="publications.html">     Research    </a> </li>
+                    <li> <a class = "current" href="fun.html">          Fun         </a> </li>
+                    <li> <a class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
+                </ul>
+                <ul class="subnavigation">
+                    <li> <a class="subcurrent" href="fun.html">Digital Art</a> </li>
+                    <li> <a class="subwaiting" href="tikz.html">    Tikz    </a> </li>
+                </ul>
             </div>
 
-            <!--HEADER-->
-            <div id="header">
-                <p style="font-size:12pt"><b>Fun /</b> Digital Art</p>
+                <!--HEADER-->
+            <div class="grid-item grid-item-1">
+                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;body&gt;</span></p>
+                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;h2&gt;</span> <b>Fun</b> <span class="htmlstyle">&lt;/h2&gt;</span></p>
+                <p style="margin-left: 30px; margin-bottom: 60px; font-size:12pt"><span class="htmlstyle">&lt;h3&gt;</span> Digital Art <span class="htmlstyle">&lt;/h3&gt;</span></p>
             </div>
-
+            <div class="grid-item grid-item-1">
+                <p style="font-size:12pt"><span class="htmlstyle">&lt;/body&gt;</span></p>
+            </div>
         </div>
     </body>
+
 </html>

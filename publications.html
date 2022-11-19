@@ -4,65 +4,57 @@
     <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
     <head>
         <title> Publications &mdash; Aitor R. Gomez </title>
-        <link rel="stylesheet" href="new_style.css" />
+        <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script defer src="app.js"></script>
     </head>
 
     <body>
-
+        <div class="grid-container">
         <!--Title-->
-        <div id="content">
-
-            <div id="header">
-                <div id="name">
-                    <h1>Aitor Ramirez Gomez</h1>
-                    <h1 style="margin-left: 1vw;margin-right: 12vw;font-weight:bold">Spacecraft GNC Engineer</h1>
-                    <div id="media">
-                        <a href="mailto:arg@es.aau.dk"><img src="./images/icons/email.png" height="16px" /></a>
-                        <a style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github.png" height="18px" /></a>
-                        <a style="margin-left:20px" href="https://www.linkedin.com/in/aitor-ramirez/"><img src="./images/icons/linkedin.png" height="20px" /></a>
-
-                    </div>
-                </div>
-                <div id="navigation">
-                    <ul class="navbar">
-                        <li> <a class = "waiting" href="index.html">         Home        </a> </li>
-                        <li> <a class = "waiting" href="about.html">        About       </a> </li>
-                        <li> <a class = "current" href="publications.html"> Research    </a> </li>
-                        <li> <a class = "waiting" href="fun.html">          Fun         </a> </li>
-                        <li> <a class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                    </ul>
-                    <ul class="subnavigation">
-                        <li> <a class="subcurrent" href="publications.html">Publications</a> </li>
-                        <li> <a class="subwaiting" href="research.html">    Projects    </a> </li>
-                        <li> <a class="subwaiting" href="awards.html">      Awards      </a> </li>
-                    </ul>
-                </div>
+            <div class="grid-item grid-item-1">
+                <span>Aitor R. Gomez <b>Spacecraft GNC Engineer</b></span>
+            </div>
+            <div class="grid-item grid-item-2">
+                <ul class="navigation">
+                    <li> <a class = "waiting" href="index.html">    Home        </a> </li>
+                    <li> <a class = "waiting" href="about.html">         About       </a> </li>
+                    <li> <a class = "current" href="publications.html">     Research    </a> </li>
+                    <li> <a class = "waiting" href="fun.html">          Fun         </a> </li>
+                    <li> <a class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
+                </ul>
+                <ul class="subnavigation">
+                    <li> <a class="subcurrent" href="publications.html">Publications</a> </li>
+                    <li> <a class="subwaiting" href="projects.html">    Projects    </a> </li>
+                    <li> <a class="subwaiting" href="honors.html">      Honors      </a> </li>
+                </ul>
             </div>
 
-            <!--HEADER-->
-            <div id="header">
-                <p style="font-size:12pt"><b>Research /</b> Publications</p>
+                <!--HEADER-->
+            <div class="grid-item grid-item-1">
+                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;body&gt;</span></p>
+                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;h2&gt;</span> <b>Research</b> <span class="htmlstyle">&lt;/h2&gt;</span></p>
+                <p style="margin-left: 30px; margin-bottom: 60px; font-size:12pt"><span class="htmlstyle">&lt;h3&gt;</span> List of Publications <span class="htmlstyle">&lt;/h3&gt;</span></p>
             </div>
-
-            <div id="journals">
+            <div class="articles hidden">
                 <h3>Journal papers</h3>
-                <ul>
+                <ul class="journals">
                     <li><b>Gomez, A. R.</b> & Wisniewski, R., “Safe Avoidance Maneuver for Multiple Upcoming Space Conjunctions”, <i>AIAA Journal of Guidance, Navigation and Control. 2023</i></li>
                 </ul>
             </div>
-            <div id="conferences">
+            <div class="articles hidden">
                 <h3>Conference papers</h3>
-                <ul>
-                    <li><b>Gomez, A. R.</b> & Al Ahdab, M., “Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition”, <i>International Federation of Automatic Control (IFAC), 2023.</i></li>
-                    <li><b>Gomez, A. R.</b> & Wisniewski, R., “Stochastic Safety in Short-term Space Conjunctions”, <i>IEEE Conference on Decision and Control (CDC), 2022.</i></li>
-                    <li><b>Gomez, A. R.</b> & la Cour-Harbo, A., “Emergency Landing Decision Method for Unmanned Aircraft”, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i></li>
-                    <li>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., “Automated Emergency Landing
-System for Drones: SafeEYE Project”, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i></li>
-
+                <ul class="conferences">
+                    <li><b>Gomez, A. R.</b> & Al Ahdab, M., <span style="color: #aaa">“Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition”</span>, <i>International Federation of Automatic Control (IFAC), 2023.</i></li>
+                    <li><b>Gomez, A. R.</b> & Wisniewski, R., <span style="color: #aaa">“Stochastic Safety in Short-term Space Conjunctions”</span>, <i>IEEE Conference on Decision and Control (CDC), 2022.</i></li>
+                    <li><b>Gomez, A. R.</b> & la Cour-Harbo, A., <span style="color: #aaa">“Emergency Landing Decision Method for Unmanned Aircraft”</span>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i></li>
+                    <li>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <span style="color: #aaa">“Automated Emergency Landing System for Drones: SafeEYE Project”</span>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i></li>
                 </ul>
             </div>
 
+            <div class="grid-item grid-item-1">
+                <p style="font-size:12pt"><span class="htmlstyle">&lt;/body&gt;</span></p>
+            </div>
         </div>
     </body>
 </html>
