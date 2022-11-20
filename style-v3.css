@@ -75,6 +75,13 @@ body {
     grid-template-columns: repeat(8,200px);
     grid-auto-rows: minmax(100px, auto);
 }
+.grid-item-6 img{
+    transition: 1s ease;
+}
+.grid-item-6 img:hover {
+    -webkit-transform:scale(3); /* or some other value */
+    transform:scale(2.5) translateX(-35%);
+}
 .grid-item-1 {
     display: flex;
     flex-direction: column;
@@ -106,6 +113,12 @@ body {
 }
 .grid-item-5 {
     grid-column: span 2;
+    padding: 3px;
+    margin: 5px;
+}
+.grid-item-6 {
+    grid-column-start: 3;
+    grid-column-end: 4;
     padding: 3px;
     margin: 5px;
 }
