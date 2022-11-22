@@ -160,7 +160,9 @@ body {
 }
 .vertical-line {
     grid-column: 1 / span 8;
-    border: 1px solid gray;
+    border: 1px;
+    border-style: solid;
+    border-color: #373737;
     height:100%;
     margin: auto;
 }
