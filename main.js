@@ -1,38 +1,72 @@
+// scene instance
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
+// create canvas and provide html id
 const canvas = document.querySelector('#bg')
-const renderer = new THREE.WebGLRenderer({canvas, alpha: true});
 
+// create renderer and pass canvas, alpha=background transparency
+const renderer = new THREE.WebGLRenderer({canvas, alpha: true});
+// set the renderer
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(30);
-camera.position.setX(-3);
+
+// camera instance (fov, aspect ratio, view fustrum min, view fustrum max)
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+// set the camera
+camera.position.setZ(4);
+
+// orbit controls instance
+const control = new THREE.OrbitControls(camera,renderer.domElement);
+// set controls
+control.enableDamping = true;
+control.dampingFactor = 0.3;
 
 renderer.render(scene, camera);
 document.body.appendChild(renderer.domElement);
 
-const earthtexture = new THREE.TextureLoader().load('texture.jpg');
+// add object - EARTH
+// load texture maps
+const textureLoader = new THREE.TextureLoader()
+const earthTexture = textureLoader.load('texture.jpg');
+// Mesh( geometry, material )
 const earth = new THREE.Mesh(
-    new THREE.SphereGeometry(8, 64, 32),
-    new THREE.MeshStandardMaterial({map: earthtexture}),
+    new THREE.SphereGeometry(1, 32, 32),
+    new THREE.MeshStandardMaterial({map: earthTexture}),
 );
-scene.add(earth);
 
+const cloudMap = textureLoader.load('cloudMap.jpg');
+// Mesh( geometry, material )
+const clouds = new THREE.Mesh(
+    new THREE.SphereGeometry(1.01,32,32),
+    new THREE.MeshLambertMaterial({alphaMap:cloudMap,map:cloudMap,transparent:true,blending:1}),
+);
+
+earth.rotation.x = Math.PI/7;
+earth.rotation.y = -Math.PI/2;
+clouds.rotation.x = Math.PI/7;
+scene.add(earth,clouds);
+
+// TODO: add Fresnel shader for atmosphere
+//       add click events
+
+// add light
 const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(0, 0, 50);
+pointLight.position.set(-1.0, 1.0, 1.0);
+pointLight.intensity=3;
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
+
+// animation
 function animate() {
-  requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
+    earth.rotation.y += 0.00085;
+    clouds.rotation.y += 0.0015;
 
-  earth.rotation.x += 0.01;
-  earth.rotation.y += 0.005;
-  earth.rotation.z += 0.01;
+    control.update();
 
-  renderer.render(scene, camera);
+    renderer.render(scene, camera);
 }
 
 animate();
