@@ -40,7 +40,8 @@ body {
 
 .info-right {
     position: relative;
-    top: 100px;
+    top: 0px;
+    left: 1000px;
     width: 100%;
     z-index: 100;
     display: block;
@@ -252,8 +253,8 @@ body {
     color: #fdc666;
 }
 .articles {
-    grid-column-start: 3;
-    grid-column-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 9;
 }
 .articles h3 {
     text-align: center;

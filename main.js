@@ -57,12 +57,19 @@ pointLight.intensity=3;
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
+var earthDir = new THREE.Vector3( );
+function showText() {
+    earth.getWorldDirection(earthDir);
+    console.log(earthDir.z);
+}
 
 // animation
 function animate() {
     requestAnimationFrame(animate);
-    earth.rotation.y += 0.00085;
-    clouds.rotation.y += 0.0015;
+    earth.rotation.y += 0.0007;
+    clouds.rotation.y += 0.0009;
+
+    showText();
 
     control.update();
 
