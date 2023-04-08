@@ -80,7 +80,7 @@ body {
     transform: translateY(0%);
 }
 .grid-container {
-    position: relative;
+    position: absolute;
     width: 100%;
     z-index:1;
     display: grid;
