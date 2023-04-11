@@ -42,27 +42,41 @@ const clouds = new THREE.Mesh(
     new THREE.MeshLambertMaterial({alphaMap:cloudMap,map:cloudMap,transparent:true,blending:1}),
 );
 
-earth.rotation.x = Math.PI/7;
-earth.rotation.y = -Math.PI/2;
-clouds.rotation.x = Math.PI/7;
+// earth.rotation.x = Math.PI/7;
+// earth.rotation.y = -Math.PI/2;
+// clouds.rotation.x = Math.PI/7;
 scene.add(earth,clouds);
+
 
 // TODO: add Fresnel shader for atmosphere
 //       add click events
 
 // add light
 const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(-1.0, 1.0, 1.0);
+pointLight.position.set(1.0, 1.0, 1.0);
 pointLight.intensity=3;
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-// var earthDir = new THREE.Vector3( );
-// function showText() {
-//     earth.getWorldDirection(earthDir);
-//     console.log(earthDir.z);
-// }
+// city coordinates
+const AAL_lon = -5*Math.PI/180;
+const AAL_lat = 57*Math.PI/180;
+const BCN_lon = 0*Math.PI/180;
+const BCN_lat = 41*Math.PI/180;
+
+var bcnDir = new THREE.Vector3(1*Math.cos(BCN_lon)*Math.cos(BCN_lat), 1*Math.cos(BCN_lon)*Math.sin(BCN_lat), 1*Math.sin(BCN_lon));
+var aalDir = new THREE.Vector3(1*Math.cos(AAL_lon)*Math.cos(AAL_lat), 1*Math.cos(AAL_lon)*Math.sin(AAL_lat), 1*Math.sin(AAL_lon));
+
+const points = [];
+points.push( new THREE.Vector3( bcnDir ) );
+points.push( new THREE.Vector3( 4*bcnDir ) );
+let geometry = new THREE.BufferGeometry().setFromPoints( points );
+let material = new THREE.LineBasicMaterial( { color: 0xffffff } );
+let line = new THREE.Line( geometry, material );
+
+scene.add(line);
+
 
 const BarcelonaTitle = "Barcelona, Spain";
 const BarcelonaInfo = "Barcelona is the place where I grew up. I graduated with a B.Sc. degree from <b>Barcelona School of Industrial Engineering</b>, while teaching Linear Algebra and Differential Equations to large groups of bachelor students. I also spent some time at the <b>Institute of Robotics and Industrial Informatics</b>, an accomplished research institution from the Spanish National Research Council (CSIC),  before I embarked myself on an international journey.";
@@ -78,39 +92,50 @@ Title.style.textAlign = "justify";
 Title.innerHTML = BarcelonaTitle.bold() +"<br><br>"+ BarcelonaInfo;
 document.body.appendChild(Title);
 
-function getEuler() {
-    // make sure the matrix world is up to date
-    obj.updateMatrixWorld();
+function location_update() {
 
-    // extract the rotation matrix
-    const rotMat = new THREE.Matrix4();
-    obj.matrixWorld.extractRotation(rotMat);
-
-    // extract the rotation
-    const euler = new THREE.Euler();
-    euler.setFromRotationMatrix(rotMat);
-
-    Title.innerHTML = AalborgTitle.bold()+"<br><br>"+ BarcelonaInfo;
-    if (euler.z < 0.5) {
-        // Title.innerHTML = AalborgTitle.bold()+"<br><br>"+ BarcelonaInfo;
-        Title.innerHTML = euler.z;
+    var cameracenter = new THREE.Vector3(0,0,0).unproject(camera);
+    var bcn = cameracenter.distanceTo(bcnDir);
+    var aal = cameracenter.distanceTo(aalDir);
+    // var bcnDirProj = bcnDir.project( camera );
+    // var aalDirProj = aalDir.project( camera );
+    if ( bcn > aal) {
+        longitude = AAL_lon;
+        latitude = AAL_lat;
+        Title.innerHTML = AalborgTitle.bold()+"<br><br>";
+    } else {
+        longitude = BCN_lon;
+        latitude = BCN_lat;
+        Title.innerHTML = BarcelonaTitle.bold() +"<br><br>"+ BarcelonaInfo;
     }
+
+    //update line
+    var positions = line.geometry.attributes.position.array;
+    positions[0] = 1*Math.cos(longitude)*Math.cos(latitude);
+    positions[1] = 1*Math.cos(longitude)*Math.sin(latitude);
+    positions[2] = 1*Math.sin(longitude);
+    positions[3] = 1.2*Math.cos(longitude)*Math.cos(latitude);
+    positions[4] = 1.2*Math.cos(longitude)*Math.sin(latitude);
+    positions[5] = 1.2*Math.sin(longitude);
+    line.geometry.attributes.position.needsUpdate = true;
+    //update text
 }
 
 // animation
 function animate() {
-    requestAnimationFrame(animate);
+    line.rotation.y += 0.0007;
     earth.rotation.y += 0.0007;
     clouds.rotation.y += 0.0009;
 
-    // showText();
+    bcnDir.applyAxisAngle( new THREE.Vector3(-1,0,0), 0.0007 );
+    console.log(bcnDir)
 
+    location_update();
+
+    requestAnimationFrame(animate);
     control.update();
     renderer.render(scene, camera);
-    // Title.innerHTML = euler.z;
-    // getEuler();
-
+    camera.updateMatrixWorld()
 }
 
 animate();
-Title.innerHTML = AalborgTitle.bold()+"<br><br>";
