@@ -94,7 +94,7 @@ document.body.appendChild(Title);
 
 function location_update() {
 
-    var cameracenter = new THREE.Vector3(0,0,0).unproject(camera);
+    var cameracenter = new THREE.Vector3(0,0,-1).unproject(camera);
     var bcn = cameracenter.distanceTo(bcnDir);
     var aal = cameracenter.distanceTo(aalDir);
     // var bcnDirProj = bcnDir.project( camera );

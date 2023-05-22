@@ -41,6 +41,10 @@ body {
     color: #f2f2f2;
 }
 
+.title {
+    font-size: 30px;
+    color: #fdc999;
+}
 .tikzbg {
     color: #000;
     animation-name: change_color;
@@ -250,6 +254,8 @@ body {
 .articles {
     grid-column-start: 1;
     grid-column-end: 9;
+    /* grid-column-start: 2; */
+    /* grid-column-end: 4; */
 }
 .articles h3 {
     text-align: center;
