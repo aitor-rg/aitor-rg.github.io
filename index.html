@@ -6,38 +6,97 @@
         <title> Home &mdash; Aitor R. Gomez </title>
         <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+    <script defer src="./js/app.js"></script>
     </head>
-    <script src="js/three.js"></script>
-    <script src="js/OrbitControls.js"></script>
-    <body style="overflow:hidden">
-        <div class="grid-container">
-        <canvas id="bg"></canvas>
-        <!--Title-->
-            <div class="grid-item grid-item-1">
-                <span class="title">Aitor R. Gomez <b style="color:#fff" >Spacecraft GNC Engineer</b></span>
-            </div>
-            <div class="grid-item grid-item-2">
-                <ul class="navigation">
-                    <li> <a class = "current" href="index.html">    Home        </a> </li>
-                    <li> <a class = "waiting" href="projects.html">     Research    </a> </li>
-                    <li> <a class = "waiting" href="experience.html">     Experience    </a> </li>
-                    <li> <a class = "waiting" href="fun.html">          Fun         </a> </li>
-                    <li> <a class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                </ul>
+
+    <body>
+
+        <div class="fixed">
+                <div style="margin-top:15px;margin-left:15px;width:200px;">
+                    <span class="title">ARG</span>
+                    <span class="title"><b style="color:#fff; white-space:nowrap;" >GNC Engineer</b></span>
+                </div>
+                <div class="menu">
+                        <ul class="navigation">
+                                <li> <a class = "current" href="index.html">        HOME        </a> </li>
+                                <li> <a class = "waiting" href="projects.html">     RESEARCH    </a> </li>
+                                <li> <a class = "waiting" href="fun.html">          EXTRA         </a> </li>
+                                <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
+                        </ul>
+                </div>
+        </div>
+
+        <div class="timeline-container">
+
+            <div class="timeline-item hidden" date-is='2022'>
+                <h1>State University of New York at Buffalo</h1>
+                <h2>Mechanical and Aerospace Department</h2>
+                <h3>Visiting Scholar</h3>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
             </div>
 
-                <!--HEADER-->
-            <div class="grid-item grid-item-1">
-                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;body&gt;</span></p>
-                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;h2&gt;</span> <b>Home</b> <span class="htmlstyle">&lt;/h2&gt;</span></p>
-                <p style="margin-left: 30px; margin-bottom: 60px; font-size:12pt"><span class="htmlstyle">&lt;h3&gt;</span> Hello, World! <span class="htmlstyle">&lt;/h3&gt;</span></p>
+            <div class="timeline-item hidden" date-is='2017-2023'>
+                <h1>Aalborg University</h1>
+                <h2>Control and Automation</h2>
+                <h3>PhD Fellow</h3>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
+                <h3>Master's Student</h3>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
+                <h2>Drone Research Lab</h2>
+                <h3>Researcher</h3>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
+
             </div>
 
-            <div class="grid-item grid-item-1">
-                <p style="font-size:12pt"><span class="htmlstyle">&lt;/body&gt;</span></p>
+            <div class="timeline-item hidden" date-is='2017'>
+                <h1>Institute of Robotics and Industrial Informatics, IRI-CSIC</h1>
+                <h2>Perception and Manipulation Department</h2>
+                <h3>Research Assistant</h3>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
+                <h2>Parallel Robots Lab</h2>
+                <h3>Bachelor's Thesis</h3>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
+            </div>
+
+            <div class="timeline-item hidden" date-is='2012-2016'>
+                <h1>CEUS Academy</h1>
+                <h2>Linear Algebra and Ordinary Differential Equations</h2>
+                <h3>Teacher and Tutor</h3>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
+            </div>
+
+            <div class="timeline-item hidden" date-is='2011-2016'>
+                <h1>School of Industrial Engineering of Barcelona (ETSEIB)</h1>
+                <h2>Industrial Engineering Department</h2>
+                <h3>Barchelor's Student</h3>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
             </div>
         </div>
-        <script src="main.js"></script>
+
+        <div class="footer hidden">
+            <p>Connect with me</p>
+            <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="25px"/></a>
+            <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="30px" /></a>
+            <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="30px" /></a>
+            <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/aytorjones"><img src="./images/icons/instagram-64.png" height="30px" /></a>
+        </div>
+
 
     </body>
 </html>

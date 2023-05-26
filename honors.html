@@ -6,68 +6,105 @@
         <title> Honors &mdash; Aitor R. Gomez </title>
         <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
-    <script defer src="app.js"></script>
+    <script defer src="./js/app.js"></script>
     </head>
 
     <body>
-        <div class="grid-container">
         <!--Title-->
-            <div class="grid-item grid-item-1">
-                <span class="title">Aitor R. Gomez <b style="color:#fff" >Spacecraft GNC Engineer</b></span>
-            </div>
-            <div class="grid-item grid-item-2">
-                <ul class="navigation">
-                    <li> <a class = "waiting" href="index.html">        Home        </a> </li>
-                    <li> <a class = "current" href="projects.html"> Research    </a> </li>
-                    <li> <a class = "waiting" href="experience.html">   Experience    </a> </li>
-                    <li> <a class = "waiting" href="fun.html">          Fun         </a> </li>
-                    <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                </ul>
-                <ul class="subnavigation">
-                    <li> <a class="subwaiting" href="projects.html">    Projects    </a> </li>
-                    <li> <a class="subwaiting" href="publications.html">Publications</a> </li>
-                    <li> <a class="subcurrent" href="honors.html">      Honors      </a> </li>
-                </ul>
-            </div>
 
+
+        <div class="fixed">
+                <div style="margin-top:15px;margin-left:15px;width:200px;">
+                    <span class="title">ARG</span>
+                    <span class="title"><b style="color:#fff; white-space:nowrap;" >GNC Engineer</b></span>
+                </div>
+                <div class="menu">
+                    <ul class="navigation">
+                            <li> <a class = "waiting" href="index.html">        HOME        </a> </li>
+                            <li> <a class = "current" href="projects.html">     RESEARCH    </a> </li>
+                            <li> <a class = "waiting" href="fun.html">          EXTRA         </a> </li>
+                            <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
+                    </ul>
+
+                </div>
+                <div id="research" class="subss center">
+                    <ul class="subnavigation">
+                        <li> <a class="waiting" href="projects.html">    PROJECTS    </a> </li>
+                        <li> <a class="waiting" href="publications.html">PUBLICATIONS</a> </li>
+                        <li> <a class="current" href="honors.html">      HONORS      </a> </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="grid-container">
                 <!--HEADER-->
-            <div class="grid-item grid-item-1">
-                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;body&gt;</span></p>
-                <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;h2&gt;</span> <b>Research</b> <span class="htmlstyle">&lt;/h2&gt;</span></p>
-                <p style="margin-left: 30px; margin-bottom: 60px; font-size:12pt"><span class="htmlstyle">&lt;h3&gt;</span> Honors <span class="htmlstyle">&lt;/h3&gt;</span></p>
-            </div>
-            <!-- <div class="articles hidden"> -->
-            <div class="articles hidden" style="grid-column-start:3; grid-column-end:7">
-                <h3>Memberships</h3>
-                <ul>
-                    <li><a target="_blank" href="https://www.en.space.aau.dk/aau-space-group/">Space Group</a> at Aalborg University (AAU)</li>
-                </ul>
-            </div>
-            <div class="articles hidden" style="grid-column-start:3; grid-column-end:7">
-                <h3>Awards</h3>
-                <ul>
-                    <li>Young Researcher, Awards XXIV Certamen de Jóvenes Investigadores, 2011</li>
-                    <li>Award Fundació Salas, Research thesis, 2011</li>
-                    <li>Award Argó, Autonomous University of Barcelona, Research thesis, 2011</li>
-                </ul>
-            </div>
-            <div class="articles hidden" style="grid-column-start:3; grid-column-end:7">
-                <h3>Certificates</h3>
-                <ul>
-                    <li>Cambridge Certificate in Advanced English (CAE) C1, 2017</li>
-                    <li>Diplôme d’Étudies en Langue Française (DELF) A1, 2007</li>
-                </ul>
+
+
+            <div class="row center">
+                <div class="col-7">
+                    <hr/>
+                </div>
             </div>
 
-            <div class="grid-item grid-item-1">
-                <p style="font-size:12pt"><span class="htmlstyle">&lt;/body&gt;</span></p>
+            <div class="row center hidden">
+                <div class="col-2">
+                    <div class="articles">
+                        <h3>Memberships</h3>
+                    </div>
+                </div>
             </div>
+            <div class="row center hidden">
+                <div class="col-4">
+                    <ul>
+                        <li><a target="_blank" href="https://www.en.space.aau.dk/aau-space-group/">Space Group</a> at Aalborg University (AAU)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row center hidden">
+                <div class="col-2">
+                    <div class="articles">
+                        <h3>Awards</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row center hidden">
+                <div class="col-4">
+                    <ul>
+                        <li>Young Researcher, Awards XXIV Certamen de Jóvenes Investigadores, 2011</li>
+                        <li>Award Fundació Salas, Research thesis, 2011</li>
+                        <li>Award Argó, Autonomous University of Barcelona, Research thesis, 2011</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row center hidden">
+                <div class="col-2">
+                    <div class="articles">
+                        <h3>Certificates</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row center hidden">
+                <div class="col-4">
+                    <ul>
+                        <li>Cambridge Certificate in Advanced English (CAE) C1, 2017</li>
+                        <li>Diplôme d’Étudies en Langue Française (DELF) A1, 2007</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row center">
+                <div class="col-7">
+                    <hr/>
+                </div>
+            </div>
+
             <div class="footer hidden">
+                <p>Connect with me</p>
                 <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="25px"/></a>
                 <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="30px" /></a>
                 <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="30px" /></a>
                 <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/aytorjones"><img src="./images/icons/instagram-64.png" height="30px" /></a>
-                <p>Connect with me</p>
             </div>
         </div>
     </body>
