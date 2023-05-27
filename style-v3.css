@@ -187,14 +187,6 @@ hr {
     transform: scale(103%);
     transition: 1000ms;
 }
-.project.left {
-    width: 20%;
-}
-.project.right {
-    width: 74%;
-    padding: 10px;
-}
-
 .tikzbg {
     color: #000;
     animation-name: change_color;
@@ -206,15 +198,6 @@ hr {
     100% { background-color: #fff; }
     background-color: #fff;
 }
-/* .tikzbg .current { */
-/*     color: #000; */
-/* } */
-/* .tikzbg .navigation { */
-/*     border: 1px solid black; */
-/* } */
-/* .tikzbg .subnavigation { */
-/*     border: 1px solid black; */
-/* } */
 .htmlstyle {
     font-style: italic;
     color:#646464;
@@ -237,18 +220,16 @@ hr {
 }
 
 .timeline-item {
+    border-bottom: 1px solid #222;
 	width: 30%;
     margin-left: auto;
     margin-right: auto;
-    /* position: relative; */
-    border-bottom: 1px solid #222;
 	padding: 3em 2em 2em;
-	color: rgba(white, .7);
 
-	p {
+}
+.timeline-item p {
 		font-size: 1rem;
         text-align: justify;
-	}
 }
 .timeline-item:before {
     content: attr(date-is);
@@ -334,9 +315,6 @@ hr {
 }
 .subnavigation a {
     font-size: 14px;
-}
-.vertical-menu {
-    position:relative;
 }
 .projnav {
     position:relative;
