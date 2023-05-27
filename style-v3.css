@@ -93,6 +93,17 @@ body {
     .timeline-container {
         font-size: 10px;
     }
+    .center {
+        flex-direction: column;
+    }
+    li {
+        margin-left: 20px;
+        margin-right:20px;
+    }
+    ul.projnav {
+        width: 100%;
+        margin: 0;
+    }
     ul.navigation {
         display: none;
     }
@@ -324,6 +335,22 @@ hr {
 .subnavigation a {
     font-size: 14px;
 }
+.vertical-menu {
+    position:relative;
+}
+.projnav {
+    position:relative;
+    z-index:10;
+    min-width: 100px;
+    width: 100px;
+    list-style-type: none;
+    background-color: transparent;
+    padding: 10px;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: -120px;
+    border-right: 1px solid #555;
+}
 .current {
     display: table-cell;
     text-align: center;
@@ -333,6 +360,10 @@ hr {
     vertical-align: middle;
     background-color: transparent;
 }
+#projects {
+    width: 100px;
+}
+
 #research {
     /* margin-left: 15px; */
     /* margin-left: 55px; */
