@@ -54,6 +54,7 @@ body {
     /* background-color: #000; */
     /* font-family: 'Poppins', helvetica; */
     font-family: 'Ubuntu', sans-serif;
+    font-size: 12pt;
     color: #f2f2f2;
 }
 
@@ -231,7 +232,7 @@ hr {
 
 }
 .timeline-item p {
-		font-size: 1rem;
+		font-size: 12pt;
         text-align: justify;
 }
 .timeline-item:before {
@@ -317,7 +318,6 @@ hr {
     padding: 0;
     min-width: 300px;
     width: 300px;
-    height: 60px;
 }
 .subnavigation a {
     font-size: 14px;
@@ -352,11 +352,14 @@ hr {
     /* margin-left: 15px; */
     /* margin-left: 55px; */
     margin-left: -5px;
-    margin-top: -56px;
+    margin-top: -38px;
+    height: 60px;
 }
 #extra {
     margin-left: 166px;
-    margin-top: -33px;
+    margin-top: -13px;
+    align-items:bottom;
+    height: 30px;
 }
 .currentcover {
     display: table-cell;
