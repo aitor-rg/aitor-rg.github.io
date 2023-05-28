@@ -27,15 +27,18 @@ li {
     float: left;
 }
 h1 {
+    font-size: 30px;
     font-family: 'Oswald', sans-serif;
     color: #fdc999;
     margin-bottom:-20px;
 }
 h2 {
+    font-size: 25px;
     font-family: 'Oswald', sans-serif;
     color: #888;
 }
 h3 {
+    font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
 a {
@@ -282,12 +285,14 @@ hr {
   justify-content: flex-start;
 }
 .menu {
+    z-index: 1;
     position: absolute;
     width:100%;
     align-items: center;
     /* border-top: 1px solid red; */
 }
 .subss {
+    z-index:2;
     position: relative;
     width:100%;
     margin-left:auto;
@@ -312,6 +317,7 @@ hr {
     padding: 0;
     min-width: 300px;
     width: 300px;
+    height: 60px;
 }
 .subnavigation a {
     font-size: 14px;
