@@ -324,7 +324,7 @@ hr {
 }
 .projnav {
     position:relative;
-    z-index:10;
+    z-index:1;
     min-width: 100px;
     width: 100px;
     list-style-type: none;
