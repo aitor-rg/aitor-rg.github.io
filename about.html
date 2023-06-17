@@ -3,57 +3,71 @@
     <!--Title Bar-->
     <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
     <head>
-        <title> Portfolio &mdash; Aitor R. Gomez </title>
-        <link rel="stylesheet" href="new_style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Home &mdash; Aitor R. Gomez </title>
+        <link rel="stylesheet" href="style-v3.css" />
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+    <script defer src="./js/app.js"></script>
     </head>
 
     <body>
 
-        <!--Title-->
-        <div id="content">
-
-            <div id="header">
-                <div id="name">
-                    <h1>Aitor Ramirez Gomez</h1>
-                    <h1 style="margin-left: 1vw;margin-right: 12vw;font-weight:bold">Spacecraft GNC Engineer</h1>
-                    <div id="media">
-                        <a href="mailto:arg@es.aau.dk"><img src="./images/icons/email.png" height="16px"/></a>
-                        <a style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github.png" height="18px" /></a>
-                        <a style="margin-left:20px" href="https://www.linkedin.com/in/aitor-ramirez/"><img src="./images/icons/linkedin.png" height="20px" /></a>
-
-                    </div>
+        <div class="header">
+                <div class="name">
+                    <p class="title">ARG</p>
+                    <p class="subtitle"><b>GNC Engineer</b></p>
                 </div>
-                <div id="navigation">
-                    <ul class="navbar">
-                        <li> <a class = "waiting" href="index.html">    Home        </a> </li>
-                        <li> <a class = "current" href="about.html">         About       </a> </li>
-                        <li> <a class = "waiting" href="publications.html">     Research    </a> </li>
-                        <li> <a class = "waiting" href="fun.html">          Fun         </a> </li>
-                        <li> <a class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                        <!--li> <a href </li-->
+
+                <div id="popup" class="submenu center">
+                    <ul id="research" class="subnavigation">
+                        <li> <a class="waiting" href="projects.html#">        PROJECTS    </a> </li>
+                        <li> <a class="waiting" href="publications.html#">    PUBLICATIONS   </a> </li>
                     </ul>
                 </div>
-            </div>
 
-            <!--HEADER-->
-            <div id="header">
-                <p style="font-size:12pt"><b>About /</b></p>
-            </div>
-
-            <div id="fill-space"> <p> </p></div>
-            <div id="presentation">
-                    <div class="info">
-                                    <p style="font-size:1.1vw">Hello, World! </p>
-                                    <p style="padding: 0.7vw">Welcome to my portfolio. My name is Aitor. I am an engineer born and raised in Barcelona (Spain) with a passion for physics and space exploration. I specialized in <b>control theory</b> at Aalborg University (Denmark), where I am conducting my Ph.D. research in <b>guidance, navigation and control of spacecrafts </b> and <b>spacecraft safety</b>.</p>
-                                    <p style="padding: 0.7vw">I am also an avid reader of science-fiction and fantasy, my all-time personal favorite being Speaker for the Dead, by Orson Scott. In my spare time, one can often find me covering songs on the guitar and the piano, playing video-games and, occasionally, out in the wild climbing, scuba diving and being awesome!</p>
-                                    <p style="padding: 0.7vw"></p>
-                    </div><!--info -->
-                    <div class="image" >
-                        <img src="./images/img_cv_clearer.png" alt="photo" width=100% height=auto />
-                    </div>
-
+                <div class="menu">
+                    <ul class="navigation">
+                        <li> <a class = "waiting" href="index.html">                      NEWS       </a> </li>
+                        <li> <a onclick="toggleup('popup');" class ="waiting" href="#">   RESEARCH    </a> </li>
+                        <li> <a class = "current" href="about.html">                      ABOUT       </a> </li>
+                        <!-- <li> <a class = "waiting" href="fun.html">                   EXTRA       </a> </li> -->
+                        <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
+                    </ul>
                 </div>
         </div>
+
+
+        <div class="grid-container">
+
+            <p class="section-title active center" href="#">BIO</p>
+                <div class="row center">
+                        <div class="col-8"  style="padding:10px;">
+                            <img src="./images/img_cv_dark.png" height="180px"/>
+                            <h2>Aitor R Gomez</h2>
+                            <h3>Guidance Navigation and Control Engineer</h3>
+                            <p> As a passionate reader of science-fiction and fantasy literature, I hold a special place in my heart for <i>Speaker for the Dead</i>, by Orson Scott. My interests extend to the domains of science and engineering, with a particular emphasis on the technical hurdles associated with control and safety of spacecrafts. When not pursuing my professional interests, I enjoy playing my favorite songs on the guitar and piano, and indulging in outdoor activities such as climbing and scuba diving. I was born in Barcelona, Spain; now I am out in the world.</p>
+                        </div>
+                </div>
+
+            <a class="collapsible section-title deactive center" href="#">CONNECT</a>
+            <div class="collapsed">
+                <div class="row center">
+                        <div class="contact-info"  style="padding:10px;">
+                            <p><b class="contact">[EMAIL]:  </b>aitoramirezg@protonmail.com </p>
+                            <p><b class="contact">[GITHUB]: </b>github/aitor-rg</p>
+                            <p><b class="contact">[LINKEDIN]: </b>/in/aitor-rg</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="footer hidden"> -->
+        <!--     <p>Connect with me</p> -->
+        <!--     <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="25px"/></a> -->
+        <!--     <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="30px" /></a> -->
+        <!--     <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="30px" /></a> -->
+        <!--     <!-1- <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -1-> -->
+        <!-- </div> -->
+
+
     </body>
 </html>

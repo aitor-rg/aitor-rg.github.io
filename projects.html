@@ -3,112 +3,168 @@
     <!--Title Bar-->
     <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
     <head>
-        <title> Projects &mdash; Aitor R. Gomez </title>
+        <title>Aitor R. Gomez&mdash;Space</title>
         <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
     <script defer src="./js/app.js"></script>
     </head>
 
     <body>
-
-
-        <div class="fixed">
-                <div style="margin-top:15px;margin-left:15px;width:200px;">
-                    <span class="title">ARG</span>
-                    <span class="title"><b style="color:#fff; white-space:nowrap;" >GNC Engineer</b></span>
+        <div class="header">
+                <div class="name">
+                    <p class="title">ARG</p>
+                    <p class="subtitle"><b>GNC Engineer</b></p>
                 </div>
+
+                <div id="popdown" class="submenu center">
+                    <ul id="research" class="subnavigation">
+                        <li> <a class="current" href="projects.html#">    + PROJECTS    </a> </li>
+                        <li> <a class="waiting" href="publications.html#">    PUBLICATIONS   </a> </li>
+                    </ul>
+                </div>
+
                 <div class="menu">
                     <ul class="navigation">
-                            <li> <a class = "waiting" href="index.html">        HOME        </a> </li>
-                            <li> <a class = "current" href="projects.html">     RESEARCH    </a> </li>
-                            <li> <a class = "waiting" href="fun.html">          EXTRA         </a> </li>
-                            <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                    </ul>
-
-                </div>
-                <div class="subss center hidden">
-                    <ul id="research" class="subnavigation">
-                        <li> <a class="current" href="projects.html">    PROJECTS    </a> </li>
-                        <li> <a class="waiting" href="publications.html">PUBLICATIONS</a> </li>
-                        <li> <a class="waiting" href="honors.html">      HONORS      </a> </li>
+                        <li> <a class = "waiting" href="index.html">                      NEWS       </a> </li>
+                        <li> <a onclick="toggledown('popdown');" class ="current" href="#">   RESEARCH    </a> </li>
+                        <li> <a class = "waiting" href="about.html">                      ABOUT       </a> </li>
+                        <!-- <li> <a class = "waiting" href="fun.html">                   EXTRA       </a> </li> -->
+                        <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
                     </ul>
                 </div>
         </div>
 
-
-
-
         <div class="grid-container">
         <!--Title-->
 
-            <div class="row center">
-                    <ul class="projnav hidden">
-                            <li> <a class = "current" href="projects.html">        SPACE     </a> </li>
-                            <li> <a class = "waiting" href="projects-drones.html"> DRONES    </a> </li>
-                            <li> <a class = "waiting" href="projects-robots.html"> ROBOTS    </a> </li>
-                    </ul>
-            </div>
+                <a class="collapsible section-title deactive center" href="#">SPACE</a>
 
-            <div class="row center hidden">
-                <div class="col-7 project">
-                        <div class="col-3">
-                            <img src="./gifs/out2.gif" alt="photo" style="display: block" width=100% />
+                <div class="collapsed">
+
+                    <div class="row center">
+                        <div class="col-7 project">
+                            <div class="col-3">
+                                <img src="./gifs/LISA_GW.gif" alt="photo" style="display: block" width=100% />
+                            </div>
+                            <div class="col-8"  style="padding:10px;">
+                                <h3 style="margin-top:0px; margin-bottom: 5px;"><b>LISA POINTING ACQUISITION</b><span class="summary" style="font-size:15px;"> [q2-2022]</span> </h3>
+                                <p style="font-size: 10px;margin-top:-1px;">@ AALBORG UNIVERSITY.</p>
+                                <p>Summary: <span class="summary">Design and simulation of a robust descentralized attitude guidance system for ultra-fine pointing accuracy in the LISA mission based on a game-theoretic approach.</span></p>
+                                <p class="keyword">Keywords: LISA, Guidance system, Game theory.</p>
+                                <p><span style="font-size:11px"><b>EXTERNAL LINK TO PAPER</b>  <a target="_blank" href="https://arxiv.org/abs/2303.02743">&nearhk;</a></span>
+                            </div>
                         </div>
-                        <div class="col-8"  style="padding:10px;">
-                            <h3 style="margin-top:0px; margin-bottom: 5px;"><b>MARitime Internet Of Things (MARIOT)</b><span class="summary" style="font-size:15px;"> [2020-present]</span> </h3>
-                            <p style="color: #999; margin-top:-1px; margin-bottom: -10px;">Intercompany collaborative project. See list of <a target="_blank" href="https://www.sternula.com/index.php/mariot-partners/">partners</a>.</p>
-                            <p><span class="summary">Summary:</span> Global VDES-SAT constellation network to provide maritime safety and navigational services. My involvement includes developing an end-to-end satellite constellation network simulator in Python and providing advice regarding safety operations (e.g. probability of collision, avoidance maneuvers, etc).</p>
-                            <p class="keyword">Keywords: Satellite network simulator, Phython, Spacecraft safety</p>
-                            <p><b>Code:</b> <a href="">TBA</a></p>
+                    </div>
+
+                    <div class="row center">
+                        <div class="col-7 project">
+                            <div class="col-3">
+                                <img src="./gifs/out2.gif" alt="photo" style="display: block" width=100% />
+                            </div>
+                            <div class="col-8"  style="padding:10px;">
+                                <h3 style="margin-top:0px; margin-bottom: 5px;"><b>MARITIME INTERNET OF THINGS (MARIOT)</b><span class="summary" style="font-size:15px;"> [2020-present]</span> </h3>
+                                <p style="margin-top:-1px;">Intercompany collaborative project. See list of <a target="_blank" href="https://www.sternula.com/index.php/mariot-partners/">partners</a>.</p>
+                                <p>Summary: <span class="summary">Global VDES-SAT constellation network to provide maritime safety and navigational services. My contributions are an end-to-end satellite constellation network simulator for system verification and providing advice regarding safety operations (e.g. probability of collision, avoidance maneuvers, etc).</span></p>
+                                <p class="keyword">Keywords: Satellite network simulator, Verification, Phython, Spacecraft safety.</p>
+                                <p style="margin-bottom:-10px;"><span style="font-size:11px"><b>EXTERNAL LINK TO VIDEO</b>  <a target="_blank" href="#">&nearhk;</a></span>
+                                <p><span style="font-size:11px"><b>EXTERNAL LINK TO CODE (TBA)</b>  <a target="_blank" href="#">&nearhk;</a></span> <!-- <p><span style="font-size:11px"><b>EXTERNAL LINK:</b></span> <a href="#">Watch orbit injection of Sternula-1</a></p> -->
+                                <!-- <p><b>EXTERNAL LINK:</b> <a href="#">Code (TBS)</a></p> -->
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="row center">
+                        <div class="col-7 project">
+                            <div class="col-3">
+                                <img src="./gifs/VBN.gif" alt="photo" style="display: block" width=100% />
+                            </div>
+                            <div class="col-8"  style="padding:10px;">
+                                <h3 style="margin-top:0px; margin-bottom: 5px;"><b>AUTONOMOUS CONTROL FOR RENDEZVOUS AND DOCKING OF CUBESATS</b> <span class="summary" style="font-size:15px;"> [q2-2018]</span></h3>
+                                <p style="font-size: 10px;margin-top:-1px;">@ AALBORG UNIVERSITY, MASTER THESIS</p>
+                                <p>Summary: <span class="summary">Comprehensive project focused in spacecraft guidance, navigation and control for relative maneuvering and proximity operations. The scope was tailored for typical and inexpensive CubeSat sensor and actuation equippment, and involved advanced techniques such as quaternion-based Unscented Kalman Filter, sliding-mode control, and camera-based navigation.</span></p>
+                                <p class="keyword">Keywords: Rendezvous and Proximity Operations (RPO), Sensor fusion, GNC algorithms.</p>
+                                <p><span style="font-size:11px"><b>EXTERNAL LINK TO THESIS</b>  <a target="_blank" href="https://projekter.aau.dk/projekter/en/studentthesis/autonomous-control-for-rendezvous-and-docking-of-cubesats(d8c69b54-4af5-4827-9f43-bece3788494a).html">&nearhk;</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row center">
+                        <div class="col-7 project">
+                            <div class="col-3">
+                                <img src="./images/lissajous.png" alt="photo"  width=100% />
+                            </div>
+                            <div class="col-8"  style="padding:10px;">
+                                <h3 style="margin-top:0px; margin-bottom: 5px;"><b>STATION-KEEPING CONTROL OF A CUBESAT CONSTELLATION IN L1</b> <span class="summary" style="font-size:15px;"> [q1-2018]</span></h3>
+                                <p style="font-size:10px;margin-top:-1px;">@ AALBORG UNIVERSITY, SEMESTER PROJECT.</p>
+                                <p><span class="summary">Summary:</span> .</p>
+                                <p class="keyword">Keywords: Libration points, Orbit design, Station-keeping, GNC algorithms.</p>
+                                <!-- <p><b>Access:</b> <a target="_blank" href="https://projekter.aau.dk/projekter/en/studentthesis/autonomous-control-for-rendezvous-and-docking-of-cubesats(d8c69b54-4af5-4827-9f43-bece3788494a).html">Thesis</a> -->
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
 
-
-            <div class="row center hidden">
-                <div class="col-7 project">
-                        <div class="col-3">
-                            <img src="./gifs/VBN.gif" alt="photo" style="display: block" width=100% />
+                <a class="collapsible section-title deactive center" href="#">DRONES</a>
+                <div class="collapsed">
+                    <div class="row center">
+                        <div class="col-7 project">
+                            <div class="col-3">
+                                <img src="./images/T500_slung_test.png" alt="photo" style="display: block" width=100% />
+                            </div>
+                            <div class="col-8"  style="padding:10px;">
+                                <h3 style="margin-top:0px; margin-bottom: 5px;"><b>SafeEYE</b> <span class="summary" style="font-size:15px;">[2019-2020]</span></h3>
+                                <p style="font-size: 10px;margin-top:-1px;">@ DRONE RESEARCH LAB, AALBORG UNIVERSITY.</p>
+                                <p><span class="summary">Design, construction and testing of an automated emergency landing system for big drones (&gt;7kg).</span></p>
+                                <p class="keyword">Keywords: UAV Risk Mitigation</p>
+                            </div>
                         </div>
-                        <div class="col-8"  style="padding:10px;">
-                            <h3 style="margin-top:0px; margin-bottom: 5px;"><b>Autonomous Control for Rendezvous and Docking of CubeSats</b> <span class="summary" style="font-size:15px;"> [q2-2018]</span></h3>
-                            <p style="color: #999; margin-top:-1px; margin-bottom: -10px;">Master's thesis, Aalborg University.</p>
-                            <p><span class="summary">Summary: </span>This comprehensive project showcased my expertise in spacecraft control, navigation, and sensor integration for relative maneuvering and docking operations. The scope was tailored for typical and inexpensive CubeSat sensor and actuation equippment, and involved techniques such as quaternion-based Unscented Kalman Filter and sliding-mode for attitude estimation and control, model predictive control for the approaching phase, and camera-based sensors for relative state estimation.</p>
-                            <p class="keyword">Keywords: Quaternion-based uncented Kalman filter, Sliding-mode control, Model predictive control.</p>
-                            <p><b>Access:</b> <a target="_blank" href="https://projekter.aau.dk/projekter/en/studentthesis/autonomous-control-for-rendezvous-and-docking-of-cubesats(d8c69b54-4af5-4827-9f43-bece3788494a).html">Thesis</a>
-                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row center hidden">
-                <div class="col-7 project">
-                        <div class="col-3">
-                            <img src="./images/lissajous.png" alt="photo"  width=100% />
+                <a class="collapsible section-title deactive center" href="#">ROBOTS</a>
+                <div class="collapsed">
+                    <div class="row center">
+                        <div class="col-7 project">
+                            <div class="col-3">
+                                <img src="./gifs/IK.gif" alt="gif" style="display: block" width=100% >
+                            </div>
+                            <div class="col-8"  style="padding:10px;">
+                                <h3 style="margin-top:0px; margin-bottom: 5px;"><b>WIRELESS CONTROL OF UR5 MANIPULATOR</b> <span class="summary" style="font-size:15px;">[q1-2017]</span></h3>
+                                <p style="font-size: 10px; margin-top:-1px;">@ AALBORG UNIVERSITY.</p>
+                                <p>Summary: <span class="summary">A wireless control system for an industrial
+                                manipulator using an iPad as the interface. This project entailed control,
+                                filtering and real-time techniques to allow seamless manipulation of industrial
+                                arm based on the iPad inputs.</span></p>
+                                <p class="keyword">Keywords: Universal Robots manipulator, Wireless communication.</p>
+                            </div>
                         </div>
-                        <div class="col-8"  style="padding:10px;">
-                            <h3 style="margin-top:0px; margin-bottom: 5px;"><b>Station-Keeping and Formation Control of a CubeSat Constellation in L1</b> <span class="summary" style="font-size:15px;"> [q1-2018]</span></h3>
-                            <p style="color: #999; margin-top:-1px; margin-bottom: -10px;">Semester Project, Aalborg University.</p>
-                            <p><span class="summary">Summary:</span> .</p>
-                            <p class="keyword">Keywords: .</p>
-                            <!-- <p><b>Access:</b> <a target="_blank" href="https://projekter.aau.dk/projekter/en/studentthesis/autonomous-control-for-rendezvous-and-docking-of-cubesats(d8c69b54-4af5-4827-9f43-bece3788494a).html">Thesis</a> -->
+                    </div>
+
+                    <div class="row center">
+                        <div class="col-7 project">
+                            <div class="col-3">
+                                <img src="./gifs/parallel.gif" alt="gif" style="display: block" width=100% >
+                            </div>
+                            <div class="col-8" style="padding:10px;">
+                                <h3 style="margin-top:0px; margin-bottom: 5px;"><b>BALANCE CONTROL OF GOUGH-STEWART PARALLEL PLATFORMS</b> <span class="summary" style="font-size:15px;">[q1-2016]</span></h3>
+                                <p style="font-size:10px;margin-top:-1px;">@ PARALLEL ROBOTS LAB, INSITUTE OF ROBOTICS AND INDUSTRIAL INFORMATICS, CSIC-UPC.</p>
+                                <p>Summary: <span class="summary">Construction, modeling and control of parallel platforms.</span></p>
+                                <p class="keyword">Keywords: Parallel platforms, Image processing, Matlab, Arduino.</p>
+                                <p><b>EXTERNAL LINK:</b> <a target="_blank" href="https://projekter.aau.dk/projekter/en/studentthesis/autonomous-control-for-rendezvous-and-docking-of-cubesats(d8c69b54-4af5-4827-9f43-bece3788494a).html">Thesis</a>
+                            </div>
                         </div>
+                    </div>
                 </div>
-            </div>
 
 
-
-            <!-- <div class="row"> -->
-            <!--     <div class="col-12"> -->
-            <!--         <p style="font-size:12pt"><span class="htmlstyle">&lt;/body&gt;</span></p> -->
-            <!--     </div> -->
+            <!-- <div class="footer"> -->
+            <!--     <p>Connect with me</p> -->
+            <!--     <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="25px"/></a> -->
+            <!--     <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="30px" /></a> -->
+            <!--     <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="30px" /></a> -->
+            <!--     <!-1- <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -1-> -->
             <!-- </div> -->
-            <div class="footer hidden">
-                <p>Connect with me</p>
-                <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="25px"/></a>
-                <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="30px" /></a>
-                <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="30px" /></a>
-                <!-- <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -->
-            </div>
         </div>
     </body>
 

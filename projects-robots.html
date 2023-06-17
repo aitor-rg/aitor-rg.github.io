@@ -3,7 +3,7 @@
     <!--Title Bar-->
     <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
     <head>
-        <title> Projects &mdash; Aitor R. Gomez </title>
+        <title>Aitor R. Gomez&mdash;Robotics</title>
         <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
     <script defer src="./js/app.js"></script>
@@ -11,26 +11,28 @@
 
     <body>
 
+        <div class="header">
 
-        <div class="fixed">
-                <div style="margin-top:15px;margin-left:15px;width:200px;">
-                    <span class="title">ARG</span>
-                    <span class="title"><b style="color:#fff; white-space:nowrap;" >GNC Engineer</b></span>
+                <div class="name">
+                    <p class="title">ARG</p>
+                    <p class="subtitle"><b>GNC Engineer</b></p>
                 </div>
+
+                <div id="popdown" class="submenu center">
+                    <ul id="research" class="subnavigation">
+                        <li> <a class="waiting" href="projects-space.html#">    SPACE    </a> </li>
+                        <li> <a class="waiting" href="projects-drones.html#">   DRONES   </a> </li>
+                        <li> <a class="current" href="projects-robots.html#">   + ROBOTS   </a> </li>
+                    </ul>
+                </div>
+
                 <div class="menu">
                     <ul class="navigation">
-                            <li> <a class = "waiting" href="index.html">        HOME        </a> </li>
-                            <li> <a class = "current" href="projects.html">     RESEARCH    </a> </li>
-                            <li> <a class = "waiting" href="fun.html">          EXTRA         </a> </li>
-                            <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                    </ul>
-
-                </div>
-                <div class="subss center">
-                    <ul id="research" class="subnavigation">
-                        <li> <a class="current" href="projects.html">    PROJECTS    </a> </li>
-                        <li> <a class="waiting" href="publications.html">PUBLICATIONS</a> </li>
-                        <li> <a class="waiting" href="honors.html">      HONORS      </a> </li>
+                        <li> <a class = "waiting" href="index.html">                      NEWS       </a> </li>
+                        <li> <a onclick="toggledown('popdown');" class ="current" href="#">   RESEARCH    </a> </li>
+                        <li> <a class = "waiting" href="index.html">                      ABOUT       </a> </li>
+                        <!-- <li> <a class = "waiting" href="fun.html">                   EXTRA       </a> </li> -->
+                        <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
                     </ul>
                 </div>
         </div>
@@ -41,48 +43,41 @@
         <div class="grid-container">
         <!--Title-->
 
-            <div class="row center">
-                    <ul class="projnav">
-                            <li> <a class = "waiting" href="projects.html">        SPACE        </a> </li>
-                            <li> <a class = "waiting" href="projects-drones.html">     DRONES    </a> </li>
-                            <li> <a class = "current" href="projects-robots.html">          ROBOTS         </a> </li>
-                    </ul>
-            </div>
-
-            <div class="row center hidden">
-                <div class="col-7 project">
-                    <div class="col-4">
-                        <img src="./gifs/IK.gif" alt="gif" style="display: block" width=100% >
-                    </div>
-                    <div class="col-7" style="padding:10px;">
-                        <h3 style="margin-top:0px; margin-bottom: 5px;"><b>Wireless Control of UR5 Manipulator</b> <span class="summary" style="font-size:15px;">[q1-2017]</span></h3>
-                        <p style="color: #999; margin-top:-1px; margin-bottom: -10px;">Semester project, Aalborg University.</p>
-                        <p><span class="summary">Summary:</span> A wireless control system for an industrial manipulator using an iPad as the interface. This project entailed the implementation of a Kalman filter to capture the attitude motion of the iPad, ensuring smooth and precise control, and a velocity control system for the manipulator, allowing for seamless manipulation of the industrial arm based on the input from the iPad. Furthermore, I successfully established a wireless interface between the iPad and the manipulator, enabling real-time communication and control.</p>
-                        <p class="keyword">Keywords: Universal Robots manipulator, Inverse kinematics, Simulation, Control.</p>
+            <a class="collapsible section-title center" href="#">PROJECTS</a>
+            <div class="collapsed">
+                <div class="row center">
+                    <div class="col-7 project">
+                        <div class="col-4">
+                            <img src="./gifs/IK.gif" alt="gif" style="display: block" width=100% >
+                        </div>
+                        <div class="col-7"  style="padding:10px;">
+                            <h3 style="margin-top:0px; margin-bottom: 5px;"><b>Wireless Control of UR5 Manipulator</b> <span class="summary" style="font-size:15px;">[q1-2017]</span></h3>
+                            <p style="color: #999; margin-top:-1px; margin-bottom: -10px;">Semester project, Aalborg University.</p>
+                            <p>Summary: <span class="summary">A wireless control system for an industrial
+                            manipulator using an iPad as the interface. This project entailed control,
+                            filtering and real-time techniques to allow seamless manipulation of industrial
+                            arm based on the iPad inputs.</span></p>
+                            <p class="keyword">Keywords: Universal Robots manipulator, Wireless communication.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row center hidden">
-                <div class="col-7 project">
-                    <div class="col-4">
-                        <img src="./gifs/parallel.gif" alt="gif" style="display: block" width=100% >
-                    </div>
-                    <div class="col-7" style="padding:10px;">
-                        <h3 style="margin-top:0px; margin-bottom: 5px;"><b>Gough-Stewart Parallel Platforms</b> <span class="summary" style="font-size:15px;">[q1-2016]</span></h3>
-                        <p style="color: #999; margin-top:-1px; margin-bottom: -10px;">Parallel Robots Lab, Insitute of Robotics and Industrial Informatics, CSIC-UPC.</p>
-                        <p><span class="summary">Summary:</span> Construction, modeling and control of parallel platforms and image processing.</p>
-                        <p class="keyword">Keywords: Parallel platform, Inverse kinematics, Control, Matlab, Arduino.</p>
+                <div class="row center">
+                    <div class="col-7 project">
+                        <div class="col-4">
+                            <img src="./gifs/parallel.gif" alt="gif" style="display: block" width=100% >
+                        </div>
+                        <div class="col-7" style="padding:10px;">
+                            <h3 style="margin-top:0px; margin-bottom: 5px;"><b>Balance Control of Gough-Stewart Parallel Platforms</b> <span class="summary" style="font-size:15px;">[q1-2016]</span></h3>
+                            <p style="color: #999; margin-top:-1px; margin-bottom: -10px;">Parallel Robots Lab, Insitute of Robotics and Industrial Informatics, CSIC-UPC.</p>
+                            <p>Summary: <span class="summary">Construction, modeling and control of parallel platforms.</span></p>
+                            <p class="keyword">Keywords: Parallel platforms, Image processing, Matlab, Arduino.</p>
+                            <p><b>EXTERNAL LINK:</b> <a target="_blank" href="https://projekter.aau.dk/projekter/en/studentthesis/autonomous-control-for-rendezvous-and-docking-of-cubesats(d8c69b54-4af5-4827-9f43-bece3788494a).html">Thesis</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- <div class="row"> -->
-            <!--     <div class="col-12"> -->
-            <!--         <p style="font-size:12pt"><span class="htmlstyle">&lt;/body&gt;</span></p> -->
-            <!--     </div> -->
-            <!-- </div> -->
-            <div class="footer hidden">
+            <div class="footer">
                 <p>Connect with me</p>
                 <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="25px"/></a>
                 <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="30px" /></a>

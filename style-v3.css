@@ -102,6 +102,9 @@ body {
         border-right: none;
         margin: 0;
     }
+    .section-title {
+        font-size: 20px;
+    }
     .m-menu {
         display: block;
     }
@@ -149,7 +152,6 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 300px;
-    /* border: 1pt solid red; */
 }
 
 [class*="col-"] {
@@ -157,6 +159,7 @@ body {
   /* border: 1pt solid red; */
 }
 .row {
+    position: relative;
     justify-content: center;
     margin-bottom: 10px;
     clear: both;
@@ -173,15 +176,20 @@ body {
     justify-content: center;
     align-items: center;
 }
-.fixed {
+.header {
     top: -15px;
     position: fixed;
     z-index: 10;
     width:100%;
-    height: 191px;
+    height: 140px;
     background-color: #040404;
+    /* border: 1pt solid red; */
 }
-
+.name {
+    margin-top:15px;
+    margin-left:15px;
+    width:200px;
+}
 hr {
     display: block;
     height: 1px;
@@ -196,16 +204,63 @@ hr {
     font-family: 'Oswald', sans-serif;
     font-size: 40px;
     color: #fdc999;
+    margin-top: 0px;
+    margin-bottom: -20px;
+}
+.subtitle {
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    /* color:#fff; */
+    color: #333;
+    white-space:nowrap;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.section-title {
+    position: relative;
+    width: 80%;
+    /* text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: #777;
+    margin-top: 50px;
+    /* border-bottom: 1pt solid #222; */
+}
+.collapsed {
+    /* display: none; */
+    max-height: 0;
+    width:100%;
+    overflow: hidden;
+    margin-top: 0px;
+    transition: max-height 0.5s ease-out;
+
+}
+.deactive:before {
+    content: '\002B\00a0';
+}
+.active:before {
+    content: "\2212\00a0";
+}
+.contact-info {
+    width: 300px;
+}
+.contact {
+    color:#777;
+    font-size:10px;
+    margin-right:10px;
 }
 .project {
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
+    /* border-top: 1px solid #222; */
+    /* border-bottom: 1px solid #222; */
     text-align: justify;
     transition: 1s;
 }
 .project:hover {
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
+    /* border-top: 1px solid #222; */
+    /* border-bottom: 1px solid #222; */
     z-index: 5;
     transform: scale(103%);
     transition: 1000ms;
@@ -304,18 +359,29 @@ hr {
   justify-content: flex-start;
 }
 .menu {
-    z-index: 1;
-    position: absolute;
+    z-index: 2;
+    position: fixed;
+    top: 30px;
     width:100%;
     align-items: center;
     /* border-top: 1px solid red; */
 }
-.subss {
-    z-index:2;
-    position: relative;
+#popup {
+    visibility: hidden;
+    transform: translateY(-200%);
+    transition: 0.5s;
+}
+#popdown {
+    visibility: visible;
+    transform: translateY(0%);
+    transition: 0.5s;
+}
+.submenu {
+    z-index: 3;
+    position: fixed;
+    top: 15px;
     width:100%;
-    margin-left:auto;
-    margin-right:auto;
+    height: 40px;
     /* border:1px solid red */
 }
 .navigation {
@@ -334,7 +400,7 @@ hr {
     list-style-type: none;
     background-color: transparent;
     padding: 0;
-    width: 190px;
+    width: 200px;
 }
 .subnavigation a {
     font-size: 14px;
@@ -365,14 +431,9 @@ hr {
 #projects {
     width: 100px;
 }
-
 #research {
-    /* margin-left: 15px; */
-    /* margin-left: 55px; */
-    margin-left: -120px;
-    margin-top: -38px;
-    height: 60px;
-    /* border: 1px solid red; */
+    margin-left: -108px;
+    height: 40px;
 }
 #extra {
     margin-left: 222px;
@@ -452,13 +513,18 @@ hr {
     list-style: none;
     text-indent: -37px;
     font-size: 17px;
+    font-family: 'Ubuntu', sans-serif;
     counter-increment: list;
     text-align: justify;
 }
 .conferences li::before {
-    content: "[C" counter(list, numeric)"]";
+    content: "[P" counter(list, numeric)"]";
     position: relative;
     left: -16px
+}
+.papers li {
+    font-size: 17px;
+    text-align: justify;
 }
 
 /*LATEX logo*/
@@ -493,7 +559,8 @@ hr {
 /* Footer style */
 .footer {
     width: 100%;
-    margin-top: 50px;
+    color: #999;
+    margin-top: 250px;
     margin-bottom: 30px;
     justify-content: center;
     text-align: center;
@@ -510,7 +577,7 @@ hr {
 }
 .keyword {
     color: #33b3a6;
-    margin-top: -15px;
+    /* margin-top: -15px; */
     font-style: italic;
 }
 

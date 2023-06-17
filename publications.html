@@ -11,25 +11,26 @@
 
     <body>
 
-        <div class="fixed">
-                <div style="margin-top:15px;margin-left:15px;width:200px;">
-                    <span class="title">ARG</span>
-                    <span class="title"><b style="color:#fff; white-space:nowrap;" >GNC Engineer</b></span>
+        <div class="header">
+                <div class="name">
+                    <p class="title">ARG</p>
+                    <p class="subtitle"><b>GNC Engineer</b></p>
                 </div>
+
+                <div id="popdown" class="submenu center">
+                    <ul id="research" class="subnavigation">
+                        <li> <a class="waiting" href="projects.html#">      PROJECTS    </a> </li>
+                        <li> <a class="current" href="publications.html#">  + PUBLICATIONS   </a> </li>
+                    </ul>
+                </div>
+
                 <div class="menu">
                     <ul class="navigation">
-                            <li> <a class = "waiting" href="index.html">        HOME        </a> </li>
-                            <li> <a class = "current" href="projects.html">     RESEARCH    </a> </li>
-                            <li> <a class = "waiting" href="fun.html">          EXTRA         </a> </li>
-                            <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                    </ul>
-
-                </div>
-                <div class="subss center hidden">
-                    <ul id="research" class="subnavigation">
-                        <li> <a class="waiting" href="projects.html">    PROJECTS    </a> </li>
-                        <li> <a class="current" href="publications.html">PUBLICATIONS</a> </li>
-                        <li> <a class="waiting" href="honors.html">      HONORS      </a> </li>
+                        <li> <a class = "waiting" href="index.html">                      NEWS       </a> </li>
+                        <li> <a onclick="toggledown('popdown');" class ="current" href="#">   RESEARCH    </a> </li>
+                        <li> <a class = "waiting" href="about.html">                      ABOUT       </a> </li>
+                        <!-- <li> <a class = "waiting" href="fun.html">                   EXTRA       </a> </li> -->
+                        <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
                     </ul>
                 </div>
         </div>
@@ -37,77 +38,20 @@
         <div class="grid-container">
         <!--Title-->
 
-               <!--HEADER-->
-            <!-- <div class="row"> -->
-            <!--     <div class="col-12"> -->
-            <!--         <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;body&gt;</span></p> -->
-            <!--         <p style="margin-bottom: -5px; font-size:12pt"><span class="htmlstyle">&lt;h2&gt;</span> <b>Research</b> <span class="htmlstyle">&lt;/h2&gt;</span></p> -->
-            <!--         <p style="margin-left: 30px; margin-bottom: -30px; font-size:12pt"><span class="htmlstyle">&lt;h3&gt;</span> List of Publications <span class="htmlstyle">&lt;/h3&gt;</span></p> -->
-            <!--     </div> -->
-            <!-- </div> -->
 
+            <p class="section-title active center">PUBLICATIONS</p>
             <div class="row center">
-                <div class="col-7">
-                    <hr/>
+                <div class="col-9">
+                    <ol class="papers">
+                        <li><b>Gomez, A. R.</b> & Crassidis, J., <a target="_blank" href="">“Near-Earth and Cislunar Maneuver Determination”</a>, <i>AIAA Journal of Guidance, Navigation and Control, 2023. TBS</i></li>
+                        <li><b> Gomez, A. R.*</b> & Al Ahdab, M.*, <a target="_bank" href="https://arxiv.org/abs/2303.02743">“Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition”</a>, <i>IFAC World Congress, 2023.</i></li>
+                        <li><b>Gomez, A. R.</b> & Wisniewski, R., <a target="_blank" href="" >“Stochastic Safety in Space Conjunctions”</a>, <i>IEEE Conference on Decision and Control (CDC), 2022.</i></li>
+                        <li><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i></li>
+                        <li>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i></li>
+                    </ol>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="row center hidden">
-                    <div class="col-2">
-                        <div class="articles">
-                            <h3>Journal papers</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row center hidden">
-                    <div class="col-8">
-                            <ul class="journals">
-                                <li><b>Gomez, A. R.</b> & Crassidis, J., <a target="_blank" href="">“Orbital and Cislunar Maneuver Determination”</a>, <i>AIAA Journal of Guidance, Navigation and Control, 2023. TBS</i></li>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="row center hidden">
-                    <div class="col-2">
-                        <div class="articles">
-                            <h3>Conference papers</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="row center hidden">
-                    <div class="col-8">
-                            <ul class="conferences">
-                                <li><b> Gomez, A. R.*</b> & Al Ahdab, M.*, <a target="_bank" href="https://arxiv.org/abs/2303.02743">“Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition”</a>, <i>IFAC World Congress, 2023.</i></li>
-                                <li><b>Gomez, A. R.</b> & Wisniewski, R., <a target="_blank" href="" >“Stochastic Safety in Space Conjunctions”</a>, <i>IEEE Conference on Decision and Control (CDC), 2022.</i></li>
-                                <li><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i></li>
-                                <li>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i></li>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row center">
-                <div class="col-7">
-                    <hr/>
-                </div>
-            </div>
-
-            <!-- <div class="row"> -->
-            <!--     <div class="col-12"> -->
-            <!--         <p style="font-size:12pt"><span class="htmlstyle">&lt;/body&gt;</span></p> -->
-            <!--     </div> -->
-            <!-- </div> -->
-
-             <div class="footer hidden">
-                 <p>Connect with me</p>
-                 <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="25px"/></a>
-                 <a style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="30px" /></a>
-                 <a style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="30px" /></a>
-                 <!-- <a style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -->
-             </div>
         </div>
 
     </body>
