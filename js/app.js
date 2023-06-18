@@ -13,12 +13,15 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function toggleup(el) {
+function toggleup(el,clicked) {
+    clicked.classList.toggle("active");
     var tag=document.getElementById(el);
     tag.style.visibility = tag.style.visibility === 'visible' ? 'hidden' : 'visible';
     tag.style.transform = tag.style.transform === "translateY(0%)" ? "translateY(-200%)" : "translateY(0%)";
 }
-function toggledown(el) {
+function toggledown(el,clicked) {
+    clicked.classList.toggle("active");
+    clicked.classList.toggle("deactive");
     var tag=document.getElementById(el);
     tag.style.visibility = tag.style.visibility === 'hidden' ? 'visible' : 'hidden';
     tag.style.transform = tag.style.transform === "translateY(-200%)" ? "translateY(0%)" : "translateY(-200%)";
