@@ -122,6 +122,9 @@ body {
     .timeline-container {
         font-size: 10px;
     }
+    .timeline-item {
+        width: 100%;
+    }
     .center {
         flex-direction: column;
     }
@@ -220,6 +223,15 @@ hr {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+.read-more {
+    position: relative;
+    width: 100%;
+    margin-top:10px;
+    margin-left: auto;
+    font-size:11px;
+    justify-content: right;
+    color: #777;
+}
 .section-title {
     position: relative;
     width: 80%;
@@ -298,11 +310,12 @@ hr {
 .timeline-container {
 	width: 100%;
     margin-top: 300px;
+    margin-bottom: 300px;
 }
 
 .timeline-item {
-    border-bottom: 1px solid #111;
-	width: 40%;
+    border-bottom: 1px solid #222;
+	width: 1000px;
     margin-left: auto;
     margin-right: auto;
 	padding: 3em 2em 2em;
@@ -324,6 +337,12 @@ hr {
     /* font-weight: 700; */
     font-size: 12px;
 }
+.news-title {
+    width: 80%;
+    margin-top: 10px;
+    text-align: justify;
+    /* border: 1pt solid red; */
+}
 .news-info {
     width:50%;
     float: right;
@@ -342,11 +361,6 @@ hr {
 }
 #event {
     color: #276EFF;
-}
-.news {
-    width: 80%;
-    margin-top: 10px;
-    /* border: 1pt solid red; */
 }
 
 #hamburger-icon {
