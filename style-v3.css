@@ -244,12 +244,53 @@ hr {
     margin-top: 50px;
     /* border-bottom: 1pt solid #222; */
 }
+.section-cover {
+    position:relative;
+    visibility: visible;
+    height:100px;
+    width:700px;
+    transition: 0.5s;
+    opacity:0.2;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* .section-cover:hover { */
+/*     opacity:1; */
+/* } */
+#space {
+    position:relative;
+    top: -110px;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background: url('images/debris_theme.jpg'); */
+}
+#robots {
+    position:relative;
+    top: -110px;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background: url('images/debris_theme.jpg'); */
+}
+#drones {
+    position:relative;
+    top: -110px;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background: url('images/drones.png'); */
+}
+.collapsible {
+    transition: 0.5s;
+}
+.collapsible:hover {
+    color: #fdc666;
+}
 .collapsed {
     /* display: none; */
     max-height: 0;
     width:100%;
     overflow: hidden;
-    margin-top: 0px;
+    margin-top: -30px;
+    margin-bottom: 30px;
     transition: max-height 0.5s ease-out;
 
 }
@@ -446,20 +487,6 @@ hr {
 .subnavigation a {
     font-size: 14px;
 }
-.projnav {
-    position:relative;
-    z-index:1;
-    min-width: 100px;
-    width: 100px;
-    list-style-type: none;
-    background-color: transparent;
-    padding: 10px;
-    margin-right: auto;
-    margin-left: 50px;
-    margin-top: 0px;
-    margin-bottom: -120px;
-    border-right: 1px solid #555;
-}
 .current {
     display: table-cell;
     text-align: center;
@@ -468,9 +495,6 @@ hr {
     /* font-weight: bold; */
     vertical-align: middle;
     background-color: transparent;
-}
-#projects {
-    width: 100px;
 }
 #research {
     margin-left: -119px;
@@ -482,22 +506,8 @@ hr {
     /* align-items:bottom; */
     height: 60px;
 }
-.currentcover {
-    display: table-cell;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    vertical-align: middle;
-}
 .waiting {
     color: #777;
-    text-align: center;
-    text-decoration: none;
-    display: table-cell;
-}
-.waitingcover {
-    color: #aaa;
     text-align: center;
     text-decoration: none;
     display: table-cell;
@@ -505,9 +515,6 @@ hr {
 .waiting:hover{
     color: #fdc666;
     transition: 600ms;
-}
-.waitingcover:hover{
-    color: #fdc666;
 }
 .imgdes {
     position: absolute;
@@ -531,37 +538,6 @@ hr {
 .articles h3 {
     font-size: 20px;
     text-align: center;
-}
-.journals ul {
-    counter-reset: list;
-}
-.journals li {
-    list-style: none;
-    font-size: 17px;
-    text-indent: -30px;
-    counter-increment: list;
-    text-align: justify;
-}
-.journals li::before {
-    content: "{J" counter(list, numeric)"}";
-    position: relative;
-    left: -16px;
-}
-.conferences ul {
-    counter-reset: list;
-}
-.conferences li {
-    list-style: none;
-    text-indent: -37px;
-    font-size: 17px;
-    font-family: 'Ubuntu', sans-serif;
-    counter-increment: list;
-    text-align: justify;
-}
-.conferences li::before {
-    content: "[P" counter(list, numeric)"]";
-    position: relative;
-    left: -16px
 }
 .papers li {
     font-size: 17px;
