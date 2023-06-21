@@ -46,6 +46,7 @@ a {
     font-size: 12pt;
     text-decoration: none;
     color: #fdc666;
+    /* color: #FF850E; */
 }
 p {
     text-align: justify;
@@ -100,10 +101,9 @@ body {
     .center {
         flex-direction: column;
     }
-    ul.projnav {
-        width: 100%;
-        border-right: none;
-        margin: 0;
+    .navigation {
+        margin-left: auto;
+        margin-right: 0;
     }
     .section-title {
         font-size: 20px;
@@ -131,10 +131,6 @@ body {
     li {
         margin-left: 20px;
         margin-right:20px;
-    }
-    ul.projnav {
-        width: 100%;
-        margin: 0;
     }
     ul.navigation {
         display: none;
@@ -196,20 +192,11 @@ body {
     margin-left:15px;
     width:200px;
 }
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #222;
-    margin-top: 50px;
-    /* margin: 1em 0; */
-    padding: 0;
-}
-
 .title {
     font-family: 'Oswald', sans-serif;
     font-size: 40px;
     color: #fdc999;
+    /* color: #FF850E; */
     margin-top: 0px;
     margin-bottom: -20px;
 }
@@ -254,43 +241,32 @@ hr {
     margin-right: auto;
     margin-left: auto;
 }
-/* .section-cover:hover { */
-/*     opacity:1; */
-/* } */
 #space {
     position:relative;
     top: -110px;
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background: url('images/debris_theme.jpg'); */
 }
 #robots {
     position:relative;
     top: -110px;
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background: url('images/debris_theme.jpg'); */
 }
 #drones {
     position:relative;
     top: -110px;
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background: url('images/drones.png'); */
 }
 .collapsible {
     transition: 0.5s;
 }
 .collapsible:hover {
     color: #fdc666;
+    /* color: #FF850E; */
 }
 .collapsed {
     /* display: none; */
     max-height: 0;
     width:100%;
     overflow: hidden;
-    margin-top: -30px;
-    margin-bottom: 30px;
+    /* margin-top: -30px; */
+    /* margin-bottom: 30px; */
     transition: max-height 0.5s ease-out;
 
 }
@@ -332,11 +308,13 @@ hr {
     100% { background-color: #fff; }
     background-color: #fff;
 }
-.htmlstyle {
-    font-style: italic;
-    color:#646464;
-}
 .hidden {
+    opacity: 0;
+    transition: 1s;
+    filter: blur(5px);
+    transform: translateY(20%);
+}
+.hidden-t {
     opacity: 0;
     transition: 1s;
     filter: blur(5px);
@@ -347,7 +325,11 @@ hr {
     filter: blur(0);
     transform: translateY(0%);
 }
-
+.show-t {
+    opacity: 0.2;
+    filter: blur(0);
+    transform: translateY(0%);
+}
 .timeline-container {
 	width: 100%;
     margin-top: 300px;
@@ -468,15 +450,14 @@ hr {
 }
 .navigation {
     min-width: 610px;
-    width: 620px;
+    width: 610px;
     list-style-type: none;
     background-color: transparent;
     padding: 0;
     margin-right: auto;
     margin-left: auto;
     margin-top: 30px;
-    /* min-width: 600px; */
-    border-top: 1px solid #555;
+    border-top: 1px solid #222;
 }
 .subnavigation {
     list-style-type: none;
@@ -514,6 +495,7 @@ hr {
 }
 .waiting:hover{
     color: #fdc666;
+    /* color: #FF850E; */
     transition: 600ms;
 }
 .imgdes {

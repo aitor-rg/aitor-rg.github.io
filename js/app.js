@@ -1,4 +1,4 @@
-const observer = new IntersectionObserver((entries) => {
+const observer1 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
         if (entry.isIntersecting) {
@@ -7,9 +7,20 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show-t');
+        }
+    });
+});
 
+const hiddenElements1 = document.querySelectorAll('.hidden');
+hiddenElements1.forEach((el) => observer1.observe(el));
+
+const hiddenElements2 = document.querySelectorAll('.hidden-t');
+hiddenElements2.forEach((el) => observer2.observe(el));
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
