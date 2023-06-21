@@ -478,14 +478,8 @@ body {
     background-color: transparent;
 }
 #research {
-    margin-left: -119px;
+    margin-left: -84px;
     height: 40px;
-}
-#extra {
-    margin-left: 222px;
-    margin-top: -38px;
-    /* align-items:bottom; */
-    height: 60px;
 }
 .waiting {
     color: #777;
