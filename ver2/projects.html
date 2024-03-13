@@ -10,25 +10,35 @@
     </head>
 
     <body>
+
         <div class="header">
-                <div class="name">
-                    <p class="title">ARG</p>
-                    <p class="subtitle">GNC Engineer</p>
+                <div class="logo">
+                    <span class="title">AITOR</span><span class="title" style="color: #444">GOMEZ</span>
+                    <!-- <span class="subtitle">GNC ENGINEER</span> -->
                 </div>
 
-                <div id="popdown" class="submenu center">
-                    <ul id="research" class="subnavigation">
-                        <li> <a class="current" href="projects.html#">        PROJECTS    </a> </li>
-                        <li> <a class="waiting" href="publications.html#">    PUBLICATIONS   </a> </li>
+                <div id="popupA" class="submenu-container">
+                    <ul class="submenu">
+                        <li id="research"> <a class="current" href="projects.html#">        PROJECTS    </a> </li>
+                        <li id="research"> <a class="waiting" href="publications.html#">    PUBLICATIONS   </a> </li>
+                        <li id="research"> <a class="waiting" href="publications.html#">    RARE-EVENT SAFETY   </a> </li>
+                        <li id="research"> <a class="waiting" href="publications.html#">    ROBUST CONTROL   </a> </li>
+                        <li id="research"> <a class="waiting" href="publications.html#">    LISA POINTING   </a> </li>
+                    </ul>
+                </div>
+                <div id="popupB" class="submenu-container">
+                    <ul class="submenu">
+                        <li id="misc"> <a class="waiting" href="fun.html">        FUN PROJECTS     </a> </li>
+                        <li id="misc"> <a class="waiting" href="gallery.html">    GALLERY           </a> </li>
+                        <!-- <li> <a class="waiting" href="tikz.html">       TIKZ              </a> </li> -->
                     </ul>
                 </div>
 
-                <div class="menu">
-                    <ul class="navigation">
+                <div class="menu-container">
+                    <ul class="menu">
                         <li> <a class = "waiting" href="index.html">                      ABOUT       </a> </li>
-                        <li> <a onclick="toggledown('popdown',this);" class ="current active" href="#">   RESEARCH    </a> </li>
-                        <li> <a class = "waiting" href="news.html">                      NEWS       </a> </li>
-                        <!-- <li> <a class = "waiting" href="fun.html">                   EXTRA       </a> </li> -->
+                        <li> <a onclick="toggleA(this,B);" id="A" class ="current deactive" href="#">   RESEARCH    </a> </li>
+                        <li> <a onclick="toggleB(this,A);" id="B" class = "waiting deactive" href="#">            MISC              </a> </li>
                         <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
                     </ul>
                 </div>
@@ -79,12 +89,12 @@
                                 <img src="./gifs/out2.gif" alt="photo" style="display: block" width=100% />
                             </div>
                             <div class="col-8"  style="margin-left: 10px; margin-right:10px">
-                                <h3 style="margin-top:0px; margin-bottom: 5px;"><b>MARITIME INTERNET OF THINGS (MARIOT)</b><span class="summary" style="font-size:15px;"> [2020-present]</span> </h3>
+                                <h3 style="margin-top:0px; margin-bottom: 5px;"><b>MARIOT</b><span class="summary" style="font-size:15px;"> [2020-present]</span> </h3>
                                 <p style="font-size: 10px;margin-top:-5px;">SEE LIST OF PARTNERS <a target="_blank" href="https://www.sternula.com/index.php/mariot-partners/">&nearhk;</a></p>
                                 <p>Summary: <span class="summary">Global VDES-SAT constellation network to provide maritime safety and navigational services.</span></p>
                                 <!-- <p>My contributions are an end-to-end satellite constellation network simulator for system verification and providing advice regarding safety operations (e.g. probability of collision, avoidance maneuvers, etc).</p> -->
                                 <p class="keyword">Keywords: Satellite network simulator, Verification, Phython, Spacecraft safety.</p>
-                                <p><span style="font-size:11px">EXTERNAL LINK TO VIDEO  <a target="_blank" href="https://www.youtube.com/watch?v=gJ93FTlVeIM">&nearhk;</a> AND CODE (TBA)  <a target="_blank" href="#">&nearhk;</a></span>
+                                <!-- <p><span style="font-size:11px">EXTERNAL LINK TO VIDEO  <a target="_blank" href="https://www.youtube.com/watch?v=gJ93FTlVeIM">&nearhk;</a> AND CODE (TBA)  <a target="_blank" href="#">&nearhk;</a></span> -->
                             </div>
                         </div>
                     </div>
@@ -169,8 +179,7 @@
                                 <img src="./images/T500_slung_test.png" alt="photo" style="display: block" width=100% />
                             </div>
                             <div class="col-8"  style="margin-left: 10px; margin-right:10px;">
-                                <h3 style="margin-top:-1px;margin-bottom: 5px;"><b>SafeEYE</b> <span class="summary" style="font-size:15px;">[2019-2020]</span></h3>
-                                <p style="font-size: 10px;margin-top:-1px;">@ DRONE RESEARCH LAB, AALBORG UNIVERSITY.</p>
+                                <h3 style="margin-top:-1px;margin-bottom: 5px;"><b>SAFE-EYE</b> <span class="summary" style="font-size:15px;">[2019-2020]</span></h3> <p style="font-size: 10px;margin-top:-1px;">@ DRONE RESEARCH LAB, AALBORG UNIVERSITY.</p>
                                 <p>Summary: <span class="summary">Design, construction and testing of an automated emergency landing system for big drones (&gt;7kg).</span></p>
                                 <p class="keyword">Keywords: UAV Risk Mitigation</p>
                             </div>
@@ -185,8 +194,23 @@
             <!--     <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="30px" /></a> -->
             <!--     <!-1- <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -1-> -->
             <!-- </div> -->
+
         </div>
+
+        <div class="vertspace">
+            <div class="row center hidden">
+                <span class="center circle"></span>
+            </div>
+            <div class="row center hidden">
+                <span class="center circle"></span>
+            </div>
+            <div class="row center hidden">
+                <span class="center circle"></span>
+            </div>
+        </div>
+        <div class="footer center hidden">
+            <p>Aitor Ramirez Gomez &copy; 2024</p>
+        </div>
+
     </body>
-
-
 </html>

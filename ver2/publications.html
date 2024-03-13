@@ -12,28 +12,38 @@
     <body>
 
         <div class="header">
-                <div class="name">
-                    <p class="title">ARG</p>
-                    <p class="subtitle">GNC Engineer</p>
+                <div class="logo">
+                    <span class="title">AITOR</span><span class="title" style="color: #444">GOMEZ</span>
+                    <!-- <span class="subtitle">GNC ENGINEER</span> -->
                 </div>
 
-                <div id="popdown" class="submenu center">
-                    <ul id="research" class="subnavigation">
-                        <li> <a class="waiting" href="projects.html#">      PROJECTS    </a> </li>
-                        <li> <a class="current" href="publications.html#">    PUBLICATIONS   </a> </li>
+                <div id="popupA" class="submenu-container">
+                    <ul class="submenu">
+                        <li id="research"> <a class="waiting" href="projects.html#">        PROJECTS    </a> </li>
+                        <li id="research"> <a class="current" href="publications.html#">    PUBLICATIONS   </a> </li>
+                        <li id="research"> <a class="waiting" href="publications.html#">    RARE-EVENT SAFETY   </a> </li>
+                        <li id="research"> <a class="waiting" href="publications.html#">    ROBUST CONTROL   </a> </li>
+                        <li id="research"> <a class="waiting" href="publications.html#">    LISA POINTING   </a> </li>
+                    </ul>
+                </div>
+                <div id="popupB" class="submenu-container">
+                    <ul class="submenu">
+                        <li id="misc"> <a class="waiting" href="fun.html">        FUN PROJECTS     </a> </li>
+                        <li id="misc"> <a class="waiting" href="gallery.html">    GALLERY           </a> </li>
+                        <!-- <li> <a class="waiting" href="tikz.html">       TIKZ              </a> </li> -->
                     </ul>
                 </div>
 
-                <div class="menu">
-                    <ul class="navigation">
+                <div class="menu-container">
+                    <ul class="menu">
                         <li> <a class = "waiting" href="index.html">                      ABOUT       </a> </li>
-                        <li> <a onclick="toggledown('popdown',this);" class ="current active" href="#">   RESEARCH    </a> </li>
-                        <li> <a class = "waiting" href="news.html">                      NEWS       </a> </li>
-                        <!-- <li> <a class = "waiting" href="fun.html">                   EXTRA       </a> </li> -->
+                        <li> <a onclick="toggleA(this,B);" id="A" class ="current deactive" href="#">   RESEARCH    </a> </li>
+                        <li> <a onclick="toggleB(this,A);" id="B" class = "waiting deactive" href="#">            MISC              </a> </li>
                         <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
                     </ul>
                 </div>
         </div>
+
 
         <div class="grid-container">
         <!--Title-->
@@ -51,6 +61,21 @@
                 </div>
             </div>
 
+        </div>
+
+        <div class="vertspace">
+            <div class="row center hidden">
+                <span class="center circle"></span>
+            </div>
+            <div class="row center hidden">
+                <span class="center circle"></span>
+            </div>
+            <div class="row center hidden">
+                <span class="center circle"></span>
+            </div>
+        </div>
+        <div class="footer center hidden">
+            <p>Aitor Ramirez Gomez &copy; 2024</p>
         </div>
 
     </body>

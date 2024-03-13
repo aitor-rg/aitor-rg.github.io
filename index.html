@@ -7,76 +7,243 @@
         <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
     <script defer src="./js/app.js"></script>
-    </head>
+    <!-- the following needed for the smooth scroll behavior coded in app.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
 
     <body>
 
         <div class="header">
-                <div class="name">
-                    <p class="title">ARG</p>
-                    <p class="subtitle">GNC Engineer</p>
-                </div>
-
-                <div id="popup" class="submenu center">
-                    <ul id="research" class="subnavigation">
-                        <li> <a class="waiting" href="projects.html#">        PROJECTS    </a> </li>
-                        <li> <a class="waiting" href="publications.html#">    PUBLICATIONS   </a> </li>
-                    </ul>
-                </div>
-
-                <div class="menu">
-                    <ul class="navigation">
-                        <li> <a class = "current" href="index.html">                      ABOUT       </a> </li>
-                        <li> <a onclick="toggleup('popup',this);" class ="waiting deactive" href="#">   RESEARCH    </a> </li>
-                        <li> <a class = "waiting" href="news.html">                      NEWS       </a> </li>
-                        <!-- <li> <a class = "waiting" href="fun.html">                   EXTRA       </a> </li> -->
-                        <li> <a target="_blank" class = "waiting" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
-                    </ul>
+                <div class="logo">
+                    <span class="name">AITOR GOMEZ</span>
                 </div>
         </div>
 
+        <div class="menu-container">
+            <ul class="menu">
+                <li> <a class="current waiting" href="#about">  ABOUT       </a> </li>
+                <li> <a class="waiting" href="#projects">       PROJECTS    </a> </li>
+                <li> <a class="waiting" href="#research">       RESEARCH    </a> </li>
+                <li> <a class="waiting" href="#publications">   PUBLICATIONS    </a> </li>
+                <!-- <li> <a class="waiting" href="#misc">            MISC              </a> </li> -->
+                <li> <a class="waiting" target="_blank" href="./files/cv_aitorRG.pdf" download>CV</a> </li>
+            </ul>
+        </div>
 
-        <div class="grid-container">
 
-            <p class="section-title active center" href="#">BIO</p>
-                <div class="row center hidden">
-                        <!-- <div class="col-2" style="padding:50px;"> -->
-                        <!--     <img src="./images/img_cv_dark.png" width="100%"/> -->
-                        <!-- </div> -->
-                        <div class="col-7" style="padding:10px;">
-                            <!-- <h1>Aitor R Gomez</h1> -->
-                            <!-- <h2>Guidance Navigation and Control Engineer</h2> -->
-                            <!-- <p style="font-size:10px">PH.D. CONTROL AND AUTOMATION</p> -->
-                            <!-- <p style="font-size:10px">M.SC. CONTROL AND AUTOMATION</p> -->
-                            <!-- <p style="font-size:10px">B.SC. INDUSTRIAL ENGINEERING</p> -->
 
-                            <!-- <p>Artificial satellites are rapidly becoming a fundamental part of our future. Yet, as the space environment gets increasingly congested and contested, many aspects of space are still unregulated, posing a threat to all those assets we now depend on for navigation, communication, weather forcast, and more.</p> -->
-                            <!-- <p>Sustainable development has proven to be the key to withstand the growing complexity of the world. Achieving sustainability in the space environment, as in any other field, is not an endeavor of a single individual but rather a cooperative effort that spans across multiple disciplines.</p> -->
-                            <!-- <p>As a GNC Engineer, and a space exploration enthusiast, I am devoted to the development of algorithms and technology for the sustainable progress of the space industry. I value collaborative learning to the highest degree, recognizing it as the most effective means of acquiring knowledge and fostering innovation, and I believe in sustainability as the driving force for progress.</p> -->
-                            <p>I am a guidance, navigation and control engineer with a solid foundation on various technical disciplines. I have a deep passion towards physics and engineering, as well as a strong interest in understanding systems behavior through rigorous mathematics. I specialized in control methods to enhance safety of spacecrafts, yet my expertise varies from classical to modern, nonlinear and decentralized control theory. I am dedicated to the development of algorithms and technology for the sustainable progress of the space industry, and I value collaborative learning to the highest degree, recognizing it as the most effective means of acquiring knowledge and fostering innovation. I have also published various articles in relevant peer reviewed control conferences related to GNC strategies for drones and spacecrafts, lectured linear algebra and differential equations to large groups of Industrial engineering students and actively participated in a student-driven project aiming at constructing and controlling an autonomous space rover.</p>
-                            <p style="margin-top:50px;"><i>Aitor R Gomez, PhD</i></p>
-                        </div>
+        <div id="about" class="section" style="height: 100vh; display: flex; align-items:center; margin-top:-30px;">
+
+            <div class="bio">
+                <p>
+                I am a control engineer with a solid foundation on various technical disciplines. I have a deep passion towards physics and engineering, as well as a strong interest in understanding systems behavior through rigorous mathematics. I specialized in control methods to enhance safety of spacecrafts, yet my expertise varies from classical to modern, nonlinear and decentralized control theory. I am dedicated to the development of algorithms and technology for the sustainable progress of the space industry, and I value collaborative learning to the highest degree. I have also published various articles in relevant peer reviewed control conferences and journals related to GNC strategies for drones and spacecrafts, lectured linear algebra and differential equations to large groups of Industrial engineering students and actively participated in a student-driven project aiming at constructing and controlling an autonomous space rover.
+                <!-- I am a control engineer with a deep passion towards physics and engineering, and a strong interest in understanding systems behavior through rigorous mathematics. -->
+                <!-- I am dedicated to the development of algorithms and technology for the sustainable progress of the space industry, and I value collaborative learning to the highest degree. -->
+                <!-- I have contributed to projects in different domains, such as ESA's funded project SURE and the development of <a href="https://www.sternula.com/projects/mariot/">MARIOT</a> and SURE, -->
+                <!-- I received my BS (2016) from the Barcelona School of Industrial Engineering, and developed my BS thesis in the Institute of Robotics and industrial Informatics with Prof. Federico Thomas as main advisor. -->
+                <!-- I obtained my MS (2019) and PhD (2024) in Control and Automation from the University of Aalborg under the supervision of Prof. Rafal Wisniewski. -->
+                <!-- In 2022, I was a visiting scholar at the Mechanical and Aerospace Department of the State University of New York at Buffalo, where I worked closely with Prof. John Crassidis. -->
+                <!-- I am a control engineer with a deep passion towards physics and engineering, and a strong interest in understanding systems behavior through rigorous mathematics. -->
+                <!-- I am dedicated to the development of algorithms and technology for the sustainable progress of the space industry, and I value collaborative learning, recognizing it as the most effective means of acquiring knowledge and fostering innovation. -->
+                <!-- A. R. Gomez has contributed to large projects such as ESA's funded project SURE and the development of<a href="https://www.sternula.com/projects/mariot/">MARIOT</a> and SURE, -->
+                <!-- After my PhD program, I became a Postdoctoral researcher (2024) with Prof. Jakob Stoustrup as my advisor to develop an ESA funded project with the aim of enhancing safety and capabilities of launcher vehicles. -->
+                <!-- In addition, I have published various articles in relevant peer reviewed conferences and journals, and lectured linear algebra and differential equations to large groups of Industrial engineering students. -->
+                <!-- My research interest lies in safe and robust control, adaptive estimation, optimization and modelling. -->
+                </p>
+            </div>
+
+        </div>
+
+        <div id="projects" class="section">
+
+            <div class="row section-title">
+                PROJECTS
+            </div>
+
+
+            <div class="project">
+                <div class="date">
+                    <span class="summary">[2023-2024]</span>
                 </div>
-
-            <a class="collapsible section-title deactive center" href="#">CONNECT</a>
-            <div class="collapsed">
-                <div class="row center">
-                        <div class="contact-info"  style="padding:10px;">
-                            <p><b class="contact">[EMAIL]:  </b>aitoramirezg@protonmail.com </p>
-                            <p><b class="contact">[GITHUB]: </b>github/aitor-rg</p>
-                            <p><b class="contact">[LINKEDIN]: </b>/in/aitor-rg</p>
-                        </div>
+                <div class="project-description">
+                    <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>Smart laUncheR Enabler (SURE) </b></h2>
+                    <p style="font-size:10px;margin-top:-1px;">Funded by the European Space Agency (ESA)</p>
+                    <p><span class="summary">Consortium partners: </span><a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a> (Project Leader), <a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a>, <a target="_blank" href="https://www.orbex.space/">Orbex</a>.</p>
+                    <p><span class="summary">Summary:</span> .</p>
                 </div>
+                <div class="project-image">
+                    <!-- <img src="./images/T500_slung_test.png" alt="photo" style="display: block" width=100% /> -->
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="date">
+                    <span class="summary">[2020-2022]</span>
+                </div>
+                <div class="project-description">
+                    <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>MARitime IoT (MARIOT) </b></h2>
+                    <p style="font-size:10px;margin-top:-1px;">Funded by the Innovation Fund Denmark</p>
+                    <p><span class="summary">Consortium partners: </span><a target="_blank" href="https://www.sternula.com/projects/mariot/">Sternula</a> (Project Leader), <a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a>, <a target="_blank" href="https://space-inventor.com/">Space Inventors S/A</a>, <a target="_blank" href="https://gatehouse.com/">GateHouse</a>, <a target="_blank" href="https://www.satlab.com/">Satlab</a> and <a target="_blank" href="https://www.dmi.dk/">Danmarks Meteorologiske Institute</a>.</p>
+                    <p><span class="summary">Summary: </span>Global VDES-SAT constellation network to provide maritime safety and
+                    navigational services. My main responsibilities are to develop a simulation environment of the satellite constellation
+                    and communication protocols for system verification, and to provide advice in relation to safety protocols (collision
+                    probability and avoidance maneuvers).</p>
+                </div>
+                <div class="project-image">
+                        <img src="./gifs/out2.gif" alt="photo" style="display: block" width=100% />
+                </div>
+            </div>
+
+
+            <div class="project">
+                <div class="date">
+                    <span class="summary">[2019-2020]</span>
+                </div>
+                <div class="project-description">
+                    <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>SafeEYE</b></h2>
+                    <p style="font-size:10px;margin-top:-1px;">Funded by the Innovation Fund Denmark</p>
+                    <!-- <p style="font-size: 10px;">@ ROCKET SCIENCE LAB, AALBORG UNIVERSITY.</p> -->
+                    <p><span class="summary">Summary: </span>Design, construction and testing of an automated flight termination system for
+                    big drones (&gt;7kg), including the implementation of neural-networks to classify landable ground images and
+                    to monitor structural vibrations of the drone; and the formulation of a decision function to terminate the flight.</p>
+                </div>
+                <!-- <div class="project-image"> -->
+                <!--     <img src="./images/T500_slung_test.png" alt="photo" style="display: block" width=100% /> -->
+                <!-- </div> -->
+            </div>
+
+        </div>
+
+        <div id="research" class="section">
+            <div class="row section-title">
+                RESEARCH
+            </div>
+
+
+            <div class="project project-title deactive collapsible">
+                <div>
+                    <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>UNSAFE RARE EVENTS</b></h2>
+                    <p style="font-size:10px;margin-top:-1px;">SPACECRAFT COLLISION ANALYSIS</p> </div>
+            </div>
+            <div class="project collapsed">
+                <div class="project-description">
+                    <p><i>Rare events</i> is the nomination given to occurrences that are characterized by very low probabilities. When the rare
+                    event is of a hazardous nature, we refer to it as an <i>unsafe rare event</i>.</p>
+                    <p>In space, there exist situations in which
+                </div>
+                <div class="project-image">
+                    <img src="./images/LDT.png" alt="photo" style="display: block" width=50% />
+                </div>
+            </div>
+
+
+            <div class="project project-title deactive collapsible">
+                <div>
+                    <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>DESCENTRALIZED GUIDANCE FOR PRECISE POINTING</b></h2>
+                    <p style="font-size:10px;margin-top:-1px;">LASER INTERFEROMETER SPACE ANTENNA POINTING ACQUISITION.</p> </div>
+            </div>
+            <div class="project collapsed">
+                <div class="project-description">
+                    <p> The Laser Interferometer Space Antenna (LISA) is a highly complex space mission from NASA and ESA, aiming at detecting and characterizing gravitational waves (GWs).
+                    It is the result of the coordinated efforts of three spacecraft maintaining frequency-stabilized laser links between each other, resulting in an equilateral triangle formation. Detection of GWs is
+                    enabled by the monitoring of frequency fluctuations of the lasers, produced by space-time ripples altering the distance between proof masses –the interferometer arm length– located inside each spacecraft. The barycentre of
+                    the formation follows an heliocentric orbit lying in the ecliptic plane, with radius of 1AU and 20 degrees behind the Earth, and the interferometer arm length is 5·10⁶km. This design has been meticulously chosen to allow for
+                    observations of gravitational radiation within a spectrum not reachable by its ground-based predecessor, the Laser Interferometer Gravitational-wave Observatory (LIGO). While LIGO is capable of detecting frequencies that are
+                    limited between 10 Hz and 10 kHz, LISA has the potential of complementing those observations by detecting GWs with frequencies ranging between 10⁻⁴ Hz and 1 Hz.
+                    </p>
+                </div>
+                <div class="project-image">
+                    <img src="./gifs/LISA_GW.gif" alt="photo" style="display: block" width=50% />
+                </div>
+            </div>
+
+
+            <div class="project project-title deactive collapsible">
+                <div>
+                    <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>ROBOTICS</b></h2>
+                    <p style="font-size:10px;margin-top:-1px;">INDUSTRIAL MANIPULATORS AND PARALLEL PLATFORMS</p> </div>
+            </div>
+            <div class="project collapsed">
+                <div class="project-description">
+                    <p>                </div>
+                <div class="project-image">
+                    <img src="./gifs/parallel.gif" alt="photo" style="padding: 10px; display: block" width=50% />
+                    <img src="./gifs/IK.gif" alt="photo" style="padding: 10px; display: block" width=50% />
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="publications" class="section">
+
+            <div class="row section-title">
+                LIST OF PUBLICATIONS
+            </div>
+
+            <div class="publication">
+                <p style="font-size: 10px; margin-bottom: 50px; text-align:right;">The symbol (*) indicates equal contribution</p>
+                <p><b>Gomez, A. R.</b>, Nebelecky, K. C. & Crassidis, J., <a target="_blank" href="">“Maneuver Determination in Near-Earth and Cislunar Space without Time/Magnitude Knowledge”</a>, <i>AIAA Journal of Guidance, Control and Dynamics, 2023. (Submitted)</i></p>
+                <p><b> Gomez, A. R.*</b> & Al Ahdab, M.*, <a target="_bank" href="https://arxiv.org/abs/2303.02743">“Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition”</a>, <i>IFAC World Congress, 2023.</i></p>
+                <p><b>Gomez, A. R.</b> & Wisniewski, R., <a target="_blank" href="https://ieeexplore.ieee.org/document/9992598" >“Stochastic Safety in Space Conjunctions”</a>, <i>IEEE Conference on Decision and Control (CDC), 2022.</i></p>
+                <p><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i></p>
+                <p>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i></p>
             </div>
         </div>
 
-        <!-- <div class="footer hidden"> -->
-        <!--     <p>Connect with me</p> -->
-        <!--     <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="25px"/></a> -->
-        <!--     <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="30px" /></a> -->
-        <!--     <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="30px" /></a> -->
-        <!--     <!-1- <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -1-> -->
+
+
+        <!-- <div class="section"> -->
+
+        <!--         <a class="collapsible section-title deactive center" href="">CONNECT</a> -->
+        <!--         <div class="collapsed"> -->
+        <!--             <div class="row center"> -->
+        <!--                     <div class="contact-info center"  style="padding:10px;"> -->
+        <!--                         <div class="col-4 center"> -->
+        <!--                             <p><b class="contact">[EMAIL]:</b></p> -->
+        <!--                             <p>arg@es.aau.dk</p> -->
+        <!--                         </div> -->
+        <!--                         <div class="col-4 center"> -->
+        <!--                             <p><b class="contact">[GITHUB]:</b></p> -->
+        <!--                             <p>github/aitor-rg</p> -->
+        <!--                         </div> -->
+        <!--                         <div class="col-4 center"> -->
+        <!--                             <p><b class="contact">[LINKEDIN]:</b></p> -->
+        <!--                             <p>/in/aitor-rg</p> -->
+        <!--                         </div> -->
+        <!--                     </div> -->
+        <!--             </div> -->
+        <!--         </div> -->
         <!-- </div> -->
+
+
+
+        <div class="contact-container">
+            <div class="contact">
+                <div class="row">
+                    <span>Connect with me</span>
+                </div>
+                <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="20px"/></a>
+                <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="25px" /></a>
+                <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="25px" /></a>
+                <!-- <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -->
+            </div>
+        </div>
+
+        <div class="vertspace">
+            <div class="row center hidden">
+                <span class="center circle"></span>
+            </div>
+            <div class="row center hidden">
+                <span class="center circle"></span>
+            </div>
+            <div class="row center hidden">
+                <span class="center circle"></span>
+            </div>
+        </div>
+        <div class="summary center hidden">
+            <p>Aitor Ramirez Gomez &copy; 2024</p>
+        </div>
 
 
     </body>
