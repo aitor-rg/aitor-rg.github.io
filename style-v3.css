@@ -296,8 +296,16 @@ body {
     width: 55%;
     margin-right: 20px;
 }
-.project-image {
-    width: 30%;
+.project-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* border: 1pt solid blue; */
+    margin-left: 20px;
+}
+.research-image img {
+    width: 300px;
+    /* border: 1pt solid blue; */
 }
 .date {
     width: 70px;
