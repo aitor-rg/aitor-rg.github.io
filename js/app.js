@@ -59,7 +59,7 @@ $(document).ready(function(){
       // The optional number (500) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 200, function(){
+      }, 100, function(){
 
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
@@ -67,62 +67,6 @@ $(document).ready(function(){
     } // End if
   });
 });
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function toggleA(clicked,notclicked) {
-    clicked.classList.toggle("active");
-    var tag1=document.getElementById("popupA");
-    var tag2=document.getElementById("popupB");
-    var transform1 = "translateY(0%)";
-    var transform2 = "translateY(-300%)";
-    var state1 = "visible";
-    var state2 = "hidden";
-
-    if (tag1.style.visibility == "hidden" && tag2.style.visibility == "visible"){
-        notclicked.classList.toggle("active");
-        tag1.style.visibility = state1;
-        tag1.style.transform = transform1;
-        tag2.style.visibility = state2;
-        tag2.style.transform = transform2;
-    }
-    else if (tag1.style.visibility == "visible"){
-        tag1.style.visibility = state2;
-        tag1.style.transform = transform2;
-    }
-    else {
-        tag1.style.visibility = state1;
-        tag1.style.transform = transform1;
-        tag2.style.visibility = state2;
-    }
-}
-function toggleB(clicked,notclicked) {
-    clicked.classList.toggle("active");
-    var tag1=document.getElementById("popupA");
-    var tag2=document.getElementById("popupB");
-    var transform1 = "translateY(0%)";
-    var transform2 = "translateY(-300%)";
-    var state1 = "visible";
-    var state2 = "hidden";
-
-    if (tag2.style.visibility == "hidden" && tag1.style.visibility == "visible"){
-        notclicked.classList.toggle("active");
-        tag2.style.visibility = state1;
-        tag1.style.visibility = state2;
-        tag2.style.transform = transform1;
-        tag1.style.transform = transform2;
-    }
-    else if (tag2.style.visibility == "visible"){
-        tag2.style.visibility = state2;
-        tag2.style.transform = transform2;
-    }
-    else {
-        tag2.style.visibility = state1;
-        tag2.style.transform = transform1;
-        tag1.style.visibility = state2;
-    }
-}
-
 
 var coll = document.getElementsByClassName("collapsible");
 var i;

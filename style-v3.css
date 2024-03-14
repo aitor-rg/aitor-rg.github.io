@@ -384,6 +384,7 @@ body {
 .menu a.current{
     color: #f2f2f2;
     transform: translateX(30px);
+    transition: 700ms;
 }
 .contact-container {
     width: 140px;
@@ -436,7 +437,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: table-cell;
-    transition: 600ms;
+    transition: 700ms;
 }
 .waiting:hover{
     color: #fdc666;
