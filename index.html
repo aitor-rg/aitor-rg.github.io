@@ -18,6 +18,9 @@
                     <span class="name">AITOR GOMEZ</span>
                 </div>
         </div>
+        <div class="header-image">
+            <img src="./images/apollo11.png" alt="photo" style="display: block" width=100% />
+        </div>
 
         <div class="menu-container">
             <ul class="menu">
@@ -181,18 +184,37 @@
             </div>
             <div class="project collapsed">
                 <div class="project-description">
-                    <p> The Laser Interferometer Space Antenna (LISA) is a highly complex space mission from NASA and ESA, aiming at detecting and characterizing gravitational waves (GWs).
-                    It is the result of the coordinated efforts of three spacecraft maintaining frequency-stabilized laser links between each other, resulting in an equilateral triangle formation. Detection of GWs is
-                    enabled by the monitoring of frequency fluctuations of the lasers, produced by space-time ripples altering the distance between proof masses –the interferometer arm length– located inside each spacecraft. The barycentre of
-                    the formation follows an heliocentric orbit lying in the ecliptic plane, with radius of 1AU and 20 degrees behind the Earth, and the interferometer arm length is 5·10⁶km. This design has been meticulously chosen to allow for
-                    observations of gravitational radiation within a spectrum not reachable by its ground-based predecessor, the Laser Interferometer Gravitational-wave Observatory (LIGO). While LIGO is capable of detecting frequencies that are
-                    limited between 10 Hz and 10 kHz, LISA has the potential of complementing those observations by detecting GWs with frequencies ranging between 10⁻⁴ Hz and 1 Hz.
+                    <p> The Laser Interferometer Space Antenna (LISA) is an ambitious space mission led by NASA and the European Space Agency (ESA) with the goal of detecting and understanding gravitational waves (GWs). This mission involves a trio of spacecraft positioned in an equilateral triangle formation, each linked by frequency-stabilized lasers. These spacecraft work together to detect gravitational waves by observing the fluctuations in the laser frequencies, which are affected by the ripples in space-time that alter the distances between internal proof masses.
                     </p>
+                    <p>
+                    An aspect of this mission that I analyzed was the Pointing Acquisition
+                    and Tracking (PAT) phase, namely, the challenge of aligning
+                    the spacecraft's internal interferometers with incoming lasers
+                    from the other two spacecraft. This alignment must meet exceptionally
+                    stringent accuracy requirements to enable scientific observations,
+                    with misalignments not exceeding 1 microrad. To that end, every spacecraft
+                    is equipped with two identical optical assemblies (OAs)
+                    as payload, each of which contain, among others, the
+                    proof mass, a telescope, a laser source and laser
+                    interferometer detectors.
+                    </p>
+                    <p>
+                    A guidance system has been developed to manage this alignment process
+                    by solving a cooperative game problem, utilizing a new algorithm
+                    designed to provide precise tracking references to each of
+                    the spacecrafts' controller for a fast, simultaneous and
+                    accurate alignment of the laser beams into the
+                    interferometer detectors.
+                    <p>
+                    Related papers:
+                    </p>
+                <p><b> Gomez, A. R.*</b> & Al Ahdab, M.*, <a target="_bank" href="https://arxiv.org/abs/2303.02743">“Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition”</a>, <i>IFAC World Congress, 2023.</i></p>
+
                 </div>
                 <div class="research-image">
-                    <!-- <img src="./gifs/LISA_GW.gif" alt="photo" style="display: block" /> -->
-                    <img src="./images/lisa.png" alt="photo" style="display: block" width=50% />
-                    <img src="./images/spacecraft.png" alt="photo" style="display: block" width=50% />
+                    <img src="./gifs/LISA_GW.gif" alt="photo" style="display: block" />
+                    <!-- <img src="./images/lisa.png" alt="photo" style="display: block" width=50% /> -->
+                    <!-- <img src="./images/spacecraft.png" alt="photo" style="display: block" width=50% /> -->
                 </div>
             </div>
 
