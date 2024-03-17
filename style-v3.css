@@ -182,6 +182,16 @@ body {
     width: 270px;
     height: 260px;
     object-fit: cover;
+    -webkit-animation: floating 200s linear  infinite;
+    animation: floating 200s linear  infinite;
+}
+@-webkit-keyframes floating {
+    0% { transform: rotate(0deg); }
+    100% {  transform: rotate(360deg); }
+}
+@keyframes floating {
+    0% { transform: rotate(0deg); }
+    100% {  transform: rotate(360deg); }
 }
 .header {
     top: 0px;
@@ -363,9 +373,10 @@ body {
 }
 .hidden-t {
     opacity: 0;
-    transition: 1s;
-    filter: blur(5px);
+    transition: 3s;
+    /* filter: blur(5px); */
     transform: translateY(20%);
+    transform: rotate(-5deg);
 }
 .show {
     opacity: 1;
@@ -373,9 +384,10 @@ body {
     transform: translateY(0%);
 }
 .show-t {
-    opacity: 0.2;
+    opacity: 1;
     filter: blur(0);
     transform: translateY(0%);
+    transform: rotate(0deg);
 }
 .menu-container {
     z-index: 100;
