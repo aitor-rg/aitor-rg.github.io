@@ -182,8 +182,8 @@ body {
     width: 270px;
     height: 260px;
     object-fit: cover;
-    -webkit-animation: floating 200s linear  infinite;
-    animation: floating 200s linear  infinite;
+    -webkit-animation: floating 400s linear  infinite;
+    animation: floating 400s linear  infinite;
 }
 @-webkit-keyframes floating {
     0% { transform: rotate(0deg); }
@@ -217,7 +217,7 @@ body {
 .name {
     font-family: 'Oswald', sans-serif;
     font-size: 80px;
-    /* font-weight: 700; */
+    font-weight: 700;
     /* color: white; */
     /* color: green; */
     /* color: #fdc666; */
@@ -430,7 +430,7 @@ body {
 }
 .menu a.current{
     color: #f2f2f2;
-    transform: translateX(30px);
+    transform: translateX(15px);
     transition: 700ms;
 }
 .contact-container {
