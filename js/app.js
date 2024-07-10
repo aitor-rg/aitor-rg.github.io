@@ -22,7 +22,7 @@ hiddenElements1.forEach((el) => observer1.observe(el));
 const hiddenElements2 = document.querySelectorAll('.hidden-t');
 hiddenElements2.forEach((el) => observer2.observe(el));
 
-/* scrolling */
+/* vertical scrolling */
 let sections = document.querySelectorAll('.section');
 let navLinks = document.querySelectorAll('.menu a');
 
@@ -42,7 +42,7 @@ window.onscroll = () => {
     });
 };
 
-/* smooth scroll behavior for all browsers */
+/* smooth vertical scroll behavior for all browsers */
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -68,6 +68,33 @@ $(document).ready(function(){
   });
 });
 
+
+/* horizontal (infinite) scroll behaviour */
+const scrollers = document.querySelectorAll(".scroller");
+
+//check if user prefers horizontal animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    enableHorizontalScroll();
+};
+
+function enableHorizontalScroll() {
+    scrollers.forEach((scroller) => {
+        scroller.setAttribute("data-animated", true);
+
+        const scrollerInside = scroller.querySelector(".scroller_inside");
+        const scrollerContent = Array.from(scrollerInside.children);
+
+        scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInside.appendChild(duplicatedItem);
+        });
+    });
+};
+
+
+
+/* collapsible behaviour */
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
