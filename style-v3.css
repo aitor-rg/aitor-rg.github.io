@@ -26,7 +26,7 @@ h1 {
     margin-bottom:-20px;
 }
 h2 {
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
 h3 {
@@ -209,7 +209,7 @@ body {
     clear: both;
     width: 100%;
     height: 30px;
-    margin-top: 200px;
+    margin-top: 20vh;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     font-weight: 700;
@@ -229,7 +229,7 @@ body {
 }
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,0.5fr));
     width: 70%;
     gap: 3rem;
     margin-top: 200px;
@@ -237,13 +237,16 @@ body {
     margin-right: auto;
 }
 .project-item {
-    height: 500px;
+    height: 200px;
+    width: 100%;
     margin-left:auto;
     margin-right:auto;
     background-color: black;
     background-image: none;
     background-size: cover;
     background-repeat: no-repeat;
+}
+#sure {
 }
 #mariot {
 }
@@ -293,8 +296,9 @@ body {
     transition: 0.5s;
 }
 .collapsible:hover {
-    color: #fdc666;
+    /* color: #fdc666; */
     /* color: #FF850E; */
+    color: #bbb;
 
 }
 .collapsed {
@@ -333,23 +337,45 @@ body {
     transform-origin: 11px 20px;
     transform: rotate(135deg);
 }
-.project {
-    width: auto;
+.research-line {
+    width: 70%;
     display: flex;
-    margin-left: 220px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
     /* margin-bottom: 15px; */
     margin-bottom: 20px;
     text-align: justify;
     /* border: 1pt solid blue; */
 }
-.project-title:hover {
+.research-description {
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    float:left;
+    display:block;
+}
+.research-title {
+    width: 100%;
+}
+.research-title:hover {
     /* border-top: 1px solid #222; */
     /* border-bottom: 1px solid #222; */
     z-index: 5;
     cursor: pointer;
     transform: scale(100.5%);
     transition: 250ms;
+}
+.project-subtitle {
+    width:70%;
+    float:left;
+    font-size:10px;
+    margin-top: -13px;
+}
+.project-subtitle.date {
+    width:30%;
+    text-align: right;
+    margin-top: -13px;
 }
 .project-description {
     width: auto;
@@ -359,7 +385,11 @@ body {
     margin-left: 0;
 }
 .project-description h2 {
+    height:30px;
     border-bottom: 1pt solid white;
+}
+.project-info {
+
 }
 .project-image img {
     width: 250px;
@@ -368,20 +398,18 @@ body {
     /* border: 1pt solid blue; */
     margin-left: 20px;
 }
+.research-image  {
+    display:block;
+    float:left;
+}
 .research-image img {
     width: 350px;
     /* border: 1pt solid blue; */
 }
-.date {
-    width: 70px;
-    float: left;
-    font-size: 10px;
-    margin-top: 12px;
-}
-.publication {
-    width: auto;
-    margin-left: 220px;
-    margin-right: 10px;
+.publications-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 25px;
     text-align: justify;
 }
@@ -457,7 +485,7 @@ body {
 .contact-container {
     width: 140px;
     /* min-width: 140px; */
-    margin-top: 85vh;
+    margin-top: 75vh;
     margin-left:auto;
     margin-right:auto;
     align-items: center;
@@ -584,7 +612,7 @@ body {
 
 
 /* media queries */
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1200px) {
 /* For TABLETS: */
     [class*="col-"] {
         width: 100%;
@@ -595,6 +623,9 @@ body {
     }
     h2 {
         font-size: 15px;
+    }
+    a {
+        font-size: 10pt;
     }
     .menu-container {
         visibility: hidden;
@@ -612,16 +643,27 @@ body {
         margin: auto;
         /* padding: 10px; */
     }
-    .bio p {
-        margin-top: 100px;
-        width: 80%;
+    .project-grid {
+        grid-template-columns: repeat(auto-fit,100%);
+        width: 100%;
+        margin-top: 50px;
     }
-    .project {
-        display: flex;
-        float: left;
+    .project-item {
         width: 100%;
         /* border: 1pt solid blue; */
-        margin: 0px;
+    }
+    .project-description {
+        width: 100%;
+        /* border: 1pt solid white; */
+    }
+    .project-description h2 {
+        height:25px;
+    }
+    .project-subtitle {
+        margin-top: -10px;
+    }
+    .project-subtitle.date {
+        margin-top: -10px;
     }
     .collapsed {
         width: 100%;
@@ -629,30 +671,37 @@ body {
         /* border: 1pt solid white; */
         float: left;
     }
-    .project-description {
-        width: 800px;
-        /* border: 1pt solid white; */
-    }
     .project-image img {
         float: left;
         width: 100%;
         /* border: 1pt solid blue; */
         margin: 0;
     }
-    .research-image img{
-        width: 70%;
+    .research-line {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .research-description {
+        display:block;
+        float:none;
+        width: 100%;
+        margin: 0;
+    }
+    .research-image {
+        width: 100%;
+        display:block;
+        float:none;
     }
     .section-title {
         width:100%;
         margin: 0px;
+        margin-top: 100px;
     }
-    .date {
-        float: left;
-        /* border: 1pt solid white; */
-        width: auto;
-        margin: 5px;
+    .contact-container {
+        margin-top: 500px;
     }
-    .publication {
+    .publications-container {
         width:100%;
         margin: 0px;
     }
