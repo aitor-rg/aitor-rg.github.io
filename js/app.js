@@ -118,13 +118,15 @@ function toggle_visibility(myid,el) {
         }
     });
 
-    var displays = document.querySelectorAll(".project-display");
+    var displays = document.querySelectorAll(".project-box");
     displays.forEach((display) => {
         if (display.id!=myid) {
             display.style.opacity = 0;
+            display.style.zIndex = 0;
         }
     });
     var clicked = document.getElementById(myid);
     clicked.style.opacity = ((clicked.style.opacity!=0) ? 0 : 1);
+    clicked.style.zIndex = ((clicked.style.zIndex!=0) ? 0 : 1);
     el.classList.toggle("opened-project");
 }
