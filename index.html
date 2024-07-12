@@ -87,64 +87,80 @@
 
             <div class="project-grid ">
 
-                <div id="sure" class="project-item">
+                <div class="project-item closed-project" onclick="toggle_visibility('sure',this)">
                     <div class="project-description">
                         <h2>Smart laUncheR Enabler (SURE)</h2>
                         <p class="project-subtitle">Funded by the European Space Agency (ESA)</p>
                         <p class="date project-subtitle">2023-2024</p>
-                        <p>Developing
-                        Avionics and on-board GNC algorithms for safe atmospheric flight, descent
-                        and landing of rockets.</p>
-                        <p><span class="summary">Consortium partners: </span><a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a> (Project Leader), <a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a>, <a target="_blank" href="https://www.orbex.space/">Orbex</a>.</p>
                     </div>
                 </div>
 
-                <div id="mariot" class="project-item">
-                   <!-- <div class="date"> -->
-                    <!--     <span class="summary">[2020-2022]</span> -->
-                    <!-- </div> -->
+                <div class="project-item closed-project" onclick="toggle_visibility('mariot',this)">
                     <div class="project-description">
                         <h2>MARitime IoT (MARIOT)</h2>
                         <p class="project-subtitle">Funded by the Innovation Fund Denmark</p>
                         <p class="date project-subtitle">2020-2021</p>
-                        <p>Global VDES-SAT constellation network to provide maritime safety and navigational services. My main responsibilities were developing a simulation environment of the satellite constellation and communication protocols for system verification, LEOP  and providing advice in relation to safety protocols (collision probability and avoidance maneuvers).  </p>
-                        <p><span class="summary">Consortium partners: </span><a target="_blank" href="https://www.sternula.com/projects/mariot/">Sternula</a> (Project Leader), <a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a>, <a target="_blank" href="https://space-inventor.com/">Space Inventors S/A</a>, <a target="_blank" href="https://gatehouse.com/">GateHouse</a>, <a target="_blank" href="https://www.satlab.com/">Satlab</a> and <a target="_blank" href="https://www.dmi.dk/">Danmarks Meteorologiske Institute</a>.</p>
                     </div>
-                    <!-- <div class="project-image"> -->
-                    <!--     <img src="./gifs/out2.gif" alt="photo" style="display: block" /> -->
-                    <!-- </div> -->
                 </div>
 
 
-                <div id="drone" class="project-item">
-                    <!-- <div class="date"> -->
-                    <!--     <span class="summary">[2019-2020]</span> -->
-                    <!-- </div> -->
+                <div class="project-item closed-project"  onclick="toggle_visibility('safeye',this)">
                     <div class="project-description">
                         <h2>SafeEYE</h2>
                         <p class="project-subtitle">Funded by the Innovation Fund Denmark</p>
                         <p class="date project-subtitle">2019-2020</p>
-                        <!-- <p style="font-size: 10px;">@ ROCKET SCIENCE LAB, AALBORG UNIVERSITY.</p> -->
-                        <p>Design, construction and testing of an automated flight termination system for big drones (&gt;7kg), including the implementation of neural-networks (for landable ground images classification and structural vibration monitoring); and the formulation of a decision function to terminate the flight.
-                        </p>
-                        <p>
-                        <span class="summary">Related papers:</span>
-                        </p>
-                        <p><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i>
-                        </p>
-                        <p>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i>
-                        </p>
-
                     </div>
-                    <!-- <div class="project-image"> -->
-                    <!--     <img src="./images/T500_slung_test.png" alt="photo" style="display: block" /> -->
-                    <!-- </div> -->
                 </div>
 
 
             </div>
 
-            <p style="margin-top:350px; font-size: 10px; text-align:center; color: #777;">Developed in collaboration with:</p>
+            <div id="sure" class="project-display">
+                <div class="project-display-container">
+                    <div class="project-display-image"
+                         style="background-image: url(./images/rocket.png);
+                                background-size: cover;
+                                background-position: center;">
+                    </div>
+                    <div class="project-display-description">
+                        <p>Developing Avionics and on-board GNC algorithms for safe atmospheric flight, descent and landing of rockets.</p>
+                        <p><span class="summary">Consortium partners: </span><a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a> (Project Leader), <a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a>, <a target="_blank" href="https://www.orbex.space/">Orbex</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mariot" class="project-display">
+                <div class="project-display-container">
+                    <div class="project-display-image"
+                         style="background-image: url(./gifs/out2.gif);
+                                background-size: cover;
+                                background-position: center;">
+                    </div>
+                    <div class="project-display-description">
+                        <p>Global VDES-SAT constellation network to provide maritime safety and navigational services. My main responsibilities were developing a simulation environment of the satellite constellation and communication protocols for system verification, LEOP  and providing advice in relation to safety protocols (collision probability and avoidance maneuvers).  </p>
+                        <p><span class="summary">Consortium partners: </span><a target="_blank" href="https://www.sternula.com/projects/mariot/">Sternula</a> (Project Leader), <a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a>, <a target="_blank" href="https://space-inventor.com/">Space Inventors S/A</a>, <a target="_blank" href="https://gatehouse.com/">GateHouse</a>, <a target="_blank" href="https://www.satlab.com/">Satlab</a> and <a target="_blank" href="https://www.dmi.dk/">Danmarks Meteorologiske Institute</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="safeye" class="project-display">
+                <div class="project-display-container">
+                    <div class="project-display-image"
+                         style="background-image: url(./images/T500_slung_test.png);
+                                background-size: cover;
+                                background-position: center;">
+                    </div>
+                    <div class="project-display-description">
+                        <p>Design, construction and testing of an automated flight termination system for big drones (&gt;7kg), including the implementation of neural-networks (for landable ground images classification and structural vibration monitoring); and the formulation of a decision function to terminate the flight.
+                        <p><span class="summary">Related papers:</span> </p>
+                        <p><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i> </p>
+                        <p>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i> </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <p style="margin-top:700px; font-size: 10px; text-align:center; color: #777;">Developed in collaboration with:</p>
             <div class="scroller hidden">
                 <ul class="logo-list scroller_inside">
                     <img src="./images/orbex.png" alt="photo" style="display: block" height=60px />
@@ -165,8 +181,8 @@
 
 
             <div class="research-line project-title deactive collapsible">
-                <div>
-                    <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>&nbsp;SAFE ASCENT AND LANDING OF ROCKETS</b></h2>
+                <div class="research-title">
+                    <h2 style="margin-top:-1px; margin-bottom: 5px;">&nbsp;SAFE ASCENT AND LANDING OF ROCKETS</h2>
                     <p style="font-size:10px;margin-top:-1px;margin-left:7px;">H-INFINITY, CONTROL BARRIER FUNCTIONS, SUCCESSIVE CONVEXIFICATION</p>
                 </div>
             </div>
@@ -239,7 +255,7 @@
 
 
             <div class="research-line project-title deactive collapsible">
-                <div>
+                <div class="research-title">
                     <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>&nbsp;AUTONOMOUS FLIGHT TERMINATION SYSTEM FOR LARGE DRONES</b></h2>
                     <p style="font-size:10px;margin-top:-1px;margin-left:7px;">NEURAL-NETWORKS, MONITORING, DECISION-MAKING</p>
                 </div>
@@ -256,9 +272,10 @@
 
 
             <div class="research-line project-title deactive collapsible">
-                <div>
+                <div class="research-title">
                     <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>&nbsp;CONTROL OF ROBOTIC MANIPULATORS</b></h2>
-                    <p style="font-size:10px;margin-top:-1px;margin-left:7px;">INDUSTRIAL MANIPULATORS, PARALLEL PLATFORMS, INVERSE KINEMATICS</p> </div>
+                    <p style="font-size:10px;margin-top:-1px;margin-left:7px;">INDUSTRIAL MANIPULATORS, PARALLEL PLATFORMS, INVERSE KINEMATICS</p>
+                </div>
             </div>
             <div class="research-line collapsed">
                 <div class="research-description">
@@ -278,7 +295,7 @@
             </div>
 
             <div class="research-line project-title deactive collapsible">
-                <div>
+                <div class="research-title">
                     <h2 style="margin-top:-1px; margin-bottom: 5px;"><b>&nbsp;LIGHTFIELDS: OCCLUSION RECONSTRUCTION</b></h2>
                     <p style="font-size:10px;margin-top:-1px;margin-left:7px;">OCCLUSIONS, FOCUS RECONSTRUCTION</p>
                 </div>

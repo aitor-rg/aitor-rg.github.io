@@ -22,7 +22,7 @@ hiddenElements1.forEach((el) => observer1.observe(el));
 const hiddenElements2 = document.querySelectorAll('.hidden-t');
 hiddenElements2.forEach((el) => observer2.observe(el));
 
-/* vertical scrolling */
+/* menu vertical scrolling */
 let sections = document.querySelectorAll('.section');
 let navLinks = document.querySelectorAll('.menu a');
 
@@ -93,7 +93,6 @@ function enableHorizontalScroll() {
 };
 
 
-
 /* collapsible behaviour */
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -108,4 +107,24 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     }
   });
+}
+
+/* toggle visibility */
+function toggle_visibility(myid,el) {
+    var projects = document.querySelectorAll(".project-item");
+    projects.forEach((project) => {
+        if (project!=el){
+            project.classList.remove("opened-project");
+        }
+    });
+
+    var displays = document.querySelectorAll(".project-display");
+    displays.forEach((display) => {
+        if (display.id!=myid) {
+            display.style.opacity = 0;
+        }
+    });
+    var clicked = document.getElementById(myid);
+    clicked.style.opacity = ((clicked.style.opacity!=0) ? 0 : 1);
+    el.classList.toggle("opened-project");
 }
