@@ -12,25 +12,27 @@
 </head>
 
     <body>
+        <div class="fixed-gradient-1"></div>
+        <div class="fixed-gradient-2"></div>
 
-        <div class="header">
-                <div class="logo hidden">
-                    <span class="name">AITOR GOMEZ</span>
-                    <span class="occupation">Postdoc in Control Engineering</span>
-                    <div class="contact">
-                        <!-- <div class="row"> -->
-                        <!--     <span>Connect with me</span> -->
-                        <!-- </div> -->
-                        <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="20px"/></a>
-                        <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="25px" /></a>
-                        <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="25px" /></a>
-                        <!-- <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -->
-                    </div>
-                </div>
-        </div>
-        <div class="header-image  hidden-t">
-            <img src="./images/apollo13.png" alt="photo" style="display: block" width=100% />
-        </div>
+        <!-- <div class="header"> -->
+        <!--         <div class="logo hidden"> -->
+        <!--             <span class="name">AITOR GOMEZ</span> -->
+        <!--             <span class="occupation">Postdoc in Control Engineering</span> -->
+        <!--             <div class="contact"> -->
+        <!--                 <!-1- <div class="row"> -1-> -->
+        <!--                 <!-1-     <span>Connect with me</span> -1-> -->
+        <!--                 <!-1- </div> -1-> -->
+        <!--                 <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="20px"/></a> -->
+        <!--                 <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="25px" /></a> -->
+        <!--                 <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="25px" /></a> -->
+        <!--                 <!-1- <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -1-> -->
+        <!--             </div> -->
+        <!--         </div> -->
+        <!-- </div> -->
+        <!-- <div class="header-image  hidden-t"> -->
+        <!--     <img src="./images/apollo13.png" alt="photo" style="display: block" width=100% /> -->
+        <!-- </div> -->
 
         <div class="menu-container">
             <ul class="menu">
@@ -47,26 +49,65 @@
 
         <div id="about" class="section">
 
-            <div class="presentation">
-                <div class="bio">
-                    <p> </p>
+            <div class="presentation-center hidden">
+                <div class="presentation-wrapper">
+                    <div class="presentation-item"
+                         onmouseenter="display_presentation('barcelona')"
+                         onmouseleave="hide_presentation('barcelona')"
+                         style="background-image: url(./images/etseib.jpg);
+                                background-size: cover;
+                                background-position: center;">
+                    </div>
+                    <div class="presentation-item"
+                         onmouseenter="display_presentation('aalborg')"
+                         onmouseleave="hide_presentation('aalborg')"
+                         style="background-image: url(./images/aau.png);
+                                background-size: cover;
+                                background-position: center;">
+                    </div>
+                    <div class="presentation-item"
+                         onmouseenter="display_presentation('buffalo')"
+                         onmouseleave="hide_presentation('buffalo')"
+                         style="background-image: url(./images/suny_ub.jpg);
+                                background-size: cover;
+                                background-position: center;">
+                    </div>
                 </div>
 
-
-                <p style="margin-top:80vh; font-size: 10px; text-align:center; color: #BBB;">I have collaborated with:</p>
-                <div class="scroller hidden">
-                    <ul class="logo-list scroller_inside">
-                        <img src="./images/orbex.png" alt="photo" style="display: block" height=60px />
-                        <img src="./images/esa_white.png" alt="photo" style="display: block" height=60px />
-                        <img src="./images/deimos.png" alt="photo" style="display: block; margin-top:-8px;" height=60px />
-                        <img src="./images/sternula.png" alt="photo" style="display: block; margin-top:0px;" height=45px />
-                        <img src="./images/ub-blk.png" alt="photo" style="display: block; margin-top:25px;" height=20px />
-                    </ul>
+                <div id="barcelona" class="presentation-text">
+                    <p><b>Barcelona</b> is the place I grew up. I obtained my Bachelor's degree from the Barcelona School of Industrial Engineering, and conducted my thesis at the Institute of Robotics and Industrial Informatics, a joint research center of the Spanish National Research Council (CSIC) and the Technical University of Catalonia (UPC). Meanwhile, I teached Linear Algebra and Differential Equations to fellow students at a reinforcement university center.</p>
                 </div>
-                <!-- <div class="downarrow"> -->
-                <!--     <p>&#x2771;</p> -->
-                <!-- </div> -->
+                <div id="aalborg" class="presentation-text">
+                    <p>I obtained my Master's in Control and Automation at <b>Aalborg University/Denmark</b>, where I specialized in spacecraft Guidance, Navigation and Control (GNC). Immediately after, I pursued my Ph.D. degree focused on enhancing spacecraft safety. Currently, I am working as a Postdoc collaborating with several companies in ESA-funded projects with the aim of developing GNC algorithms for launchers.</p>
+                </div>
+                <div id="buffalo" class="presentation-text">
+                    <p>During my Ph.D. studies, I was honored with the opportunity of visiting the Mechanical and Aerospace Engineering Department of the <b>State University of New York at Buffalo</b> under the supervision of Prof. John Crassidis, a SUNY distinguished professor and amazing mentor.</p>
+                </div>
+
             </div>
+
+
+
+            <!-- <div class="presentation"> -->
+            <!--     <div class="bio"> -->
+            <!--         <p> </p> -->
+            <!--     </div> -->
+
+
+            <!--     <p style="margin-top:80vh; font-size: 10px; text-align:center; color: #BBB;">I have collaborated with:</p> -->
+            <!--     <div class="scroller hidden"> -->
+            <!--         <ul class="logo-list scroller_inside"> -->
+            <!--             <img src="./images/orbex.png" alt="photo" style="display: block" height=60px /> -->
+            <!--             <img src="./images/esa_white.png" alt="photo" style="display: block" height=60px /> -->
+            <!--             <img src="./images/deimos.png" alt="photo" style="display: block; margin-top:-8px;" height=60px /> -->
+            <!--             <img src="./images/sternula.png" alt="photo" style="display: block; margin-top:0px;" height=45px /> -->
+            <!--             <img src="./images/ub-blk.png" alt="photo" style="display: block; margin-top:25px;" height=20px /> -->
+            <!--         </ul> -->
+            <!--     </div> -->
+            <!--     <!-1- <div class="downarrow"> -1-> -->
+            <!--     <!-1-     <p>&#x2771;</p> -1-> -->
+            <!--     <!-1- </div> -1-> -->
+            <!-- </div> -->
 
 
         </div>
@@ -79,36 +120,17 @@
             </div>
 
             <div class="project-center">
-                <div class="project-selection">
-
-                    <div class="project-item closed-project" onclick="toggle_visibility('sure',this)">
-                        <div class="project-description">
-                            <h2>Smart laUncheR Enabler (SURE)</h2>
-                            <p class="project-subtitle">Funded by the European Space Agency (ESA)</p>
-                            <p class="date project-subtitle">2023-2024</p>
-                        </div>
-                    </div>
-
-                    <div class="project-item closed-project" onclick="toggle_visibility('mariot',this)">
-                        <div class="project-description">
-                            <h2>MARitime IoT (MARIOT)</h2>
-                            <p class="project-subtitle">Funded by the Innovation Fund Denmark</p>
-                            <p class="date project-subtitle">2020-2021</p>
-                        </div>
-                    </div>
-
-
-                    <div class="project-item closed-project"  onclick="toggle_visibility('safeye',this)">
-                        <div class="project-description">
-                            <h2>SafeEYE</h2>
-                            <p class="project-subtitle">Funded by the Innovation Fund Denmark</p>
-                            <p class="date project-subtitle">2019-2020</p>
-                        </div>
-                    </div>
-
-                </div>
 
                 <div class="project-container">
+
+                    <div class="project">
+                    <div class="project-selector">
+                        <div class="project-title closed-project" onclick="toggle_project('sure',this)">
+                            <span class="project-name">SMART LAUNCHER ENABLER / <b>SURE</b></span>
+                            <p class="date">ROCKETS</p>
+                            <p class="date">2023-2024</p>
+                        </div>
+                    </div>
 
                     <div id="sure" class="project-box">
                         <div class="project-display-container">
@@ -119,13 +141,27 @@
                             </div>
                             <div class="project-display-description">
                                 <p>Developing Avionics and on-board GNC algorithms for safe and robust atmospheric flight, descent and landing of rockets.</p>
-                                <p><span class="summary">CONSORTIUM PARTNERS: </span></p>
+                                <span class="summary">FUNDED BY</span>
+                                <p>European Space Agency</p>
+                                <span class="summary">STATUS</span>
+                                <p>Ongoing</p>
+                                <span class="summary">CONSORTIUM PARTNERS</span>
                                 <ul>
                                     <li><a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a> (Project leader)</li>
                                     <li><a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a></li>
                                     <li><a target="_blank" href="https://www.orbex.space/">Orbex</a></li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="project">
+                    <div class="project-selector">
+                        <div class="project-title closed-project" onclick="toggle_project('mariot',this)">
+                            <span class="project-name">MARITIME IOT / <b>MARIOT</b></span>
+                            <p class="date">SATELLITES</p>
+                            <p class="date">2020-2021</p>
                         </div>
                     </div>
 
@@ -138,7 +174,11 @@
                             </div>
                             <div class="project-display-description">
                                 <p>Global VDES-SAT constellation network to provide maritime safety and navigational services. For the MARIOT project I developed a Python simulation environment of the satellite constellation and communication protocols for system verification, performed analyses of Launch and Early Operations and provided advice in relation to safety protocols (collision probability and avoidance maneuvers).  </p>
-                                    <p><span class="summary">CONSORTIUM PARTNERS: </span></p>
+                                <span class="summary">FUNDED BY </span>
+                                <p>Innovation Fund Denmark</p>
+                                <span class="summary">STATUS </span>
+                                <p>Completed</p>
+                                <span class="summary">CONSORTIUM PARTNERS</span>
                                 <ul>
                                     <li><a target="_blank" href="https://www.sternula.com/projects/mariot/">Sternula</a> (Project leader)</li>
                                     <li><a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a></li>
@@ -147,11 +187,22 @@
                                     <li><a target="_blank" href="https://www.satlab.com/">Satlab</a></li>
                                     <li><a target="_blank" href="https://www.dmi.dk/">Danmarks Meteorologiske Institute</a></li>
                                 </ul>
+                                <a style="font-size: 11px;" target="_blank" href="https://www.sternula.com/projects/mariot/">MARIOT WEBSITE &#129125;</a>
                             </div>
                         </div>
                     </div>
+                    </div>
 
-                    <div id="safeye" class="project-box">
+                    <div class="project">
+                    <div class="project-selector">
+                        <div class="project-title closed-project" onclick="toggle_project('drone',this)">
+                            <span class="project-name">SAFE EYE</span>
+                            <p class="date">DRONES</p>
+                            <p class="date">2019-2020</p>
+                        </div>
+                    </div>
+
+                    <div id="drone" class="project-box">
                         <div class="project-display-container">
                             <div class="project-display-image"
                                  style="background-image: url(./images/T500_slung_test.png);
@@ -159,13 +210,19 @@
                                         background-position: center;">
                             </div>
                             <div class="project-display-description">
-                                <p>Design, construction and testing of an automated flight termination system for big drones (&gt;7kg), including the implementation of neural-networks (for landable ground images classification and structural vibration monitoring); and the formulation of a decision function to terminate the flight. Airborne and lab tests performed using VICON motion capture system on a DJI M800 to gather nominal and faulty vibration data.
-                                <p><span class="summary">RELATED PAPERS:</span> </p>
+                                <p>Design, construction and testing of an automated flight termination system for big drones (&gt;7kg). This includes the implementation of neural-networks for 1) classification of landable ground areas and 2) structural vibration monitoring; and the formulation of a decision function to terminate the flight. Airborne tests were conducted, as well as lab tests using VICON motion capture system on a DJI M800 to gather nominal and faulty vibration data.</p>
+                                <span class="summary">FUNDED BY </span>
+                                <p>Innovation Fund Denmark</p>
+                                <span class="summary">STATUS </span>
+                                <p>Completed</p>
+                                <span class="summary">RELATED PAPERS</span>
                                 <p><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i> </p>
                                 <p>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i> </p>
                             </div>
                         </div>
                     </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -182,145 +239,145 @@
 
 
 
-            <div class="project-center">
-                <div class="project-selection">
+            <!-- <div class="project-center"> -->
+            <!--     <div class="project-selection"> -->
 
-                    <div class="project-item closed-project" onclick="toggle_visibility('saferockets',this)">
-                        <div class="project-description">
-                            <h2>Safe-Robust Ascent and Landing of Rockets</h2>
-                            <p class="project-subtitle">Aalborg University, AAU</p>
-                            <p class="date project-subtitle">2023-2024</p>
-                        </div>
-                    </div>
+            <!--         <div class="project-item closed-project" onclick="toggle_visibility('saferockets',this)"> -->
+            <!--             <div class="project-description"> -->
+            <!--                 <h2>Safe-Robust Ascent and Landing of Rockets</h2> -->
+            <!--                 <p class="project-subtitle">Aalborg University, AAU</p> -->
+            <!--                 <p class="date project-subtitle">2023-2024</p> -->
+            <!--             </div> -->
+            <!--         </div> -->
 
-                    <div class="project-item closed-project" onclick="toggle_visibility('largedeviations',this)">
-                        <div class="project-description">
-                            <h2>Large Deviations in Satellite Collisions</h2>
-                            <p class="project-subtitle">Aalborg University, AAU</p>
-                            <p class="date project-subtitle">2022-2023</p>
-                        </div>
-                    </div>
+            <!--         <div class="project-item closed-project" onclick="toggle_visibility('largedeviations',this)"> -->
+            <!--             <div class="project-description"> -->
+            <!--                 <h2>Large Deviations in Satellite Collisions</h2> -->
+            <!--                 <p class="project-subtitle">Aalborg University, AAU</p> -->
+            <!--                 <p class="date project-subtitle">2022-2023</p> -->
+            <!--             </div> -->
+            <!--         </div> -->
 
-                    <div class="project-item closed-project" onclick="toggle_visibility('maneuvers',this)">
-                        <div class="project-description">
-                            <h2>Satellite Manuever Determination</h2>
-                            <p class="project-subtitle">State University of New York at Buffalo, UB</p>
-                            <p class="date project-subtitle">2022-2023</p>
-                        </div>
-                    </div>
+            <!--         <div class="project-item closed-project" onclick="toggle_visibility('maneuvers',this)"> -->
+            <!--             <div class="project-description"> -->
+            <!--                 <h2>Satellite Manuever Determination</h2> -->
+            <!--                 <p class="project-subtitle">State University of New York at Buffalo, UB</p> -->
+            <!--                 <p class="date project-subtitle">2022-2023</p> -->
+            <!--             </div> -->
+            <!--         </div> -->
 
-                    <div class="project-item closed-project" onclick="toggle_visibility('lisa',this)">
-                        <div class="project-description">
-                            <h2>Descentralized Guidance for LISA</h2>
-                            <p class="project-subtitle">Aalborg University, AAU</p>
-                            <p class="date project-subtitle">2021-2022</p>
-                        </div>
-                    </div>
+            <!--         <div class="project-item closed-project" onclick="toggle_visibility('lisa',this)"> -->
+            <!--             <div class="project-description"> -->
+            <!--                 <h2>Descentralized Guidance for LISA</h2> -->
+            <!--                 <p class="project-subtitle">Aalborg University, AAU</p> -->
+            <!--                 <p class="date project-subtitle">2021-2022</p> -->
+            <!--             </div> -->
+            <!--         </div> -->
 
-                    <div class="project-item closed-project" onclick="toggle_visibility('robotics',this)">
-                        <div class="project-description">
-                            <h2>Robotic Manipulators</h2>
-                            <p class="project-subtitle">Institute of Robotics and industrial Informatics, IRI-CSIC</p>
-                            <p class="date project-subtitle">2016-2017</p>
-                        </div>
-                    </div>
+            <!--         <div class="project-item closed-project" onclick="toggle_visibility('robotics',this)"> -->
+            <!--             <div class="project-description"> -->
+            <!--                 <h2>Robotic Manipulators</h2> -->
+            <!--                 <p class="project-subtitle">Institute of Robotics and industrial Informatics, IRI-CSIC</p> -->
+            <!--                 <p class="date project-subtitle">2016-2017</p> -->
+            <!--             </div> -->
+            <!--         </div> -->
 
-                    <div class="project-item closed-project" onclick="toggle_visibility('lightfields',this)">
-                        <div class="project-description">
-                            <h2>Lightfields</h2>
-                            <p class="project-subtitle">Aalborg University, AAU</p>
-                            <p class="date project-subtitle">2020-2021</p>
-                        </div>
-                    </div>
+            <!--         <div class="project-item closed-project" onclick="toggle_visibility('lightfields',this)"> -->
+            <!--             <div class="project-description"> -->
+            <!--                 <h2>Lightfields</h2> -->
+            <!--                 <p class="project-subtitle">Aalborg University, AAU</p> -->
+            <!--                 <p class="date project-subtitle">2020-2021</p> -->
+            <!--             </div> -->
+            <!--         </div> -->
 
-                </div>
-
-
-                <div class="project-container">
-
-                    <div id="saferockets" class="project-box">
-                        <div class="project-display-container">
-                            <div class="research-display-image"
-                                 style="background-image: url(./images/rocket.png);
-                                        background-size: contain;
-                                        background-repeat: no-repeat;
-                                        background-position: top left;">
-                            </div>
-                            <div class="research-display-description">
-                                <p>Developing Avionics and on-board GNC algorithms for safe atmospheric flight, descent and landing of rockets.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="largedeviations" class="project-box">
-                        <div class="project-display-container">
-                            <div class="research-display-image"
-                                 style="background-image: url(./images/LDT.png);
-                                        background-size: contain;
-                                        background-repeat: no-repeat;
-                                        background-position: top center;">
-                            </div>
-                            <div class="research-display-description">
-                                <p> Satellite collisions are <i>rare events</i>, thus characterized by very low probabilities of occurrence, yet they stand as a significant concern due to their potential catastrophic consequences. The impact of a collision can be severe, leading to the generation of space debris that poses risk to operational spacecraft and human space activities.  </p>
-                                <p> The analysis of rare events in dynamical systems can be challenging, since standard Monte Carlo methods are often not suitable (it would require a ridiculously large amount of simulations to obtain any meaningful statistical information). Such analysis requires formulations that involve rare event tailored methods.  </p>
-                                <p>In particular, we borrow rigorous mathematical tools from the theory of large deviations to study the rare, but extreme, events of spacecraft collisions in orbit. Large deviations allows us to describe the limiting behaviour of the satellites with respect to some small parameter by modeling the uncertain motion of satellites using stochastic differential equations with small diffusion. Then, we extend this description so as to include the effects of having probabilistic initial conditions&mdash;a typical assumption in spacecrafts. This description enables the computation of the most likely fluctuations leading to an orbital collision, yielding the most likely samplepath realizing the rare event: the maximum likelihood path (or <i>instanton</i>) for deterministic initial conditions, and the maximum a posteriori path when the departing state is random.  </p>
-                                <p> <span class="summary">Related papers:</span> </p>
-                                <p><b> Gomez, A. R.</b> & Bujorianu, M. L., Wisniewski, R. <a target="_bank" href="">“Large Deviations in Hamiltonian Systems with Probabilistic Initial Conditions”</a>, <i>Automatica, 2024 (Submitted).</i></p>
-                                <p><b>Gomez, A. R.</b> & Wisniewski, R., <a target="_blank" href="https://ieeexplore.ieee.org/document/9992598" >“Stochastic Safety in Space Conjunctions”</a>, <i>IEEE Conference on Decision and Control (CDC), 2022.</i></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="lisa" class="project-box">
-                        <div class="project-display-container">
-                            <div class="research-display-image"
-                                 style="background-image: url(./gifs/LISA_GW.gif);
-                                        background-size: contain;
-                                        background-repeat: no-repeat;
-                                        background-position: top left;">
-                            </div>
-                            <div class="research-display-description">
-                                <p> The Laser Interferometer Space Antenna (LISA) is an ambitious space mission led by NASA and ESA with the goal of detecting and understanding gravitational waves (GWs). This mission involves a trio of spacecraft positioned in an equilateral triangle formation, each linked by frequency-stabilized lasers. These spacecraft work together to detect gravitational waves by observing the fluctuations in the lasers' frequency, which are affected by the ripples in space-time that alter the distances between internal proof masses located in each spacecraft.  </p>
-                                <p> We designed a guidance algorithm that could potentially be employed for the Pointing Acquisition and Tracking (PAT) phase, namely, the challenge of aligning the spacecraft's internal interferometers with incoming lasers from the other two spacecraft. This alignment must meet exceptionally stringent accuracy requirements to enable scientific observations, with misalignments not exceeding 1 microrad. To that end, every spacecraft is equipped with two identical optical assemblies (OAs) as payload, each of which contain, among others, the proof mass, a telescope, a laser source and laser interferometer detectors.  </p>
-                                <p> The guidance system has been developed to manage this alignment process by solving a cooperative game problem with a new algorithm designed to provide precise tracking references to each of the spacecrafts' controller for a fast, simultaneous and accurate alignment of the laser beams into the interferometer detectors.
-                                <p> <span class="summary">Related papers:</span> </p>
-                                <p><b> Gomez, A. R.*</b> & Al Ahdab, M.*, <a target="_bank" href="https://arxiv.org/abs/2303.02743">“Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition”</a>, <i>IFAC World Congress, 2023.</i></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="robotics" class="project-box">
-                        <div class="project-display-container">
-                            <div class="research-display-image"
-                                 style="background-image: url(./gifs/parallel.gif);
-                                        background-size: contain;
-                                        background-repeat: no-repeat;
-                                        background-position: top left;">
-                            </div>
-                            <div class="research-display-description">
-                                <p> I worked at the <a href="http://www.iri.upc.edu/people/thomas/ID-Robots.htm" target="_blank">Computational Robotics Laboratory</a> from the <a target="_blank" href="https://www.iri.upc.edu/index.php">Institute of Robotics and industrial Informatics</a> modelling, constructing and controlling Gough-Stewart-type parallel platforms (in particular 6-RUS platforms) under the supervision of Professor Federico Thomas.  The parallel platforms consisted of 6 Dynamixel actuators, an Arduino UNO electronic board and an inertia measurement unit MPU-6050. An external camera was also employed to collect images of the surface of the platform. Despite the available 6 degrees of freedom, the main goal was to balance the orientation of the platform in order to perform different tasks, e.g. stabilize a rolling/bouncing ball or counteract the motion of the base so as to maintain the platform parallel to the horizon.  </p>
-                                <p> I also got the chance to play around with serial manipulators during my Master's in Control and Automation. In particular, developing simulations and implementing the inverse kinematics of an Universal Robot 5 with the goal of manipulating the end-effector wirelessly through a tablet.  </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="lightfields" class="project-box">
-                        <div class="project-display-container">
-                            <div class="research-display-image"
-                                 style="background-image: url(./gifs/LF.gif);
-                                        background-size: contain;
-                                        background-repeat: no-repeat;
-                                        background-position: top left;">
-                            </div>
-                            <div class="research-display-description">
-                                <p>Reconstructing occluded objects from structured array of images using focus reconstruction. Inspired by paper from <a href="https://graphics.stanford.edu/papers/sap-recons/final.pdf">Mark Levoy et al</a>. This type of technology is used in many sectors, including astronomical observatories, UAVs for search-and-rescue and photographic cameras. The application shown on the right demonstrates how an a structured array of images use the parallax effect to its advantage to reconstruct objects (a chair on the left, and a red bike in the center of the image) behind occlusions. Other applications include autonomous re-focusing of images and 3d object reconstruction.</p>
-                            </div>
-                        </div>
-                    </div>
+            <!--     </div> -->
 
 
-                </div>
-            </div>
+            <!--     <div class="project-container"> -->
+
+            <!--         <div id="saferockets" class="project-box"> -->
+            <!--             <div class="project-display-container"> -->
+            <!--                 <div class="research-display-image" -->
+            <!--                      style="background-image: url(./images/rocket.png); -->
+            <!--                             background-size: contain; -->
+            <!--                             background-repeat: no-repeat; -->
+            <!--                             background-position: top left;"> -->
+            <!--                 </div> -->
+            <!--                 <div class="research-display-description"> -->
+            <!--                     <p>Developing Avionics and on-board GNC algorithms for safe atmospheric flight, descent and landing of rockets.</p> -->
+            <!--                 </div> -->
+            <!--             </div> -->
+            <!--         </div> -->
+
+            <!--         <div id="largedeviations" class="project-box"> -->
+            <!--             <div class="project-display-container"> -->
+            <!--                 <div class="research-display-image" -->
+            <!--                      style="background-image: url(./images/LDT.png); -->
+            <!--                             background-size: contain; -->
+            <!--                             background-repeat: no-repeat; -->
+            <!--                             background-position: top center;"> -->
+            <!--                 </div> -->
+            <!--                 <div class="research-display-description"> -->
+            <!--                     <p> Satellite collisions are <i>rare events</i>, thus characterized by very low probabilities of occurrence, yet they stand as a significant concern due to their potential catastrophic consequences. The impact of a collision can be severe, leading to the generation of space debris that poses risk to operational spacecraft and human space activities.  </p> -->
+            <!--                     <p> The analysis of rare events in dynamical systems can be challenging, since standard Monte Carlo methods are often not suitable (it would require a ridiculously large amount of simulations to obtain any meaningful statistical information). Such analysis requires formulations that involve rare event tailored methods.  </p> -->
+            <!--                     <p>In particular, we borrow rigorous mathematical tools from the theory of large deviations to study the rare, but extreme, events of spacecraft collisions in orbit. Large deviations allows us to describe the limiting behaviour of the satellites with respect to some small parameter by modeling the uncertain motion of satellites using stochastic differential equations with small diffusion. Then, we extend this description so as to include the effects of having probabilistic initial conditions&mdash;a typical assumption in spacecrafts. This description enables the computation of the most likely fluctuations leading to an orbital collision, yielding the most likely samplepath realizing the rare event: the maximum likelihood path (or <i>instanton</i>) for deterministic initial conditions, and the maximum a posteriori path when the departing state is random.  </p> -->
+            <!--                     <p> <span class="summary">Related papers:</span> </p> -->
+            <!--                     <p><b> Gomez, A. R.</b> & Bujorianu, M. L., Wisniewski, R. <a target="_bank" href="">“Large Deviations in Hamiltonian Systems with Probabilistic Initial Conditions”</a>, <i>Automatica, 2024 (Submitted).</i></p> -->
+            <!--                     <p><b>Gomez, A. R.</b> & Wisniewski, R., <a target="_blank" href="https://ieeexplore.ieee.org/document/9992598" >“Stochastic Safety in Space Conjunctions”</a>, <i>IEEE Conference on Decision and Control (CDC), 2022.</i></p> -->
+            <!--                 </div> -->
+            <!--             </div> -->
+            <!--         </div> -->
+
+            <!--         <div id="lisa" class="project-box"> -->
+            <!--             <div class="project-display-container"> -->
+            <!--                 <div class="research-display-image" -->
+            <!--                      style="background-image: url(./gifs/LISA_GW.gif); -->
+            <!--                             background-size: contain; -->
+            <!--                             background-repeat: no-repeat; -->
+            <!--                             background-position: top left;"> -->
+            <!--                 </div> -->
+            <!--                 <div class="research-display-description"> -->
+            <!--                     <p> The Laser Interferometer Space Antenna (LISA) is an ambitious space mission led by NASA and ESA with the goal of detecting and understanding gravitational waves (GWs). This mission involves a trio of spacecraft positioned in an equilateral triangle formation, each linked by frequency-stabilized lasers. These spacecraft work together to detect gravitational waves by observing the fluctuations in the lasers' frequency, which are affected by the ripples in space-time that alter the distances between internal proof masses located in each spacecraft.  </p> -->
+            <!--                     <p> We designed a guidance algorithm that could potentially be employed for the Pointing Acquisition and Tracking (PAT) phase, namely, the challenge of aligning the spacecraft's internal interferometers with incoming lasers from the other two spacecraft. This alignment must meet exceptionally stringent accuracy requirements to enable scientific observations, with misalignments not exceeding 1 microrad. To that end, every spacecraft is equipped with two identical optical assemblies (OAs) as payload, each of which contain, among others, the proof mass, a telescope, a laser source and laser interferometer detectors.  </p> -->
+            <!--                     <p> The guidance system has been developed to manage this alignment process by solving a cooperative game problem with a new algorithm designed to provide precise tracking references to each of the spacecrafts' controller for a fast, simultaneous and accurate alignment of the laser beams into the interferometer detectors. -->
+            <!--                     <p> <span class="summary">Related papers:</span> </p> -->
+            <!--                     <p><b> Gomez, A. R.*</b> & Al Ahdab, M.*, <a target="_bank" href="https://arxiv.org/abs/2303.02743">“Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition”</a>, <i>IFAC World Congress, 2023.</i></p> -->
+            <!--                 </div> -->
+            <!--             </div> -->
+            <!--         </div> -->
+
+            <!--         <div id="robotics" class="project-box"> -->
+            <!--             <div class="project-display-container"> -->
+            <!--                 <div class="research-display-image" -->
+            <!--                      style="background-image: url(./gifs/parallel.gif); -->
+            <!--                             background-size: contain; -->
+            <!--                             background-repeat: no-repeat; -->
+            <!--                             background-position: top left;"> -->
+            <!--                 </div> -->
+            <!--                 <div class="research-display-description"> -->
+            <!--                     <p> I worked at the <a href="http://www.iri.upc.edu/people/thomas/ID-Robots.htm" target="_blank">Computational Robotics Laboratory</a> from the <a target="_blank" href="https://www.iri.upc.edu/index.php">Institute of Robotics and industrial Informatics</a> modelling, constructing and controlling Gough-Stewart-type parallel platforms (in particular 6-RUS platforms) under the supervision of Professor Federico Thomas.  The parallel platforms consisted of 6 Dynamixel actuators, an Arduino UNO electronic board and an inertia measurement unit MPU-6050. An external camera was also employed to collect images of the surface of the platform. Despite the available 6 degrees of freedom, the main goal was to balance the orientation of the platform in order to perform different tasks, e.g. stabilize a rolling/bouncing ball or counteract the motion of the base so as to maintain the platform parallel to the horizon.  </p> -->
+            <!--                     <p> I also got the chance to play around with serial manipulators during my Master's in Control and Automation. In particular, developing simulations and implementing the inverse kinematics of an Universal Robot 5 with the goal of manipulating the end-effector wirelessly through a tablet.  </p> -->
+            <!--                 </div> -->
+            <!--             </div> -->
+            <!--         </div> -->
+
+            <!--         <div id="lightfields" class="project-box"> -->
+            <!--             <div class="project-display-container"> -->
+            <!--                 <div class="research-display-image" -->
+            <!--                      style="background-image: url(./gifs/LF.gif); -->
+            <!--                             background-size: contain; -->
+            <!--                             background-repeat: no-repeat; -->
+            <!--                             background-position: top left;"> -->
+            <!--                 </div> -->
+            <!--                 <div class="research-display-description"> -->
+            <!--                     <p>Reconstructing occluded objects from structured array of images using focus reconstruction. Inspired by paper from <a href="https://graphics.stanford.edu/papers/sap-recons/final.pdf">Mark Levoy et al</a>. This type of technology is used in many sectors, including astronomical observatories, UAVs for search-and-rescue and photographic cameras. The application shown on the right demonstrates how an a structured array of images use the parallax effect to its advantage to reconstruct objects (a chair on the left, and a red bike in the center of the image) behind occlusions. Other applications include autonomous re-focusing of images and 3d object reconstruction.</p> -->
+            <!--                 </div> -->
+            <!--             </div> -->
+            <!--         </div> -->
+
+
+            <!--     </div> -->
+            <!-- </div> -->
 
         </div>
 
@@ -387,7 +444,7 @@
                 <span class="center circle"></span>
             </div>
         </div>
-        <div class="summary center hidden">
+        <div class="copyright center hidden">
             <p>Copyright &copy; Aitor Ramirez Gomez 2024</p>
         </div>
 

@@ -109,24 +109,30 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-/* toggle visibility */
-function toggle_visibility(myid,el) {
-    var projects = document.querySelectorAll(".project-item");
-    projects.forEach((project) => {
-        if (project!=el){
-            project.classList.remove("opened-project");
-        }
-    });
 
-    var displays = document.querySelectorAll(".project-box");
-    displays.forEach((display) => {
-        if (display.id!=myid) {
-            display.style.opacity = 0;
-            display.style.zIndex = 0;
-        }
-    });
-    var clicked = document.getElementById(myid);
-    clicked.style.opacity = ((clicked.style.opacity!=0) ? 0 : 1);
-    clicked.style.zIndex = ((clicked.style.zIndex!=0) ? 0 : 1);
-    el.classList.toggle("opened-project");
+/* toggle presenation text */
+function display_presentation(myid) {
+    var el = document.getElementById(myid);
+    el.style.opacity = ((el.style.opacity!="100%") ? "100%" : "0%");
 }
+function hide_presentation(myid) {
+    var el = document.getElementById(myid);
+    el.style.opacity = ((el.style.opacity!="0%") ? "0%" : "100%");
+}
+
+/* toggle projects */
+function toggle_project(myid,el) {
+    var clicked_box = document.getElementById(myid);
+    var clicked_img = document.getElementById(myid).children[0].children[0];
+    var clicked_des = document.getElementById(myid).children[0].children[1];
+
+    clicked_box.style.marginLeft = ((clicked_box.style.marginLeft!="250px") ? "250px" : "500px");
+    clicked_img.style.width = ((clicked_img.style.width!="70%") ? "70%" : "30%");
+    clicked_des.classList.toggle("project-display-description-open");
+    el.classList.toggle("opened-project");
+    var selector = el.parentElement;
+    selector.style.width = ((selector.style.width!="250px") ? "250px" : "500px");
+
+}
+
+
