@@ -549,8 +549,8 @@ overflow: hidden;
 .line {
     position: fixed;
     border-top: 1px solid #444;
-    width: 8%;
-    min-width: 200px;
+    width: calc(11% - 100px);
+    /* min-width: 200px; */
     height:1px;
 }
 #mabout {
