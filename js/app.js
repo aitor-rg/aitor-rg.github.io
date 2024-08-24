@@ -38,8 +38,19 @@ window.onscroll = () => {
                 link.classList.remove('current');
                 document.querySelector('.menu a[href*=' + id + ']').classList.add('current');
             });
+
+            let lines = document.querySelectorAll('.line');
+            lines.forEach(line => {
+                if(line.getAttribute('id') == id + '-dyn') {
+                    line.style.transform = 'translateX(0%)';
+                }
+                else{
+                    line.style.transform = 'translateX(-100%)';
+                };
+            });
         };
     });
+
 };
 
 /* smooth vertical scroll behavior for all browsers */
