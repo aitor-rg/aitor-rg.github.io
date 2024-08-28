@@ -357,7 +357,7 @@ overflow: hidden;
 }
 .presentation-center {
     width: 60%;
-    margin-top: calc(50vh - 100px);
+    margin-top: calc(50vh - 150px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -365,7 +365,7 @@ overflow: hidden;
     display: flex;
     /* border: 1pt solid blue; */
     gap: 7px;
-    height: 200px;
+    height: 300px;
 }
 .presentation-item {
     display: block;
