@@ -134,15 +134,25 @@ function hide_presentation(myid) {
 /* toggle projects */
 function toggle_project(myid,el) {
     var clicked_box = document.getElementById(myid);
-    var clicked_img = document.getElementById(myid).children[0].children[0];
-    var clicked_des = document.getElementById(myid).children[0].children[1];
+    //var clicked_img = document.getElementById(myid).children[0].children[0];
+    //var clicked_des = document.getElementById(myid).children[0].children[1];
 
-    clicked_box.style.marginLeft = ((clicked_box.style.marginLeft!="250px") ? "250px" : "500px");
-    clicked_img.style.width = ((clicked_img.style.width!="70%") ? "70%" : "30%");
-    clicked_des.classList.toggle("project-display-description-open");
-    el.classList.toggle("opened-project");
-    var selector = el.parentElement;
-    selector.style.width = ((selector.style.width!="250px") ? "250px" : "500px");
+    var boxes = document.querySelectorAll(".project-box");
+    boxes.forEach((box) => {
+        box.style.opacity = "0%";
+        box.style.zIndex = "1";
+    });
+    clicked_box.style.opacity = ((clicked_box.style.opacity!="100%") ? "100%" : "0%");;
+    clicked_box.style.zIndex = "10";
+
+    var selectors = document.querySelectorAll(".project-title");
+    selectors.forEach((selector) => {
+        selector.classList.remove("opened-project");
+        selector.classList.add("closed-project");
+    });
+    el.classList.remove("closed-project");;
+    el.classList.add("opened-project");;
+
 
 }
 

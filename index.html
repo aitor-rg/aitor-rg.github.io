@@ -134,16 +134,31 @@
 
                 <div class="project-container">
 
-                    <div class="project">
-                    <div class="project-selector">
-                        <div class="project-title closed-project" onclick="toggle_project('sure',this)">
-                            <span class="project-name">SMART LAUNCHER ENABLER / <b>SURE</b></span>
-                            <p class="date">ROCKETS</p>
-                            <p class="date">2023-2024</p>
+                    <div class="project-menu">
+                        <div class="project-selector">
+                            <div class="project-title opened-project" onclick="toggle_project('sure',this)">
+                                <span class="project-name">SMART LAUNCHER ENABLER / <b>SURE</b></span>
+                                <p class="date">ROCKETS [2023-2024]</p>
+                            </div>
                         </div>
+                        <div class="project-selector">
+                            <div class="project-title closed-project" onclick="toggle_project('mariot',this)">
+                                <span class="project-name">MARITIME IOT / <b>MARIOT</b></span>
+                                <p class="date">SATELLITES [2020-2021]</p>
+                            </div>
+                        </div>
+
+                        <div class="project-selector">
+                            <div class="project-title closed-project" onclick="toggle_project('drone',this)">
+                                <span class="project-name">FLIGHT TERMINATION / <b>SAFE EYE</b></span>
+                                <p class="date">DRONES [2019-2020]</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div id="sure" class="project-box">
+
+                    <div id="sure" class="project-box" style="opacity:1; z-index:10;">
                         <div class="project-display-container">
                             <div class="project-display-image"
                                  style="background-image: url(./images/rocket.png);
@@ -164,16 +179,6 @@
                                     <li><a target="_blank" href="https://www.orbex.space/">Orbex</a></li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-                    </div>
-
-                    <div class="project">
-                    <div class="project-selector">
-                        <div class="project-title closed-project" onclick="toggle_project('mariot',this)">
-                            <span class="project-name">MARITIME IOT / <b>MARIOT</b></span>
-                            <p class="date">SATELLITES</p>
-                            <p class="date">2020-2021</p>
                         </div>
                     </div>
 
@@ -203,16 +208,8 @@
                             </div>
                         </div>
                     </div>
-                    </div>
 
                     <div class="project">
-                    <div class="project-selector">
-                        <div class="project-title closed-project" onclick="toggle_project('drone',this)">
-                            <span class="project-name">SAFE EYE</span>
-                            <p class="date">DRONES</p>
-                            <p class="date">2019-2020</p>
-                        </div>
-                    </div>
 
                     <div id="drone" class="project-box">
                         <div class="project-display-container">
@@ -234,6 +231,10 @@
                         </div>
                     </div>
                     </div>
+
+
+                    </div>
+
 
                 </div>
 
