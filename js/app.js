@@ -137,7 +137,7 @@ function toggle_project(myid,el) {
     //var clicked_img = document.getElementById(myid).children[0].children[0];
     //var clicked_des = document.getElementById(myid).children[0].children[1];
 
-    var boxes = document.querySelectorAll(".project-box");
+    var boxes = document.querySelectorAll(".project-selected");
     boxes.forEach((box) => {
         box.style.opacity = "0%";
         box.style.zIndex = "1";

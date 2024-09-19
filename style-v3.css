@@ -4,21 +4,6 @@
 $tablet: 768px;
 $phone: 480px;
 
-* {
-    box-sizing: border-box; /*padding and border included in width/height*/
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index:1;
-}
 h1 {
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
@@ -246,42 +231,100 @@ body {
 }
 .project-container {
     width: 100%;
+    height: calc(100vh - 10vh - 80px);
 }
 .project-menu {
-    width: 250px;
-    margin-bottom: 40px;
+    width: 25%;
+    /* height: calc(100vh - 10vh - 80px); */
+    /* margin-bottom: 40px; */
 }
+.project-selector {
+    /* height: 200px; */
+    float: left;
+    cursor: pointer;
+    display: inline-block;
+    height: 65px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    /* background-color: black; */
+    /* background-image: none; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+}
+.closed-project {
+    /* color: #777; */
+    background-position: left;
+}
+.opened-project {
+    /* color: white; */
+    background-position: right;
+}
+.project-title {
+    /* width: auto; */
+    height: auto;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-left: auto;
+    text-align: right;
+
+    background-image: linear-gradient( 45deg, #555 50%, #fff 50%);
+    background-size: 230%;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 0.5s ease-in-out;
+}
+.project-title p {
+    width: auto;
+    /* border-bottom: 1pt solid white; */
+    font-family: sans-serif;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: right;
+}
+.project-title:hover {
+    background-position: 20% 0%;
+}
+.opened-project:hover {
+    /* color: #777; */
+    background-position: right;
+}
+.project-name {
+    /* height: 30px; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 12px;
+}
+
 .project-box {
+    width: 75%;
+    margin-left: 25%;
+    margin-right: auto;
+}
+.project-selected {
     position: absolute;
     z-index: 1;
-    width: calc(100% - 250px - 40%);
+    width: calc(80% * 0.8 * 0.75);
+    /* width: 100%; */
     opacity: 0%;
-    margin-left: 250px;
+    margin-left: 0px;
     margin-right: 0;
     transition: opacity 0.5s ease-in-out;
-}
-.project-display-container {
-    width: 100%;
-    margin: 0;
-    overflow: auto;
 }
 .project-display-image {
     float: left;
     display: inline-block;
-    width: 70%;
+    width: 75%;
     aspect-ratio : 1 / 1;
     transition: opacity 0.5s ease-in-out;
 }
 .project-display-description {
     float: left;
-    width: 27%;
-    height: 100px;
-    margin-left: 2%;
-}
-.project-display-description-open {
-    height : 600px;
-    overflow: visible;
-    opacity: 1;
+    width: calc(25% - 10px);
+    /* height: 100px; */
+    margin-left: 10px;
 }
 .project-display-description p {
     margin: 0px;
@@ -309,27 +352,6 @@ body {
     margin-bottom: 2px;
 }
 
-.project-selector {
-    /* height: 200px; */
-    float: left;
-    cursor: pointer;
-    display: inline-block;
-    height: 65px;
-    width: 250px;
-    margin-left: auto;
-    margin-right: 0;
-    background-color: black;
-    background-image: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: width 0.5s ease-in-out;
-}
-.closed-project {
-    color: #777;
-}
-.opened-project {
-    color: white;
-}
 .research-display-image {
     float:left;
     margin-left: auto;
@@ -484,35 +506,6 @@ body {
     cursor: pointer;
     transform: scale(100.5%);
     transition: 250ms;
-}
-.project-title {
-    /* width: auto; */
-    height: auto;
-    overflow: hidden;
-    margin-right: 20px;
-    margin-left: auto;
-    text-align: right;
-    transition: 0.5s;
-}
-.project-title p {
-    width: auto;
-    /* border-bottom: 1pt solid white; */
-    font-family: sans-serif;
-    font-size: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    text-align: right;
-}
-.project-title:hover {
-    transition: 0.5s;
-    color: #BBB;
-}
-.project-name {
-    /* height: 30px; */
-    font-family: 'Oswald', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 12px;
 }
 .publications-container {
     width: 70%;
