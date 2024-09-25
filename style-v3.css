@@ -345,26 +345,60 @@ body {
     font-size: 13px;
     margin-bottom: 2px;
 }
+.research-container {
+    width: 100%;
+    /* height: calc(100vh - 168px * 4); */
+}
 .research-box {
     width: 75%;
-    height: 150px;
+    max-width: 980px;
+    height: 148px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
     overflow: hidden;
+    padding: 0 10px 0 0;
 
-    border: 1pt solid black;
-    background-image: linear-gradient( 45deg, #111 50%, #000 50%);
-    background-size: 240%;
-    background-position: right;
-    transition: background-position 1s ease-in-out;
+    cursor: pointer;
+    background-color: #111;
 }
 .research-box:hover {
-    background-position: left;
+    .research-plus-button {
+        color: #777;
+    }
+    .research-ellipsis {
+        color: #777;
+    }
+}
+.research-plus-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: calc(100% - 30px);
+    color: #444;
+    font-weight: 200;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: center;
+    transform-origin: center 19px;
+    transition: transform 0.5s ease-in-out;
+}
+.research-ellipsis {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    margin-left: calc(100% - 30px);
+    margin-top: calc(148px - 20px);
+    color: #444;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    vertical-align: center;
+    background-color: #111;
 }
 .research-image {
     float: left;
-    height: 150px;
+    height: 148px;
     aspect-ratio: 1.5 / 1;
     margin-right: 10px;
     background-size: cover;
@@ -372,9 +406,10 @@ body {
     /* border: 1pt solid #777; */
 }
 .research-body {
+    float: left;
     position: relative;
-    width: 100%;
-    height: 150px;
+    width: calc(100% - 1.5 * 148px - 10px);
+    background-color: transparent;
 }
 .research-body a {
     color: #FFF;
@@ -382,9 +417,10 @@ body {
     text-decoration: underline;
 }
 .research-body p {
-    color: #777;
+    color: #999;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    text-align: justify;
 }
 .research-name {
     /* height: 30px; */
@@ -478,6 +514,9 @@ body {
     margin-right: auto;
     margin-bottom: 25px;
     text-align: justify;
+}
+.publications-container a {
+    text-decoration: underline;
 }
 .hidden {
     opacity: 0;
@@ -635,10 +674,6 @@ body {
     font-weight: 400;
     font-size: 12px;
 }
-.keyword {
-    color: #33b3a6;
-    font-style: italic;
-}
 .copyright {
     position: relative;
     color: #777;
@@ -687,97 +722,35 @@ body {
 
 
 /* media queries */
-@media only screen and (max-width: 1200px) {
-/* For TABLETS: */
-    [class*="col-"] {
+@media only screen and (max-width: 1530px) {
+    .section {
         width: 100%;
-        box-sizing: border-box; /*padding and border included in width/height*/
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10vh;
     }
-    p {
-        font-size: 10pt;
+    .presentation-center {
+        margin-top: calc(50vh - 250px);
     }
-    h2 {
-        font-size: 15px;
+    .project-center {
+        width: 100%;
     }
-    a {
-        font-size: 10pt;
+    .project-box {
+        width: 66.66%;
+    }
+    .project-selected {
+        width: 66.66%;
+    }
+    .project-display-image {
+        width: 60%;
+    }
+    .project-display-description {
+        width: 35%;
     }
     .menu-container {
         visibility: hidden;
     }
-    .section-title {
-        font-size: 20px;
-    }
-    .center {
-        flex-direction: column;
-    }
-    .section {
-        /* display: flex; */
-        width:90%;
-        /* border: 1pt solid red; */
-        margin: auto;
-        /* padding: 10px; */
-    }
-    .project-grid {
-        grid-template-columns: repeat(auto-fit,100%);
-        width: 100%;
-        margin-top: 50px;
-    }
-    .project-item {
-        width: 100%;
-        /* border: 1pt solid blue; */
-    }
-    .project-description {
-        width: 100%;
-        /* border: 1pt solid white; */
-    }
-    .project-description h2 {
-        height:25px;
-    }
-    .project-subtitle {
-        margin-top: -10px;
-    }
-    .project-subtitle.date {
-        margin-top: -10px;
-    }
-    .collapsed {
-        width: 100%;
-        display: flex;
-        /* border: 1pt solid white; */
-        float: left;
-    }
-    .project-image img {
-        float: left;
-        width: 100%;
-        /* border: 1pt solid blue; */
-        margin: 0;
-    }
-    .research-line {
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .research-description {
-        display:block;
-        float:none;
-        width: 100%;
-        margin: 0;
-    }
-    .research-image {
-        width: 100%;
-        display:block;
-        float:none;
-    }
-    .section-title {
-        width:100%;
-        margin: 0px;
-        margin-top: 100px;
-    }
-    .contact-container {
-    }
-    .publications-container {
-        width:100%;
-        margin: 0px;
+    .line {
+        visibility: hidden;
     }
 }
-

@@ -152,8 +152,13 @@ function toggle_project(myid,el) {
     });
     el.classList.remove("closed-project");;
     el.classList.add("opened-project");;
-
-
 }
 
-
+/* expand research description */
+function expand_description(el) {
+    el.style.height = ((el.style.height!="auto") ? "auto" : "148px");
+    // div class research-plus-button
+    el.children[1].style.transform = ((el.children[1].style.transform!="rotate(135deg)") ? "rotate(135deg)" : "rotate(0deg)" );
+    // div class research-ellipsis
+    el.children[3].style.display = ((el.children[3].style.display!="none") ? "none" : "block" );
+}
