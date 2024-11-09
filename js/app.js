@@ -22,38 +22,8 @@ hiddenElements1.forEach((el) => observer1.observe(el));
 const hiddenElements2 = document.querySelectorAll('.hidden-t');
 hiddenElements2.forEach((el) => observer2.observe(el));
 
-/* menu vertical scrolling */
-let sections = document.querySelectorAll('.section');
-let navLinks = document.querySelectorAll('.menu a');
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop-700;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset+height) {
-            navLinks.forEach(link => {
-                link.classList.remove('current');
-                document.querySelector('.menu a[href*=' + id + ']').classList.add('current');
-            });
-
-            let lines = document.querySelectorAll('.line');
-            lines.forEach(line => {
-                if(line.getAttribute('id') == id + '-dyn') {
-                    line.style.transform = 'translateX(0%)';
-                }
-                else{
-                    line.style.transform = 'translateX(-100%)';
-                };
-            });
-        };
-    });
-
-};
-
-/* smooth vertical scroll behavior for all browsers */
+/* enable smooth vertical scroll behavior for all browsers */
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -70,18 +40,82 @@ $(document).ready(function(){
       // The optional number (500) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 100, function(){
-
+      }, 500, function(){
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
+
     } // End if
+
   });
 });
 
 
+/* left menu animations on vertical scrolling */
+let sections = document.querySelectorAll('.section');
+let navLinks = document.querySelectorAll('.menu a');
+
+var timer = null;
+var currentPos = 0;
+var currentSection = 0;
+
+let scrollDir = 0;
+window.addEventListener('wheel', (event) => {
+
+    event.preventDefault();
+    event.stopPropagation();
+    scrollDir = event.deltaY > 0 ? 1 : -1;
+
+    if (timer !== null) {
+        clearTimeout(timer);
+    }
+    timer = setTimeout(snapScroll, 75);
+
+}, { passive: false });
+
+
+// snap to next section and animate menu
+function snapScroll() {
+    currentSection += scrollDir;
+    if (currentSection < 0) currentSection = 0;
+    if (currentSection >= sections.length) currentSection = sections.length - 1;
+    sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+
+    let id = sections[currentSection].getAttribute('id');
+    animateMenu(id);
+};
+
+function scrollToSec(id) {
+
+    const sectionList = ["about","projects","research","publications"];
+    const isSection = (element) => element === id;
+
+    currentSection = sectionList.findIndex(isSection);
+    animateMenu(id);
+
+};
+
+function animateMenu(id) {
+
+    navLinks.forEach(link => {
+        link.classList.remove('current');
+        document.querySelector('.menu a[href*=' + id + ']').classList.add('current');
+    });
+
+    let lines = document.querySelectorAll('.line');
+    lines.forEach(line => {
+        if(line.getAttribute('id') == id + '-dyn') {
+            line.style.transform = 'translateX(0%)';
+        }
+        else{
+            line.style.transform = 'translateX(-100%)';
+        };
+    });
+};
+
+
 /* horizontal (infinite) scroll behaviour */
-const scrollers = document.querySelectorAll(".scroller");
+const horizontalScrollers = document.querySelectorAll(".scroller");
 
 //check if user prefers horizontal animation
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -89,7 +123,7 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 };
 
 function enableHorizontalScroll() {
-    scrollers.forEach((scroller) => {
+    horizontalScrollers.forEach((scroller) => {
         scroller.setAttribute("data-animated", true);
 
         const scrollerInside = scroller.querySelector(".scroller_inside");

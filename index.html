@@ -3,7 +3,7 @@
     <!--Title Bar-->
     <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
     <head>
-        <title>Aitor R. Gomez&mdash;Portfolio</title>
+        <title>Aitor R Gomez&mdash;Portfolio</title>
         <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
     <script defer src="./js/app.js"></script>
@@ -12,39 +12,24 @@
 </head>
 
     <body>
+        <div class="header">
+            <span class="name">AITOR GOMEZ</span>
+            <span class="name" style="font-size: 15px;"><a target="_blank" href="https://vbn.aau.dk/da/persons/arg">POSTDOC</a> @AALBORG UNIVERSITY</span>
+            <span class="name" style="font-size: 15px;"><a target="_blank" href="https://scholar.google.com/citations?user=LBQKamgAAAAJ&hl=en">+ GOOGLE SCHOLAR</a></span>
+            <span class="name" style="font-size: 15px;"><a target="_blank" href="https://www.linkedin.com/in/aitor-rg/">+ LINKEDIN</a></span>
+            <span class="name" style="font-size: 15px;"><a target="_blank" href="mailto:arg@es.aau.dk">+ CONTACT ME</span>
+        </div>
+
         <div class="fixed-gradient-1"></div>
         <div class="fixed-gradient-2"></div>
 
-        <!-- <div class="header"> -->
-        <!--         <div class="logo hidden"> -->
-        <!--             <span class="name">AITOR GOMEZ</span> -->
-        <!--             <span class="occupation">Postdoc in Control Engineering</span> -->
-        <!--             <div class="contact"> -->
-        <!--                 <!-1- <div class="row"> -1-> -->
-        <!--                 <!-1-     <span>Connect with me</span> -1-> -->
-        <!--                 <!-1- </div> -1-> -->
-        <!--                 <a href="mailto:arg@es.aau.dk"><img src="./images/icons/chat-50.png" height="20px"/></a> -->
-        <!--                 <a target="_blank" style="margin-left:20px" href="https://github.com/aitor-rg"><img src="./images/icons/github-64.png" height="25px" /></a> -->
-        <!--                 <a target="_blank" style="margin-left:20px" href="https://www.linkedin.com/in/aitor-rg/"><img src="./images/icons/linkedin-64.png" height="25px" /></a> -->
-        <!--                 <!-1- <a target="_blank" style="margin-left:20px" href="https://www.instagram.com/"><img src="./images/icons/instagram-64.png" height="30px" /></a> -1-> -->
-        <!--             </div> -->
-        <!--         </div> -->
-        <!-- </div> -->
-        <!-- <div class="header-image  hidden-t"> -->
-        <!--     <img src="./images/apollo13.png" alt="photo" style="display: block" width=100% /> -->
-        <!-- </div> -->
-
-        <!-- <div class="name"> -->
-        <!--     <span class="name">AITOR GOMEZ</span> -->
-        <!-- </div> -->
-
         <div class="menu-container">
             <ul class="menu">
-                <li> <a class="current waiting" href="#about">  ABOUT       </a> </li>
-                <li> <a class="waiting" href="#projects">       PROJECTS    </a> </li>
-                <li> <a class="waiting" href="#research">       RESEARCH    </a> </li>
-                <li> <a class="waiting" href="#publications">   PUBLICATIONS    </a> </li>
-                <li> <a class="waiting" target="_blank" href="./files/cv_aitorRG.pdf" download>CV &#128621;</a> </li>
+                <li> <a class="current waiting" href="#about" onclick="scrollToSec('about')">       ABOUT       </a> </li>
+                <li> <a class="waiting" href="#projects" onclick="scrollToSec('projects')">         PROJECTS    </a> </li>
+                <li> <a class="waiting" href="#research" onclick="scrollToSec('research')">         RESEARCH    </a> </li>
+                <li> <a class="waiting" href="#publications" onclick="scrollToSec('publications')"> PUBLICATIONS    </a> </li>
+                <li> <a class="waiting" target="_blank" href="./files/cv_aitorRG.pdf" download>     CV &#128621;</a> </li>
             </ul>
         </div>
 
@@ -82,20 +67,19 @@
                 </div>
 
                 <div id="barcelona" class="presentation-text">
-                    <p style="color:#999;font-size: 20px"><b>BS @ Barcelona Technical School of Industrial Engineering</b></p>
+                    <p style="font-family: 'Oswald', sans-serif; color:#999; font-size: 20px"><b>BS @ Barcelona Technical School of Industrial Engineering (ETSEIB)</b></p>
                     <p><b>Barcelona</b> is the place I grew up. I obtained my Bachelor's degree from the Barcelona School of Industrial Engineering, and conducted my thesis at the Institute of Robotics and Industrial Informatics, a joint research center of the Spanish National Research Council (CSIC) and the Technical University of Catalonia (UPC). Meanwhile, I teached Linear Algebra and Differential Equations to fellow students at a reinforcement university center.</p>
                 </div>
                 <div id="aalborg" class="presentation-text">
-                    <p style="color:#999;font-size: 20px"><b>MS / PhD @ Control and Automation Section of Aalborg University</b></p>
+                    <p style="font-family: 'Oswald', sans-serif; color:#999;font-size: 20px"><b>MS / PhD @ Section of Control and Automation at Aalborg University</b></p>
                     <p>I obtained my Master's in Control and Automation at <b>Aalborg University/Denmark</b>, where I specialized in spacecraft Guidance, Navigation and Control (GNC). Immediately after, I pursued my Ph.D. degree focused on enhancing spacecraft safety. Currently, I am working as a Postdoc collaborating with several companies in ESA-funded projects with the aim of developing GNC algorithms for launchers.</p>
                 </div>
                 <div id="buffalo" class="presentation-text">
-                    <p style="color:#999;font-size: 20px"><b>Visiting Scholar @ Mechanical and Aerospace Department of SUNY</b></p>
+                    <p style="font-family: 'Oswald', sans-serif; color:#999;font-size: 20px"><b>Visiting Scholar @ Mechanical and Aerospace Department of the State University of NY at Buffalo</b></p>
                     <p>During my Ph.D. studies, I was honored with the opportunity of visiting the Mechanical and Aerospace Engineering Department of the <b>State University of New York at Buffalo</b> under the supervision of Prof. John Crassidis, a SUNY distinguished professor and amazing mentor.</p>
                 </div>
 
             </div>
-
 
 
             <!-- <div class="presentation"> -->
@@ -259,7 +243,7 @@
                         <div class="research-body">
                             <p><a target="_blank" href="https://arxiv.org/abs/2405.13506">Paper&#129125;</a> &#8226; <a target="_blank" href="">Code&#129125;</a></p>
                             <span class="research-name">SAMPLE PATH LARGE DEVIATIONS IN SPACE COLLISIONS</span>
-                            <p>Freidlin-Wentzell theory of Large Deviations is applied to the problem of spacecraft collisions, a rare event characterized by extremely low probabilities. We accommodate stochastic uncertainty in the initial states, which is a relevant source of uncertainty in this type of problems,  and define an optimal control problem which solution are the most likely sample paths, initial conditions and terminal time leading to the realization of the unsafe rare event.</p>
+                            <p class="research-description">Freidlin-Wentzell theory of Large Deviations is applied to the problem of spacecraft collisions, a rare event characterized by extremely low probabilities. We accommodate stochastic uncertainty in the initial states, which is a relevant source of uncertainty in this type of problems,  and define an optimal control problem which solution are the most likely sample paths, initial conditions and terminal time leading to the realization of the unsafe rare event.</p>
                         </div>
                     </div>
 
@@ -281,8 +265,9 @@
                         <div class="research-plus-button">+</div>
                         <div class="research-body">
                             <p><a target="_blank" href="https://arxiv.org/abs/2303.02743">Paper&#129125;</a> &#8226; <a target="_blank" href="">Code&#129125;</a></p>
-                            <span class="research-name">DESCENTRALIZED GUIDANCE FOR LISA'S HIGH-PRECISION POINTING</span>
-                            <p class="research-description">We designed a guidance scheme for the pointing acquisition phase of the Laser Interferometer Space Antenna (LISA) mission. We formulate the problem in a cooperative game setup, which solution is a sequence of corrections that can be used as a tracking reference for the controllers to align all the spacecraft' laser beams simultaneously within the tolerances required for gravitational wave detection. Our method proposes a model-free learning algorithm based on residual-feedback and momentum, for accelerated convergence to stable solutions, i.e. Nash Equilibria. Each spacecraft has 4 degrees of freedom, and the only measured output considered are laser misalignments with the local interferometer sensors.</p>
+                            <span class="research-name">DESCENTRALIZED GUIDANCE FOR HIGH-PRECISION POINTING</span>
+                            <p class="research-description">We designed a guidance scheme for the pointing acquisition phase of the Laser Interferometer Space Antenna (LISA) mission. The problem is formulated as a cooperative game and we solve it using a modified gradient-bandit algorithm. The algorithm yields a reference signal for the controllers to align all the spacecraft' laser beams simultaneously within the tolerances required for gravitational wave detection.</p>
+                            <!-- <p class="research-description"><b style="color: rgb(176,0,1);">About LISA:</b> Each spacecraft has 4 degrees of freedom, and the only measured output considered are laser misalignments with the local interferometer sensors.</p> -->
                         </div>
                         <div class="research-ellipsis">...</div>
                     </div>
@@ -498,7 +483,6 @@
         <div class="copyright center hidden">
             <p>Copyright &copy; Aitor Ramirez Gomez 2024</p>
         </div>
-
 
     </body>
 </html>
