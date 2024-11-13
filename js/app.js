@@ -108,7 +108,7 @@ function animateMenu(id) {
             line.style.transform = 'translateX(0%)';
         }
         else{
-            line.style.transform = 'translateX(-100%)';
+            line.style.transform = 'translateX(-101%)';
         };
     });
 };

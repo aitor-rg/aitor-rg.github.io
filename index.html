@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <!--Title Bar-->
-    <link rel="icon" type="image/png" href="./images/icons/lambda1.ico">
+    <!-- <link rel="icon" type="image/png" href="./images/icons/lambda1.ico"> -->
     <head>
-        <title>Aitor R Gomez&mdash;Portfolio</title>
+        <title>Aitor Gomez's Research</title>
         <link rel="stylesheet" href="style-v3.css" />
     <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
     <script defer src="./js/app.js"></script>
@@ -13,11 +13,11 @@
 
     <body>
         <div class="header">
-            <span class="name">AITOR GOMEZ</span>
-            <span class="name" style="font-size: 15px;"><a target="_blank" href="https://vbn.aau.dk/da/persons/arg">POSTDOC</a> @AALBORG UNIVERSITY</span>
-            <span class="name" style="font-size: 15px;"><a target="_blank" href="https://scholar.google.com/citations?user=LBQKamgAAAAJ&hl=en">+ GOOGLE SCHOLAR</a></span>
-            <span class="name" style="font-size: 15px;"><a target="_blank" href="https://www.linkedin.com/in/aitor-rg/">+ LINKEDIN</a></span>
-            <span class="name" style="font-size: 15px;"><a target="_blank" href="mailto:arg@es.aau.dk">+ CONTACT ME</span>
+            <p class="name">AITOR GOMEZ</p>
+            <p class="name" style="font-size: 15px;"><a target="_blank" href="https://vbn.aau.dk/da/persons/arg">POSTDOC</a> @AALBORG UNIVERSITY</p>
+            <p class="name" style="font-size: 15px;"><a target="_blank" href="https://scholar.google.com/citations?user=LBQKamgAAAAJ&hl=en">+ GOOGLE SCHOLAR</a></p>
+            <p class="name" style="font-size: 15px;"><a target="_blank" href="https://www.linkedin.com/in/aitor-rg/">+ LINKEDIN</a></p>
+            <p class="name" style="font-size: 15px;"><a target="_blank" href="mailto:arg@es.aau.dk">+ REACH OUT</a></p>
         </div>
 
         <div class="fixed-gradient-1"></div>
@@ -25,7 +25,7 @@
 
         <div class="menu-container">
             <ul class="menu">
-                <li> <a class="current waiting" href="#about" onclick="scrollToSec('about')">       ABOUT       </a> </li>
+                <li> <a class="current waiting" href="#about" onclick="scrollToSec('about')">       ABOUT ME      </a> </li>
                 <li> <a class="waiting" href="#projects" onclick="scrollToSec('projects')">         PROJECTS    </a> </li>
                 <li> <a class="waiting" href="#research" onclick="scrollToSec('research')">         RESEARCH    </a> </li>
                 <li> <a class="waiting" href="#publications" onclick="scrollToSec('publications')"> PUBLICATIONS    </a> </li>
@@ -41,51 +41,73 @@
 
         <div id="about" class="section">
 
-            <div class="presentation-center hidden">
-                <div class="presentation-wrapper">
-                    <div class="presentation-item"
-                         onmouseenter="display_presentation('barcelona')"
-                         onmouseleave="hide_presentation('barcelona')"
-                         style="background-image: url(./images/etseib.jpg);
-                                background-size: cover;
-                                background-position: center;">
-                    </div>
-                    <div class="presentation-item"
-                         onmouseenter="display_presentation('aalborg')"
-                         onmouseleave="hide_presentation('aalborg')"
-                         style="background-image: url(./images/aau.png);
-                                background-size: cover;
-                                background-position: center;">
-                    </div>
-                    <div class="presentation-item"
-                         onmouseenter="display_presentation('buffalo')"
-                         onmouseleave="hide_presentation('buffalo')"
-                         style="background-image: url(./images/suny_ub.jpg);
-                                background-size: cover;
-                                background-position: center;">
-                    </div>
-                </div>
 
-                <div id="barcelona" class="presentation-text">
-                    <p style="font-family: 'Oswald', sans-serif; color:#999; font-size: 20px"><b>BS @ Barcelona Technical School of Industrial Engineering (ETSEIB)</b></p>
-                    <p><b>Barcelona</b> is the place I grew up. I obtained my Bachelor's degree from the Barcelona School of Industrial Engineering, and conducted my thesis at the Institute of Robotics and Industrial Informatics, a joint research center of the Spanish National Research Council (CSIC) and the Technical University of Catalonia (UPC). Meanwhile, I teached Linear Algebra and Differential Equations to fellow students at a reinforcement university center.</p>
-                </div>
-                <div id="aalborg" class="presentation-text">
-                    <p style="font-family: 'Oswald', sans-serif; color:#999;font-size: 20px"><b>MS / PhD @ Section of Control and Automation at Aalborg University</b></p>
-                    <p>I obtained my Master's in Control and Automation at <b>Aalborg University/Denmark</b>, where I specialized in spacecraft Guidance, Navigation and Control (GNC). Immediately after, I pursued my Ph.D. degree focused on enhancing spacecraft safety. Currently, I am working as a Postdoc collaborating with several companies in ESA-funded projects with the aim of developing GNC algorithms for launchers.</p>
-                </div>
-                <div id="buffalo" class="presentation-text">
-                    <p style="font-family: 'Oswald', sans-serif; color:#999;font-size: 20px"><b>Visiting Scholar @ Mechanical and Aerospace Department of the State University of NY at Buffalo</b></p>
-                    <p>During my Ph.D. studies, I was honored with the opportunity of visiting the Mechanical and Aerospace Engineering Department of the <b>State University of New York at Buffalo</b> under the supervision of Prof. John Crassidis, a SUNY distinguished professor and amazing mentor.</p>
-                </div>
+            <div class="timeline">
+                <span class="timeline-item" style="left:213px;top:110px">BS, INDUSTRIAL ENGINEERING</span>
+                <span class="timeline-item" style="left:490px;top:110px">RESEARCH ASSISTANT</span>
+                <span class="timeline-item" style="left:698px;top:110px">VISITING SCHOLAR</span>
+
+                <span class="timeline-item-subtitle" style="text-align:right;left:200px;top:138px">BARCELONA SCHOOL OF INDUSTRIAL ENGINEERING</span>
+                <span class="timeline-item-subtitle" style="left:472px;top:138px">DRONE RESEARCH LAB, AAU</span>
+                <span class="timeline-item-subtitle" style="left:683px;top:138px">UNIVERSITY AT BUFFALO</span>
+
+                <span class="timeline-item-description" style="left:656px;top:170px">Collaboration with Prof. John Crassidis on spacecraft maneuver determination</span>
+
+                <span class="timeline-item" style="left:342px;top:480px">MS, CONTROL OF SYSTEMS</span>
+                <span class="timeline-item" style="left:591px;top:480px">PHD, SAFE CONTROL</span>
+                <span class="timeline-item" style="left:879px;top:480px">POSTDOC</span>
+
+                <span class="timeline-item-subtitle" style="left:372px;top:453px">AALBORG UNIVERISTY</span>
+                <span class="timeline-item-subtitle" style="left:590px;top:453px">AALBORG UNIVERISTY</span>
+                <!-- <span class="timeline-item-subtitle" style="left:562px;top:453px">LEARNING AND DECISION LAB</span> -->
+                <!-- <span class="timeline-item-subtitle" style="left:472px;top:453px">AALBORG UNIVERSITY</span> -->
+                <span class="timeline-item-subtitle" style="left:830px;top:453px">AAU ROCKET SCIENCE</span>
+
+                <span class="timeline-item-description" style="left:547px;top:385px">Supervised by Prof. Rafal Wisniewski. Investigating GNC methods for safe spacecraft operations</span>
+                <span class="timeline-item-description" style="left:786px;top:385px">ESA project with Deimos and Orbex developing GNC algorithms for Launchers</span>
 
             </div>
 
-
-            <!-- <div class="presentation"> -->
-            <!--     <div class="bio"> -->
-            <!--         <p> </p> -->
+            <!-- <div class="presentation-center hidden"> -->
+            <!--     <div class="presentation-wrapper"> -->
+            <!--         <div class="presentation-item" -->
+            <!--              onmouseenter="display_presentation('barcelona')" -->
+            <!--              onmouseleave="hide_presentation('barcelona')" -->
+            <!--              style="background-image: url(./images/etseib.jpg); -->
+            <!--                     background-size: cover; -->
+            <!--                     background-position: center;"> -->
+            <!--         </div> -->
+            <!--         <div class="presentation-item" -->
+            <!--              onmouseenter="display_presentation('aalborg')" -->
+            <!--              onmouseleave="hide_presentation('aalborg')" -->
+            <!--              style="background-image: url(./images/aau.png); -->
+            <!--                     background-size: cover; -->
+            <!--                     background-position: center;"> -->
+            <!--         </div> -->
+            <!--         <div class="presentation-item" -->
+            <!--              onmouseenter="display_presentation('buffalo')" -->
+            <!--              onmouseleave="hide_presentation('buffalo')" -->
+            <!--              style="background-image: url(./images/suny_ub.jpg); -->
+            <!--                     background-size: cover; -->
+            <!--                     background-position: center;"> -->
+            <!--         </div> -->
             <!--     </div> -->
+
+            <!--     <div id="barcelona" class="presentation-text"> -->
+            <!--         <p style="font-family: 'Oswald', sans-serif; color:#999; font-size: 20px"><b>BS @ Barcelona Technical School of Industrial Engineering (ETSEIB)</b></p> -->
+            <!--         <p><b>Barcelona</b> is the place I grew up. I obtained my Bachelor's degree from the Barcelona School of Industrial Engineering, and conducted my thesis at the Institute of Robotics and Industrial Informatics, a joint research center of the Spanish National Research Council (CSIC) and the Technical University of Catalonia (UPC). Meanwhile, I teached Linear Algebra and Differential Equations to fellow students at a reinforcement university center.</p> -->
+            <!--     </div> -->
+            <!--     <div id="aalborg" class="presentation-text"> -->
+            <!--         <p style="font-family: 'Oswald', sans-serif; color:#999;font-size: 20px"><b>MS / PhD @ Section of Control and Automation at Aalborg University</b></p> -->
+            <!--         <p>I obtained my Master's in Control and Automation at <b>Aalborg University/Denmark</b>, where I specialized in spacecraft Guidance, Navigation and Control (GNC). Immediately after, I pursued my Ph.D. degree focused on enhancing spacecraft safety. Currently, I am working as a Postdoc collaborating with several companies in ESA-funded projects with the aim of developing GNC algorithms for launchers.</p> -->
+            <!--     </div> -->
+            <!--     <div id="buffalo" class="presentation-text"> -->
+            <!--         <p style="font-family: 'Oswald', sans-serif; color:#999;font-size: 20px"><b>Visiting Scholar @ Mechanical and Aerospace Department of the State University of NY at Buffalo</b></p> -->
+            <!--         <p>During my Ph.D. studies, I was honored with the opportunity of visiting the Mechanical and Aerospace Engineering Department of the <b>State University of New York at Buffalo</b> under the supervision of Prof. John Crassidis, a SUNY distinguished professor and amazing mentor.</p> -->
+            <!--     </div> -->
+
+            <!-- </div> -->
+
 
 
             <!--     <p style="margin-top:80vh; font-size: 10px; text-align:center; color: #BBB;">I have collaborated with:</p> -->
@@ -110,7 +132,7 @@
         <div id="projects" class="section">
 
             <div class="row section-title">
-                PROJECTS
+                LARGE PROJECTS
             </div>
 
             <div class="project-center">
@@ -192,7 +214,7 @@
 
                     <div id="drone" class="project-selected">
                         <div class="project-display-image"
-                             style="background-image: url(./images/T500_slung_test.png);
+                             style="background-image: url(./images/PD6C4174.JPG);
                                     background-size: cover;
                                     background-position: center;">
                         </div>
@@ -233,7 +255,7 @@
                         <div class="research-image" style="background-image: url(./images/rocket.png);"></div>
                         <div class="research-body">
                             <p><a target="_blank" href="">Code&#129125;</a></p>
-                            <span class="research-name">ROBUST-SAFE TVC FOR ASCENT, DESCENT AND LANDING OF ROCKETS</span>
+                            <span class="research-name">ROBUST CONTROL BARRIER FUNCTIONS FOR THRUST VECTOR CONTROL</span>
                             <p class="research-description">Developing Avionics and on-board GNC algorithms for safe atmospheric flight, descent and landing of rockets.</p>
                         </div>
                     </div>
@@ -242,7 +264,7 @@
                         <div class="research-image" style="background-image: url(./images/LDT.png);background-position:bottom;"></div>
                         <div class="research-body">
                             <p><a target="_blank" href="https://arxiv.org/abs/2405.13506">Paper&#129125;</a> &#8226; <a target="_blank" href="">Code&#129125;</a></p>
-                            <span class="research-name">SAMPLE PATH LARGE DEVIATIONS IN SPACE COLLISIONS</span>
+                            <span class="research-name">SAMPLE PATH LARGE DEVIATIONS FOR SPACECRAFT COLLISIONS</span>
                             <p class="research-description">Freidlin-Wentzell theory of Large Deviations is applied to the problem of spacecraft collisions, a rare event characterized by extremely low probabilities. We accommodate stochastic uncertainty in the initial states, which is a relevant source of uncertainty in this type of problems,  and define an optimal control problem which solution are the most likely sample paths, initial conditions and terminal time leading to the realization of the unsafe rare event.</p>
                         </div>
                     </div>
