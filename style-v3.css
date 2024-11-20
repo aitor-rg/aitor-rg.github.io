@@ -188,10 +188,11 @@ body {
 }
 .timeline-item {
     position: absolute;
-    float: left;
-    width: 142px;
+    /* float: left; */
+    width: 152px;
     font-family: 'Oswald', sans-serif;
     font-size: 13px;
+    text-align: right;
     color: white;
 }
 .timeline-item-subtitle {
@@ -199,18 +200,19 @@ body {
     float: left;
     width: 155px;
     font-family: 'Oswald', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
+    text-align: right;
     color: #777;
 }
 
 .timeline-item-description {
     position: absolute;
     float: left;
-    width: 140px;
+    width: 155px;
     font-family: sans-serif;
     font-size: 11px;
     text-align: right;
-    color: #777;
+    color: #555;
 }
 
 .section {
