@@ -46,6 +46,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 12pt;
     color: #f2f2f2;
+    overflow-x: hidden;
 }
 
 /* For desktop: */
@@ -218,8 +219,8 @@ body {
 .section {
     border-top: 1pt solid black;
     min-height: 100vh;
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
     /* border-left: 1pt solid #555; */
 }
 .section-title {
@@ -253,17 +254,17 @@ body {
     background: linear-gradient(180deg, rgba(255,0,0,0), black);
 }
 .project-center {
-    width:80%;
-    margin-top: calc(50vh - 10vh - 80% * 0.5 * 0.5);
+    width: 90%;
+    margin-top: calc(50vh - 10vh - 75% * 0.5 * 0.5);
     margin-right:auto;
     margin-left:auto;
 }
 .project-container {
     width: 100%;
-    height: calc(100vh - 10vh - 80px);
+    /* height: calc(100vh - 10vh - 80px); */
 }
 .project-menu {
-    width: 25%;
+    width: 20%;
     /* height: calc(100vh - 10vh - 80px); */
     /* margin-bottom: 40px; */
 }
@@ -274,6 +275,7 @@ body {
     display: inline-block;
     height: 65px;
     width: 100%;
+    border-right: 1pt solid #444;
     margin-left: auto;
     margin-right: 0;
 }
@@ -281,7 +283,7 @@ body {
     /* width: auto; */
     height: auto;
     overflow: hidden;
-    margin-right: 20px;
+    margin-right: 10px;
     margin-left: auto;
     text-align: right;
 
@@ -324,37 +326,40 @@ body {
 }
 
 .project-box {
-    width: 75%;
-    margin-left: 25%;
-    margin-right: auto;
+    width: 80%;
+    margin-left: 31%;
+    margin-right: 0;
 }
 .project-selected {
     position: absolute;
     z-index: 1;
-    width: calc(80% * 0.8 * 0.75);
-    opacity: 0%;
+    width: calc(90% * 0.9 * 0.8);
+    /* opacity: 0%; */
+    transform: translate(105%);
     margin-left: 0px;
     margin-right: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: transform 0.8s ease-in-out;
 }
 .project-display-image {
     float: left;
     display: inline-block;
-    width: 66.66%;
-    aspect-ratio : 1 / 1;
-    transition: opacity 0.5s ease-in-out;
+    width: 75%;
+    aspect-ratio : 1.5 / 1;
+    /* transition: opacity 0.5s ease-in-out; */
 }
 .project-display-description {
     float: left;
-    width: calc(33.33% - 10px);
+    width: calc(25% - 10px);
     /* height: 100px; */
-    margin-left: 10px;
+    margin-right: 10px;
+    text-align: right;
 }
 .project-display-description p {
     margin: 0px;
     margin-top: 0px;
     margin-bottom: 15px;
     font-size: 13px;
+    text-align: right;
 }
 .project-display-description a {
     color: #FFF;

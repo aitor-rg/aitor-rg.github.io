@@ -173,10 +173,12 @@ function toggle_project(myid,el) {
 
     var boxes = document.querySelectorAll(".project-selected");
     boxes.forEach((box) => {
-        box.style.opacity = "0%";
+        // box.style.opacity = "0%";
+        box.style.transform  = "translate(105%)";
         box.style.zIndex = "1";
     });
-    clicked_box.style.opacity = ((clicked_box.style.opacity!="100%") ? "100%" : "0%");;
+    // clicked_box.style.opacity = ((clicked_box.style.opacity!="100%") ? "100%" : "0%");;
+    clicked_box.style.transform = ((clicked_box.style.transform!="translate(0%)") ? "translate(0%)" : "translate(105%)");
     clicked_box.style.zIndex = "10";
 
     var selectors = document.querySelectorAll(".project-title");

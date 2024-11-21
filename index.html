@@ -146,20 +146,20 @@
                         <div class="project-selector">
                             <div class="project-title opened-project" onclick="toggle_project('sure',this)">
                                 <span class="project-name">SMART LAUNCHER ENABLER / <b>SURE</b></span>
-                                <p class="date">ROCKETS [2023-2024]</p>
+                                <p><i>ROCKETS [2023-2024]</i></p>
                             </div>
                         </div>
                         <div class="project-selector">
                             <div class="project-title closed-project" onclick="toggle_project('mariot',this)">
                                 <span class="project-name">MARITIME IOT / <b>MARIOT</b></span>
-                                <p class="date">SATELLITES [2020-2021]</p>
+                                <p><i>SATELLITES [2020-2021]</i></p>
                             </div>
                         </div>
 
                         <div class="project-selector">
                             <div class="project-title closed-project" onclick="toggle_project('drone',this)">
                                 <span class="project-name">FLIGHT TERMINATION / <b>SAFE EYE</b></span>
-                                <p class="date">DRONES [2019-2020]</p>
+                                <p><i>DRONES [2019-2020]</i></p>
                             </div>
                         </div>
 
@@ -168,36 +168,31 @@
 
                     <div class="project-box">
 
-                    <div id="sure" class="project-selected" style="opacity:1; z-index:10;">
-                        <div class="project-display-image"
-                             style="background-image: url(./images/rocket.png);
-                                    background-size: cover;
-                                    background-position: center;
-                                    filter: brightness(0.9);">
-                        </div>
+                    <div id="sure" class="project-selected" style="transform:translate(0%); z-index:10;">
                         <div class="project-display-description">
-                            <p>Developing Avionics and on-board GNC algorithms for safe and robust atmospheric flight, descent and landing of rockets.</p>
+                            <p style="text-align:justify;">SURE's primary goal is to identify, design and develop up to TRL 4 on-board avionics and GNC capabilities for autonomous, safe and robust atmospheric flight, descent and landing of rockets.</p>
                             <span class="summary">FUNDED BY</span>
                             <p>European Space Agency</p>
                             <span class="summary">STATUS</span>
                             <p>Ongoing</p>
                             <span class="summary">CONSORTIUM PARTNERS</span>
                             <ul>
-                                <li><a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a> (Project leader)</li>
+                                <li>(Project leader) <a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a></li>
                                 <li><a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a></li>
                                 <li><a target="_blank" href="https://www.orbex.space/">Orbex</a></li>
                             </ul>
                         </div>
+                        <div class="project-display-image"
+                             style="background-image: url(./images/ascent.jpg);
+                                    background-size: cover;
+                                    background-position: center;
+                                    filter: brightness(1);">
+                        </div>
                     </div>
 
                     <div id="mariot" class="project-selected">
-                        <div class="project-display-image"
-                             style="background-image: url(./gifs/out2.gif);
-                                    background-size: cover;
-                                    background-position: center;">
-                        </div>
                         <div class="project-display-description">
-                            <p>Global VDES-SAT constellation network to provide maritime safety and navigational services. For the MARIOT project I developed a Python simulation environment of the satellite constellation and communication protocols for system verification, performed analyses of Launch and Early Operations and provided advice in relation to safety protocols (collision probability and avoidance maneuvers).  </p>
+                            <p style="text-align:justify;">The MARIOT project has the objective of developing the first commercial VDES satellite constellation network to improve maritime safety and navigation in the arctic and other naval waters. I contributed with LEOP, orbital and collision avoidance analyses, and developed an end-to-end Python simulation environment for system verification and communication throughput validation. MARIOT-1 satellite was launched on 3rd of January 2023.</p>
                             <span class="summary">FUNDED BY </span>
                             <p>Innovation Fund Denmark</p>
                             <span class="summary">STATUS </span>
@@ -213,23 +208,29 @@
                             </ul>
                             <a style="font-size: 11px;" target="_blank" href="https://www.sternula.com/projects/mariot/">MARIOT WEBSITE &#129125;</a>
                         </div>
-                    </div>
-
-                    <div id="drone" class="project-selected">
                         <div class="project-display-image"
-                             style="background-image: url(./images/PD6C4174.JPG);
+                             style="background-image: url(./gifs/out2.gif);
                                     background-size: cover;
                                     background-position: center;">
                         </div>
+                    </div>
+
+                    <div id="drone" class="project-selected">
                         <div class="project-display-description">
-                            <p>Design, construction and testing of an automated flight termination system for big drones (&gt;7kg). This includes the implementation of neural-networks for 1) classification of landable ground areas and 2) structural vibration monitoring; and 3) the formulation of a decision function to terminate the flight. Airborne tests were conducted, as well as lab tests using VICON motion capture system on a DJI M800 to gather nominal and faulty vibration data.</p>
+                            <p style="text-align:justify;">Design, construction and testing of an automated flight termination system for big drones (&gt;7kg). This includes the implementation of neural-networks for 1) classification of landable ground areas and 2) structural vibration monitoring; and 3) the formulation of a decision function to terminate the flight. Airborne tests were conducted, as well as lab tests using VICON motion capture system on a DJI M800 to gather nominal and faulty vibration data.</p>
                             <span class="summary">FUNDED BY </span>
                             <p>Innovation Fund Denmark</p>
                             <span class="summary">STATUS </span>
                             <p>Completed</p>
                             <span class="summary">RELATED PAPERS</span>
-                            <p><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i> </p>
-                            <p>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i> </p>
+                            <p style="text-align:justify;"><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i> </p>
+                            <p style="text-align:justify;">Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i> </p>
+                        </div>
+                        <div class="project-display-image"
+                             style="background-image: url(./images/PD6C4174.JPG);
+                                    background-size: cover;
+                                    background-position: center;
+                                    filter: brightness(0.8);">
                         </div>
                     </div>
 
