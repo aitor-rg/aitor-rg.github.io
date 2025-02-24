@@ -13,12 +13,12 @@
 
     <body>
         <div class="header">
-            <p class="name">AITOR GOMEZ</p>
-            <p class="name" style="font-size: 15px;"><a target="_blank" href="https://vbn.aau.dk/da/persons/arg">POSTDOC</a> @AALBORG UNIVERSITY</p>
-            <p class="name" style="font-size: 15px;"><a target="_blank" href="https://www.en.space.aau.dk/aau-space-group">AAU SPACE</a></p>
+            <p class="name me" style="font-weight: 700">AITOR GOMEZ</p>
+            <!-- <p class="name" style="font-size: 15px;"><a target="_blank" href="https://vbn.aau.dk/da/persons/arg">POSTDOC</a> @AALBORG UNIVERSITY</p> -->
+            <p class="name header-link" data-text="AAUSPACE"><a target="_blank" href="https://www.en.space.aau.dk/aau-space-group">AAU SPACE</a></p>
             <!-- <p class="name" style="font-size: 15px;"><a target="_blank" href="https://scholar.google.com/citations?user=LBQKamgAAAAJ&hl=en">GOOGLE SCHOLAR</a></p> -->
-            <p class="name" style="font-size: 15px;"><a target="_blank" href="https://www.linkedin.com/in/aitor-rg/">LINKEDIN</a></p>
-            <p class="name" style="font-size: 15px;"><a target="_blank" href="mailto:arg@es.aau.dk">REACH OUT</a></p>
+            <p class="name header-link" data-text="LINKEDIN"><a target="_blank" href="https://www.linkedin.com/in/aitor-rg/">LINKEDIN</a></p>
+            <p class="name header-link" data-text="REACHOUT"><a target="_blank" href="mailto:arg@es.aau.dk">REACH OUT</a></p>
         </div>
 
         <div class="fixed-gradient-1"></div>
@@ -43,73 +43,26 @@
         <div id="about" class="section">
 
 
-            <div class="timeline">
-                <span class="timeline-item" style="left:261px;top:109px">BSc - INDUSTRIAL ENGINEERING</span>
-                <span class="timeline-item" style="left:487px;top:109px">MSc - AUTOM. AND CONTROL</span>
-                <span class="timeline-item" style="left:706px;top:109px">VISITING SCHOLAR</span>
-                <span class="timeline-item" style="left:945px;top:109px">POSTDOC</span>
-
-                <span class="timeline-item-subtitle" style="left:257px;top:131px;">ETSEIB, UPC</span>
-                <span class="timeline-item-subtitle" style="left:485px;top:131px">AALBORG UNIVERSITY</span>
-                <span class="timeline-item-subtitle" style="left:703px;top:131px">UNIVERSITY AT BUFFALO</span>
-                <span class="timeline-item-subtitle" style="left:942px;top:131px">AAU ROCKET SCIENCE</span>
-
-                <span class="timeline-item-description" style="left:258px;top:170px">Obtained engineering degree. Lectured university students in algebra and differential equations</span>
-                <span class="timeline-item-description" style="left:703px;top:170px">Collaboration with Prof. John Crassidis on spacecraft maneuver determination</span>
-                <span class="timeline-item-description" style="left:942px;top:170px">ESA projects developing innovative GNC algorithms for reusable launchers. Supervised by Prof. Jakob Stoustrup</span>
-
-                <span class="timeline-item" style="left:372px;top:471px">RESEARCH ASSISTANT</span>
-                <span class="timeline-item" style="left:613px;top:471px">RESEARCHER</span>
-                <span class="timeline-item" style="left:808px;top:471px">PhD - SAFE CONTROL</span>
-
-                <span class="timeline-item-subtitle" style="left:372px;top:433px">INSTITUTE OF ROBOTICS AND INDUSTRIAL INFORMATICS, IRI</span>
-                <span class="timeline-item-subtitle" style="left:610px;top:450px">DRONE RESEARCH LAB, AAU</span>
-                <!-- <span class="timeline-item-subtitle" style="left:562px;top:453px">LEARNING AND DECISION LAB</span> -->
-                <span class="timeline-item-subtitle" style="left:805px;top:450px">AALBORG UNIVERSITY</span>
-
-                <span class="timeline-item-description" style="left:805px;top:375px">Developing GNC methods for safe spacecraft operations. Supervised by Prof. Rafal Wisniewski</span>
-
+            <div class="about-container">
+                <div class="about-opaqueUP"></div>
+                <div class="about-fadeUP"></div>
+                    <div class="aboutme">
+                    <div class="about-out">
+                        <p>I develop</p>
+                        <div class="about-in">
+                            <span>
+                                control <br />
+                                navigation <br />
+                                guidance <br />
+                                learning <br />
+                            </span>
+                        </div>
+                        <p>algorithms for spacecrafts and rockets.</p>
+                    </div>
+                    </div>
+                <div class="about-fadeDW"></div>
+                <div class="about-opaqueDW"></div>
             </div>
-
-            <!-- <div class="presentation-center hidden"> -->
-            <!--     <div class="presentation-wrapper"> -->
-            <!--         <div class="presentation-item" -->
-            <!--              onmouseenter="display_presentation('barcelona')" -->
-            <!--              onmouseleave="hide_presentation('barcelona')" -->
-            <!--              style="background-image: url(./images/etseib.jpg); -->
-            <!--                     background-size: cover; -->
-            <!--                     background-position: center;"> -->
-            <!--         </div> -->
-            <!--         <div class="presentation-item" -->
-            <!--              onmouseenter="display_presentation('aalborg')" -->
-            <!--              onmouseleave="hide_presentation('aalborg')" -->
-            <!--              style="background-image: url(./images/aau.png); -->
-            <!--                     background-size: cover; -->
-            <!--                     background-position: center;"> -->
-            <!--         </div> -->
-            <!--         <div class="presentation-item" -->
-            <!--              onmouseenter="display_presentation('buffalo')" -->
-            <!--              onmouseleave="hide_presentation('buffalo')" -->
-            <!--              style="background-image: url(./images/suny_ub.jpg); -->
-            <!--                     background-size: cover; -->
-            <!--                     background-position: center;"> -->
-            <!--         </div> -->
-            <!--     </div> -->
-
-            <!--     <div id="barcelona" class="presentation-text"> -->
-            <!--         <p style="font-family: 'Oswald', sans-serif; color:#999; font-size: 20px"><b>BS @ Barcelona Technical School of Industrial Engineering (ETSEIB)</b></p> -->
-            <!--         <p><b>Barcelona</b> is the place I grew up. I obtained my Bachelor's degree from the Barcelona School of Industrial Engineering, and conducted my thesis at the Institute of Robotics and Industrial Informatics, a joint research center of the Spanish National Research Council (CSIC) and the Technical University of Catalonia (UPC). Meanwhile, I teached Linear Algebra and Differential Equations to fellow students at a reinforcement university center.</p> -->
-            <!--     </div> -->
-            <!--     <div id="aalborg" class="presentation-text"> -->
-            <!--         <p style="font-family: 'Oswald', sans-serif; color:#999;font-size: 20px"><b>MS / PhD @ Section of Control and Automation at Aalborg University</b></p> -->
-            <!--         <p>I obtained my Master's in Control and Automation at <b>Aalborg University/Denmark</b>, where I specialized in spacecraft Guidance, Navigation and Control (GNC). Immediately after, I pursued my Ph.D. degree focused on enhancing spacecraft safety. Currently, I am working as a Postdoc collaborating with several companies in ESA-funded projects with the aim of developing GNC algorithms for launchers.</p> -->
-            <!--     </div> -->
-            <!--     <div id="buffalo" class="presentation-text"> -->
-            <!--         <p style="font-family: 'Oswald', sans-serif; color:#999;font-size: 20px"><b>Visiting Scholar @ Mechanical and Aerospace Department of the State University of NY at Buffalo</b></p> -->
-            <!--         <p>During my Ph.D. studies, I was honored with the opportunity of visiting the Mechanical and Aerospace Engineering Department of the <b>State University of New York at Buffalo</b> under the supervision of Prof. John Crassidis, a SUNY distinguished professor and amazing mentor.</p> -->
-            <!--     </div> -->
-
-            <!-- </div> -->
 
 
 
@@ -135,7 +88,7 @@
         <div id="projects" class="section">
 
             <div class="row section-title">
-                <p>LARGE PROJECTS</p>
+                LARGE PROJECTS
             </div>
 
             <div class="project-center">
@@ -145,20 +98,20 @@
                     <div class="project-menu">
                         <div class="project-selector">
                             <div class="project-title opened-project" onclick="toggle_project('sure',this)">
-                                <span class="project-name">SMART LAUNCHER ENABLER / <b>SURE</b></span>
+                                <span class="project-name">SMART LAUNCHER ENABLER/<b>SURE</b></span>
                                 <p><i>ROCKETS [2023-2024]</i></p>
                             </div>
                         </div>
                         <div class="project-selector">
                             <div class="project-title closed-project" onclick="toggle_project('mariot',this)">
-                                <span class="project-name">MARITIME IOT / <b>MARIOT</b></span>
+                                <span class="project-name">MARITIME IOT/<b>MARIOT</b></span>
                                 <p><i>SATELLITES [2020-2021]</i></p>
                             </div>
                         </div>
 
                         <div class="project-selector">
                             <div class="project-title closed-project" onclick="toggle_project('drone',this)">
-                                <span class="project-name">FLIGHT TERMINATION / <b>SAFE EYE</b></span>
+                                <span class="project-name">FLIGHT TERMINATION/<b>SAFE EYE</b></span>
                                 <p><i>DRONES [2019-2020]</i></p>
                             </div>
                         </div>
@@ -170,37 +123,48 @@
 
                     <!-- SURE -->
                     <div id="sure" class="project-selected" style="transform:translate(0%); z-index:10;">
-                        <div class="project-display-status">
-                            <span class="summary">DEVELOPED AT</span>
-                            <p>AAU Space Group, Aalborg University</p>
-                            <span class="summary">FUNDED BY</span>
-                            <p>European Space Agency</p>
-                            <span class="summary">STATUS</span>
-                            <p>Ongoing</p>
-                            <span class="summary">CONSORTIUM PARTNERS</span>
-                            <ul>
-                                <li>(Project leader) <a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a></li>
-                                <li><a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a></li>
-                                <li><a target="_blank" href="https://www.orbex.space/">Orbex</a></li>
-                            </ul>
-                            <span class="summary">RELATED PAPERS</span>
-                            <p>TBA</p>
-                        </div>
                         <div class="project-display-image"
                              style="background-image: url(./images/ascent.jpg);
                                     background-size: cover;
                                     background-position: center;
                                     filter: brightness(1);">
                         </div>
-                        <div class=project-display-description>
-                            <p style="text-align:justify;">SURE's primary goal is to identify, design and develop (up to TRL 4) on-board avionics and GNC capabilities for autonomous, safe and robust atmospheric flights.</p>
-                            <p style="text-align:justify;">My main contributions to the project was identifying the need of and developing an on-board <i>safety filter</i> for a launcher. This capability allowed the reduction of dispersions of extreme cases, enforced safety-related constraints and facilitated their monitoring for flight termination.</p>
+                        <div class="project-display-status">
+                            <p style="font-size:30px; font-weight:300">SURE</p>
+                            <p>SURE's primary goal is to identify, design and develop (up to TRL 4) on-board avionics and GNC capabilities for autonomous, safe and robust atmospheric flights.</p>
+                            <p>My main contributions to the project was identifying the need of and developing the first on-board <i>safety filter</i> for launchers. This capability allowed the reduction of dispersions of extreme cases, enforced safety-related constraints and facilitated their monitoring for flight termination.</p>
+                            <span class="summary">RELATED PAPERS</span>
+                            <p>TBA</p>
+                            <span class="summary">DEVELOPED AT</span>
+                            <p>AAU Space Group, Aalborg University</p>
+                            <span class="summary">FUNDED BY</span>
+                            <p>European Space Agency</p>
+                            <span class="summary">STATUS</span>
+                            <p>Completed</p>
+                            <span class="summary">CONSORTIUM PARTNERS</span>
+                            <ul>
+                                <li><a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a> (Project leader)</li>
+                                <li><a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a></li>
+                                <li><a target="_blank" href="https://www.orbex.space/">Orbex</a></li>
+                            </ul>
                         </div>
+                        <!-- <div class=project-display-description> -->
+                        <!-- </div> -->
                     </div>
 
                     <!-- MARIOT -->
                     <div id="mariot" class="project-selected">
+                        <div class="project-display-image"
+                             style="background-image: url(./gifs/out2.gif);
+                                    background-size: cover;
+                                    background-position: center;
+                                    filter: brightness(0.6);">
+                        </div>
                         <div class="project-display-status">
+                            <p style="font-size:30px; font-weight:300">MARIOT</p>
+                            <p>The MARIOT project has the objective of developing the first commercial VDES satellite constellation network to improve maritime safety and navigation in the arctic and other naval waters.</p>
+                            <p>I contributed with LEOP, orbital and collision avoidance analyses, and developed an end-to-end Python simulation environment for system verification and communication throughput validation.</p>
+                            <p>MARIOT-1 satellite was launched on 3rd of January 2023.</p>
                             <span class="summary">DEVELOPED AT</span>
                             <p>Learning and Decision Lab, Aalborg University</p>
                             <span class="summary">FUNDED BY </span>
@@ -209,7 +173,7 @@
                             <p>Completed</p>
                             <span class="summary">CONSORTIUM PARTNERS</span>
                             <ul>
-                                <li>(Project leader) <a target="_blank" href="https://www.sternula.com/projects/mariot/">Sternula</a></li>
+                                <li><a target="_blank" href="https://www.sternula.com/projects/mariot/">Sternula</a> (Project leader)</li>
                                 <li><a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a></li>
                                 <li><a target="_blank" href="https://space-inventor.com/">Space Inventors S/A</a></li>
                                 <li><a target="_blank" href="https://gatehouse.com/">GateHouse</a></li>
@@ -218,40 +182,28 @@
                             </ul>
                             <a style="font-size: 11px;" target="_blank" href="https://www.sternula.com/projects/mariot/">MARIOT WEBSITE &#129125;</a>
                         </div>
-                        <div class="project-display-image"
-                             style="background-image: url(./gifs/out2.gif);
-                                    background-size: cover;
-                                    background-position: center;
-                                    filter: brightness(0.6);">
-                        </div>
-                        <div class="project-display-description">
-                            <p style="text-align:justify;">The MARIOT project has the objective of developing the first commercial VDES satellite constellation network to improve maritime safety and navigation in the arctic and other naval waters.</p>
-                            <p style="text-align:justify;">I contributed with LEOP, orbital and collision avoidance analyses, and developed an end-to-end Python simulation environment for system verification and communication throughput validation.</p>
-                            <p style="text-align:justify;">MARIOT-1 satellite was launched on 3rd of January 2023.</p>
-                        </div>
                     </div>
 
                     <!-- DRONEs -->
                     <div id="drone" class="project-selected">
-                        <div class="project-display-status">
-                            <span class="summary">DEVELOPED AT</span>
-                            <p>Drone Research Lab, Aalborg University</p>
-                            <span class="summary">FUNDED BY </span>
-                            <p>Innovation Fund Denmark</p>
-                            <span class="summary">STATUS </span>
-                            <p>Completed</p>
-                            <span class="summary">RELATED PAPERS</span>
-                            <p style="text-align:justify;"><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i> </p>
-                            <p style="text-align:justify;">Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i> </p>
-                        </div>
                         <div class="project-display-image"
                              style="background-image: url(./images/PD6C4174.JPG);
                                     background-size: cover;
                                     background-position: center;
                                     filter: brightness(0.7);">
                         </div>
-                        <div class="project-display-description">
-                            <p style="text-align:justify;">Design, construction and testing of an automated flight termination system for big drones (&gt;7kg). This includes the implementation of neural-networks for 1) classification of landable ground areas and 2) structural vibration monitoring; and 3) the formulation of a decision function to terminate the flight. Airborne tests were conducted, as well as lab tests using VICON motion capture system on a DJI M800 to gather nominal and faulty vibration data.</p>
+                        <div class="project-display-status">
+                            <p style="font-size:30px; font-weight:300">SAFE EYE</p>
+                            <p>Design, construction and testing of an automated flight termination system for big drones (&gt;7kg). This includes the implementation of neural-networks for 1) classification of landable ground areas and 2) structural vibration monitoring; and 3) the formulation of a decision function to terminate the flight. Airborne tests were conducted, as well as lab tests using VICON motion capture system on a DJI M800 to gather nominal and faulty vibration data.</p>
+                            <span class="summary">RELATED PAPERS</span>
+                            <p><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i> </p>
+                            <p>Bektash, O. M., Pedersen, J. N., <b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/automated-emergency-landing-system-for-drones-safeeye-project" >“Automated Emergency Landing System for Drones: SafeEYE Project”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2020.</i> </p>
+                            <span class="summary">DEVELOPED AT</span>
+                            <p>Drone Research Lab, Aalborg University</p>
+                            <span class="summary">FUNDED BY </span>
+                            <p>Innovation Fund Denmark</p>
+                            <span class="summary">STATUS </span>
+                            <p>Completed</p>
                         </div>
                     </div>
 
@@ -268,9 +220,9 @@
 
         <div id="research" class="section">
             <div class="row section-title">
-                <p>LINES OF RESEARCH</p>
+                LINES OF RESEARCH
             </div>
-            <p style="font-size: 10px; margin-right: 30px; margin-top: 50px; text-align:right;">This section is currently under construction</p>
+            <p class="section-note">This section is currently under construction</p>
 
 
             <div class="project-center">
@@ -469,13 +421,13 @@
         <div id="publications" class="section">
 
             <div class="row section-title">
-                <p>LIST OF PUBLICATIONS</p>
+                LIST OF PUBLICATIONS
             </div>
-            <p style="font-size: 10px; margin-right: 30px; margin-top: 50px; text-align:right;">The symbol (*) indicates equal contribution</p>
+            <p class="section-note">The symbol (*) indicates equal contribution</p>
 
             <div class="publications-container">
                 <p><b>Gomez, A. R.</b>, Bujorianu, M. L. & Wisniewski, R., <a target="_blank" href="https://arxiv.org/abs/2405.13506">“Large Deviations in Hamiltonian Systems with Probabilistic Initial Conditions (Preprint)”</a>, <i>Automatica, 2024. (Submitted)</i></p>
-                <p><b>Gomez, A. R.</b>, Nebelecky, K. C. & Crassidis, J., <a target="_blank" href="">“Maneuver Determination in Near-Earth and Cislunar Space without Time/Magnitude Knowledge”</a>, <i>AIAA Journal of Guidance, Control and Dynamics, 2023. (Submitted)</i></p>
+                <p><b>Gomez, A. R.</b>, Nebelecky, K. C. & Crassidis, J., <a target="_blank" href="">“Low-Thrust Spacecraft Maneuver Determination in Near-Earth and Cislunar Space without Time/Magnitude Knowledge”</a>, <i>AIAA Journal of Guidance, Control and Dynamics, 2023. (Submitted)</i></p>
                 <p><b> Gomez, A. R.*</b> & Al Ahdab, M.*, <a target="_bank" href="https://arxiv.org/abs/2303.02743">“Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition (Preprint)”</a>, <i>IFAC World Congress, 2023.</i></p>
                 <p><b>Gomez, A. R.</b> & Wisniewski, R., <a target="_blank" href="https://ieeexplore.ieee.org/document/9992598" >“Stochastic Safety in Space Conjunctions”</a>, <i>IEEE Conference on Decision and Control (CDC), 2022.</i></p>
                 <p><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i></p>
