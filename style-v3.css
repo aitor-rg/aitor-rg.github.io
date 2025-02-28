@@ -372,6 +372,16 @@ body {
     font-family: 'Roboto Mono', serif;
     font-size: 15px;
     text-align: right;
+    margin: 0;
+}
+.section-note-talks {
+    width: 100px;
+    font-family: 'Roboto Mono', serif;
+    font-size: 12px;
+    text-align: right;
+    margin: 0;
+    margin-top:11px;
+    margin-right:5px;
 }
 .fixed-gradient-1 {
     position: fixed;
@@ -869,10 +879,13 @@ body {
     font-size: 12px;
 }
 .at {
-    /* color: #777; */
+    color: #444;
     /* color: #39ffd5; */
-    color: rgb(255,0,188);
+    /* color: rgb(255,0,188); */
     font-weight: 400;
+}
+.highlight {
+    color: rgb(255,0,188);
 }
 .copyright {
     position: relative;
