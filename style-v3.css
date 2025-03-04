@@ -407,23 +407,23 @@ body {
 }
 .project-container {
     width: 70%;
-    max-height: 55px;
+    max-height: 165px;
     display: inline-block;
     overflow: hidden;
-    margin-top: calc(50vh - 20px);
+    margin-top: calc(50vh - 100px);
     margin-left: 15%;
     /* border: 1pt solid red; */
 }
 
 .project-active {
-    max-height: 700px;
-    margin-top: calc(50vh - 350px);
+    max-height: 800px;
+    margin-top: calc(50vh - 400px);
 }
 .project-click {
     cursor: pointer;
     text-align: center;
     font-family: 'Roboto Mono', serif;
-    font-size: 20px;
+    font-size: 55pt;
     font-weight: 400;
     /* color: #777; */
 
@@ -435,24 +435,28 @@ body {
     transition: background-position 1s ease-in-out;
 
 }
+/* .project-click::before { */
+/*     content: "+"; */
+/*     display: inline-block; */
+/*     transition: transform 1s ease-in-out; */
+/* } */
 .project-click:hover {
     background-position: 50% 0%;
 }
+/* .project-click:hover::before { */
+/*     transform: rotate(360deg); */
+/* } */
 .project-click p {
     float: left;
     width:100%;
     text-align: center;
     margin: 0;
-    margin-top: 10px;
-    color: #bbb;
+    margin-top: 30px;
+    color: #777;
     font-size: 9pt;
 }
 .opened-project {
     /* color: white; */
-    background-position: right;
-}
-.opened-project:hover {
-    /* color: #777; */
     background-position: right;
 }
 
@@ -461,7 +465,7 @@ body {
     display: inline-block;
     width: 50%;
     height: 650px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .project-display-status {
     float: left;
@@ -469,7 +473,7 @@ body {
     height: 650px;
     /* width: calc(100% - 66% - 10px - 50px); */
     /* height: 100px; */
-    margin-top: 50px;
+    margin-top: 40px;
     margin-left: 10px;
     text-align: left;
 }
@@ -816,7 +820,7 @@ body {
 }
 .copyright {
     position: relative;
-    color: #777;
+    color: #333;
     font-weight: 400;
     font-size: 12px;
     z-index: 3000;
