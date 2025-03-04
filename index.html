@@ -13,7 +13,7 @@
 
     <body>
         <div class="header">
-            <p class="name me" style="font-weight: 700">AITOR GOMEZ</p>
+            <p class="name me" style="font-weight: 700">aitor gomez</p>
             <!-- <p class="name" style="font-size: 15px;"><a target="_blank" href="https://vbn.aau.dk/da/persons/arg">POSTDOC</a> @AALBORG UNIVERSITY</p> -->
             <p class="name header-link" data-text="AAUSPACE"><a target="_blank" href="https://www.en.space.aau.dk/aau-space-group">AAU SPACE</a></p>
             <!-- <p class="name" style="font-size: 15px;"><a target="_blank" href="https://scholar.google.com/citations?user=LBQKamgAAAAJ&hl=en">GOOGLE SCHOLAR</a></p> -->
@@ -78,9 +78,9 @@
             <!--             <img src="./images/ub-blk.png" alt="photo" style="display: block; margin-top:25px;" height=20px /> -->
             <!--         </ul> -->
             <!--     </div> -->
-            <!--     <!-1- <div class="downarrow"> -1-> -->
-            <!--     <!-1-     <p>&#x2771;</p> -1-> -->
-            <!--     <!-1- </div> -1-> -->
+                <!-- <div class="downarrow"> -->
+                <!--     <p>&#x2771;</p> -->
+                <!-- </div> -->
             <!-- </div> -->
 
 
@@ -93,77 +93,65 @@
                 LARGE PROJECTS
             </div>
 
+            <div class="project-center" style="margin-top: -40px;">
+
+                <div class="project-container hidden" onclick="toggle_collapse(this)">
+
+                    <div class="project-click">
+                        <span>SMART LAUNCHER ENABLER/<b>SURE</b></span>
+                        <p>2023-2024</p>
+                    </div>
+
+                    <div class="project-display-image"
+                         style="background-image: url(./images/ascent.jpg);
+                                background-position: top;
+                                background-size: cover;
+                                filter: brightness(1);">
+                    </div>
+                    <div class="project-display-status">
+                        <p>SURE's primary goal is to identify, design and develop (up to TRL 4) on-board avionics and GNC capabilities for autonomous, safe and robust atmospheric flights.</p>
+                        <p>My main contributions to the project was identifying the need of and developing the first on-board <i>safety filter</i> for launchers. This capability allowed the reduction of dispersions of extreme cases, enforced safety-related constraints and facilitated their monitoring for flight termination.</p>
+                        <span class="summary">RELATED PAPERS</span>
+                        <p>TBA</p>
+                        <span class="summary">DEVELOPED AT</span>
+                        <p>AAU Space Group, Aalborg University</p>
+                        <span class="summary">FUNDED BY</span>
+                        <p>European Space Agency (Contract No. 4000142645/23/NL/CRS)</p>
+                        <span class="summary">STATUS</span>
+                        <p>Completed</p>
+                        <span class="summary">CONSORTIUM PARTNERS</span>
+                        <ul>
+                            <li><a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a> (Project leader)</li>
+                            <li><a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a></li>
+                            <li><a target="_blank" href="https://www.orbex.space/">Orbex</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="projects" class="section">
+
             <div class="project-center">
 
-                <div class="project-container">
+                <div class="project-container hidden" onclick="toggle_collapse(this)">
 
-                    <div class="project-menu">
-                        <div class="project-selector">
-                            <div class="project-title opened-project" onclick="toggle_project('sure',this)">
-                                <span class="project-name">SMART LAUNCHER ENABLER/<b>SURE</b></span>
-                                <p><i>ROCKETS [2023-2024]</i></p>
-                            </div>
-                        </div>
-                        <div class="project-selector">
-                            <div class="project-title closed-project" onclick="toggle_project('mariot',this)">
-                                <span class="project-name">MARITIME IOT/<b>MARIOT</b></span>
-                                <p><i>SATELLITES [2020-2021]</i></p>
-                            </div>
-                        </div>
-
-                        <div class="project-selector">
-                            <div class="project-title closed-project" onclick="toggle_project('drone',this)">
-                                <span class="project-name">FLIGHT TERMINATION/<b>SAFE EYE</b></span>
-                                <p><i>DRONES [2019-2020]</i></p>
-                            </div>
-                        </div>
-
+                    <div class="project-click">
+                        <span>MARITIME IOT/<b>MARIOT</b></span>
+                        <p>2020-2021</p>
                     </div>
 
-
-                    <div class="project-box">
-
-                    <!-- SURE -->
-                    <div id="sure" class="project-selected" style="transform:translate(0%); z-index:10;">
-                        <div class="project-display-image"
-                             style="background-image: url(./images/ascent.jpg);
-                                    background-size: cover;
-                                    background-position: center;
-                                    filter: brightness(1);">
-                        </div>
-                        <div class="project-display-status">
-                            <p style="font-size:30px; font-weight:300">SURE</p>
-                            <p>SURE's primary goal is to identify, design and develop (up to TRL 4) on-board avionics and GNC capabilities for autonomous, safe and robust atmospheric flights.</p>
-                            <p>My main contributions to the project was identifying the need of and developing the first on-board <i>safety filter</i> for launchers. This capability allowed the reduction of dispersions of extreme cases, enforced safety-related constraints and facilitated their monitoring for flight termination.</p>
-                            <span class="summary">RELATED PAPERS</span>
-                            <p>TBA</p>
-                            <span class="summary">DEVELOPED AT</span>
-                            <p>AAU Space Group, Aalborg University</p>
-                            <span class="summary">FUNDED BY</span>
-                            <p>European Space Agency</p>
-                            <span class="summary">STATUS</span>
-                            <p>Completed</p>
-                            <span class="summary">CONSORTIUM PARTNERS</span>
-                            <ul>
-                                <li><a target="_blank" href="https://elecnor-deimos.com/">Deimos Enginheria</a> (Project leader)</li>
-                                <li><a target="_blank" href="https://www.en.aau.dk/education/master/electronic-systems#">Aalborg University</a></li>
-                                <li><a target="_blank" href="https://www.orbex.space/">Orbex</a></li>
-                            </ul>
-                        </div>
-                        <!-- <div class=project-display-description> -->
-                        <!-- </div> -->
-                    </div>
-
-                    <!-- MARIOT -->
-                    <div id="mariot" class="project-selected">
                         <div class="project-display-image"
                              style="background-image: url(./gifs/out2.gif);
                                     background-size: cover;
-                                    background-position: center;
+                                    background-position: bottom;
                                     filter: brightness(0.6);">
                         </div>
                         <div class="project-display-status">
-                            <p style="font-size:30px; font-weight:300">MARIOT</p>
                             <p>The MARIOT project has the objective of developing the first commercial VDES satellite constellation network to improve maritime safety and navigation in the arctic and other naval waters.</p>
                             <p>I contributed with LEOP, orbital and collision avoidance analyses, and developed an end-to-end Python simulation environment for system verification and communication throughput validation.</p>
                             <p>MARIOT-1 satellite was launched on 3rd of January 2023.</p>
@@ -184,10 +172,25 @@
                             </ul>
                             <a style="font-size: 11px;" target="_blank" href="https://www.sternula.com/projects/mariot/">MARIOT WEBSITE &#129125;</a>
                         </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="projects" class="section">
+
+            <div class="project-center">
+
+                <div class="project-container hidden" onclick="toggle_collapse(this)">
+
+                    <div class="project-click">
+                        <span>SAFE EYE</span>
+                        <p>2019-2020</p>
                     </div>
 
-                    <!-- DRONEs -->
-                    <div id="drone" class="project-selected">
                         <div class="project-display-image"
                              style="background-image: url(./images/PD6C4174.JPG);
                                     background-size: cover;
@@ -195,7 +198,6 @@
                                     filter: brightness(0.7);">
                         </div>
                         <div class="project-display-status">
-                            <p style="font-size:30px; font-weight:300">SAFE EYE</p>
                             <p>Design, construction and testing of an automated flight termination system for big drones (&gt;7kg). This includes the implementation of neural-networks for 1) classification of landable ground areas and 2) structural vibration monitoring; and 3) the formulation of a decision function to terminate the flight. Airborne tests were conducted, as well as lab tests using VICON motion capture system on a DJI M800 to gather nominal and faulty vibration data.</p>
                             <span class="summary">RELATED PAPERS</span>
                             <p><b>Gomez, A. R.</b> & la Cour-Harbo, A., <a target="_blank" href="https://vbn.aau.dk/en/publications/emergency-landing-decision-method-for-unmanned-aircraft" >“Emergency Landing Decision Method for Unmanned Aircraft”</a>, <i>International Conference on Unmanned Aircraft Systems (ICUAS), 2021.</i> </p>
@@ -207,17 +209,14 @@
                             <span class="summary">STATUS </span>
                             <p>Completed</p>
                         </div>
-                    </div>
-
-
-                    </div>
-
 
                 </div>
 
             </div>
 
         </div>
+
+
 
 
         <div id="research" class="section">
@@ -231,158 +230,52 @@
 
                 <div class="research-container">
 
-                    <div class="research-box hidden">
-                        <div class="research-image" style="background-image: url(./images/rocket.png);"></div>
-                        <div class="research-body">
-                            <p><a target="_blank" href="">Code&#129125;</a></p>
-                            <span class="research-name">ROBUST CONTROL BARRIER FUNCTIONS FOR THRUST VECTOR CONTROL</span>
-                            <p class="research-description">Developing Avionics and on-board GNC algorithms for safe atmospheric flight, descent and landing of rockets.</p>
-                        </div>
-                    </div>
+                    <!-- <div class="research-box hidden"> -->
+                    <!--     <div class="research-image" style="background-image: url(./images/rocket.png);"></div> -->
+                    <!--     <div class="research-body"> -->
+                    <!--         <p><a target="_blank" href="">Code&#129125;</a></p> -->
+                    <!--         <span class="research-name">ROBUST CONTROL BARRIER FUNCTIONS FOR THRUST VECTOR CONTROL</span> -->
+                    <!--         <p class="research-description">Developing Avionics and on-board GNC algorithms for safe atmospheric flight, descent and landing of rockets.</p> -->
+                    <!--     </div> -->
+                    <!-- </div> -->
 
-                    <div class="research-box hidden">
-                        <div class="research-image" style="background-image: url(./images/LDT.png);background-position:bottom;"></div>
-                        <div class="research-body">
-                            <p><a target="_blank" href="https://arxiv.org/abs/2405.13506">Paper&#129125;</a> &#8226; <a target="_blank" href="">Code&#129125;</a></p>
-                            <span class="research-name">SAMPLE PATH LARGE DEVIATIONS FOR SPACECRAFT COLLISIONS</span>
-                            <p class="research-description">Freidlin-Wentzell theory of Large Deviations is applied to the problem of spacecraft collisions, a rare event characterized by extremely low probabilities. We accommodate stochastic uncertainty in the initial states, which is a relevant source of uncertainty in this type of problems,  and define an optimal control problem which solution are the most likely sample paths, initial conditions and terminal time leading to the realization of the unsafe rare event.</p>
-                        </div>
-                    </div>
-
-
-                    <div class="research-box hidden" onclick="expand_description(this)">
-                        <div class="research-image" style="background-image: url(./images/JGCD_MD_results.png);"></div>
-                        <div class="research-plus-button">+</div>
-                        <div class="research-body">
-                            <p><a target="_blank" href="https://arxiv.org/abs/2303.02743">Paper&#129125;</a> &#8226; <a target="_blank" href="">Code&#129125;</a></p>
-                            <span class="research-name">IMPULSIVE MANEUVER DETERMINATION</span>
-                            <p class="research-description">Maneuver determination is crucial aspect of Space Domain Awareness (SDA). Specifically, we focus on estimating non-cooperative impulsive spacecraft maneuvers in terms of execution time, direction, and magnitude using a multiple-model estimation approach. This technique improves the understanding of the current state of space objects, particularly, but not exclusively, in near-Earth regions, and helps predicting their future trajectories. Enhancing SDA is crucial for making more informed decisions, thereby increasing the overall safety of the space environment.</p>
-                        </div>
-                        <div class="research-ellipsis">...</div>
-                    </div>
+                    <!-- <div class="research-box hidden"> -->
+                    <!--     <div class="research-image" style="background-image: url(./images/LDT.png);background-position:bottom;"></div> -->
+                    <!--     <div class="research-body"> -->
+                    <!--         <p><a target="_blank" href="https://arxiv.org/abs/2405.13506">Paper&#129125;</a> &#8226; <a target="_blank" href="">Code&#129125;</a></p> -->
+                    <!--         <span class="research-name">SAMPLE PATH LARGE DEVIATIONS FOR SPACECRAFT COLLISIONS</span> -->
+                    <!--         <p class="research-description">Freidlin-Wentzell theory of Large Deviations is applied to the problem of spacecraft collisions, a rare event characterized by extremely low probabilities. We accommodate stochastic uncertainty in the initial states, which is a relevant source of uncertainty in this type of problems,  and define an optimal control problem which solution are the most likely sample paths, initial conditions and terminal time leading to the realization of the unsafe rare event.</p> -->
+                    <!--     </div> -->
+                    <!-- </div> -->
 
 
-                    <div class="research-box hidden" onclick="expand_description(this)">
-                        <div class="research-image" style="background-image: url(./images/spacecraft.png);"></div>
-                        <div class="research-plus-button">+</div>
-                        <div class="research-body">
-                            <p><a target="_blank" href="https://arxiv.org/abs/2303.02743">Paper&#129125;</a> &#8226; <a target="_blank" href="">Code&#129125;</a></p>
-                            <span class="research-name">DESCENTRALIZED GUIDANCE FOR HIGH-PRECISION POINTING</span>
-                            <p class="research-description">We designed a guidance scheme for the pointing acquisition phase of the Laser Interferometer Space Antenna (LISA) mission. The problem is formulated as a cooperative game and we solve it using a modified gradient-bandit algorithm. The algorithm yields a reference signal for the controllers to align all the spacecraft' laser beams simultaneously within the tolerances required for gravitational wave detection.</p>
-                            <!-- <p class="research-description"><b style="color: rgb(176,0,1);">About LISA:</b> Each spacecraft has 4 degrees of freedom, and the only measured output considered are laser misalignments with the local interferometer sensors.</p> -->
-                        </div>
-                        <div class="research-ellipsis">...</div>
-                    </div>
+                    <!-- <div class="research-box hidden" onclick="expand_description(this)"> -->
+                    <!--     <div class="research-image" style="background-image: url(./images/JGCD_MD_results.png);"></div> -->
+                    <!--     <div class="research-plus-button">+</div> -->
+                    <!--     <div class="research-body"> -->
+                    <!--         <p><a target="_blank" href="https://arxiv.org/abs/2303.02743">Paper&#129125;</a> &#8226; <a target="_blank" href="">Code&#129125;</a></p> -->
+                    <!--         <span class="research-name">IMPULSIVE MANEUVER DETERMINATION</span> -->
+                    <!--         <p class="research-description">Maneuver determination is crucial aspect of Space Domain Awareness (SDA). Specifically, we focus on estimating non-cooperative impulsive spacecraft maneuvers in terms of execution time, direction, and magnitude using a multiple-model estimation approach. This technique improves the understanding of the current state of space objects, particularly, but not exclusively, in near-Earth regions, and helps predicting their future trajectories. Enhancing SDA is crucial for making more informed decisions, thereby increasing the overall safety of the space environment.</p> -->
+                    <!--     </div> -->
+                    <!--     <div class="research-ellipsis">...</div> -->
+                    <!-- </div> -->
+
+
+                    <!-- <div class="research-box hidden" onclick="expand_description(this)"> -->
+                    <!--     <div class="research-image" style="background-image: url(./images/spacecraft.png);"></div> -->
+                    <!--     <div class="research-plus-button">+</div> -->
+                    <!--     <div class="research-body"> -->
+                    <!--         <p><a target="_blank" href="https://arxiv.org/abs/2303.02743">Paper&#129125;</a> &#8226; <a target="_blank" href="">Code&#129125;</a></p> -->
+                    <!--         <span class="research-name">DESCENTRALIZED GUIDANCE FOR HIGH-PRECISION POINTING</span> -->
+                    <!--         <p class="research-description">We designed a guidance scheme for the pointing acquisition phase of the Laser Interferometer Space Antenna (LISA) mission. The problem is formulated as a cooperative game and we solve it using a modified gradient-bandit algorithm. The algorithm yields a reference signal for the controllers to align all the spacecraft' laser beams simultaneously within the tolerances required for gravitational wave detection.</p> -->
+                    <!--         <!-1- <p class="research-description"><b style="color: rgb(176,0,1);">About LISA:</b> Each spacecraft has 4 degrees of freedom, and the only measured output considered are laser misalignments with the local interferometer sensors.</p> -1-> -->
+                    <!--     </div> -->
+                    <!--     <div class="research-ellipsis">...</div> -->
+                    <!-- </div> -->
 
                 </div>
             </div>
 
-            <!-- <div class="project-center"> -->
-            <!--     <div class="project-selection"> -->
-
-            <!--         <div class="project-item closed-project" onclick="toggle_visibility('saferockets',this)"> -->
-            <!--             <div class="project-description"> -->
-            <!--                 <h2>Safe-Robust Ascent and Landing of Rockets</h2> -->
-            <!--                 <p class="project-subtitle">Aalborg University, AAU</p> -->
-            <!--                 <p class="date project-subtitle">2023-2024</p> -->
-            <!--             </div> -->
-            <!--         </div> -->
-
-            <!--         <div class="project-item closed-project" onclick="toggle_visibility('largedeviations',this)"> -->
-            <!--             <div class="project-description"> -->
-            <!--                 <h2>Large Deviations in Satellite Collisions</h2> -->
-            <!--                 <p class="project-subtitle">Aalborg University, AAU</p> -->
-            <!--                 <p class="date project-subtitle">2022-2023</p> -->
-            <!--             </div> -->
-            <!--         </div> -->
-
-            <!--         <div class="project-item closed-project" onclick="toggle_visibility('maneuvers',this)"> -->
-            <!--             <div class="project-description"> -->
-            <!--                 <h2>Satellite Manuever Determination</h2> -->
-            <!--                 <p class="project-subtitle">State University of New York at Buffalo, UB</p> -->
-            <!--                 <p class="date project-subtitle">2022-2023</p> -->
-            <!--             </div> -->
-            <!--         </div> -->
-
-            <!--         <div class="project-item closed-project" onclick="toggle_visibility('lisa',this)"> -->
-            <!--             <div class="project-description"> -->
-            <!--                 <h2>Descentralized Guidance for LISA</h2> -->
-            <!--                 <p class="project-subtitle">Aalborg University, AAU</p> -->
-            <!--                 <p class="date project-subtitle">2021-2022</p> -->
-            <!--             </div> -->
-            <!--         </div> -->
-
-            <!--         <div class="project-item closed-project" onclick="toggle_visibility('robotics',this)"> -->
-            <!--             <div class="project-description"> -->
-            <!--                 <h2>Robotic Manipulators</h2> -->
-            <!--                 <p class="project-subtitle">Institute of Robotics and industrial Informatics, IRI-CSIC</p> -->
-            <!--                 <p class="date project-subtitle">2016-2017</p> -->
-            <!--             </div> -->
-            <!--         </div> -->
-
-            <!--         <div class="project-item closed-project" onclick="toggle_visibility('lightfields',this)"> -->
-            <!--             <div class="project-description"> -->
-            <!--                 <h2>Lightfields</h2> -->
-            <!--                 <p class="project-subtitle">Aalborg University, AAU</p> -->
-            <!--                 <p class="date project-subtitle">2020-2021</p> -->
-            <!--             </div> -->
-            <!--         </div> -->
-
-            <!--     </div> -->
-
-
-            <!--     <div class="project-container"> -->
-
-            <!--         <div id="saferockets" class="project-box"> -->
-            <!--             <div class="project-display-container"> -->
-            <!--                 <div class="research-display-image" -->
-            <!--                      style="background-image: url(./images/rocket.png); -->
-            <!--                             background-size: contain; -->
-            <!--                             background-repeat: no-repeat; -->
-            <!--                             background-position: top left;"> -->
-            <!--                 </div> -->
-            <!--                 <div class="research-display-description"> -->
-            <!--                     <p>Developing Avionics and on-board GNC algorithms for safe atmospheric flight, descent and landing of rockets.</p> -->
-            <!--                 </div> -->
-            <!--             </div> -->
-            <!--         </div> -->
-
-            <!--         <div id="largedeviations" class="project-box"> -->
-            <!--             <div class="project-display-container"> -->
-            <!--                 <div class="research-display-image" -->
-            <!--                      style="background-image: url(./images/LDT.png); -->
-            <!--                             background-size: contain; -->
-            <!--                             background-repeat: no-repeat; -->
-            <!--                             background-position: top center;"> -->
-            <!--                 </div> -->
-            <!--                 <div class="research-display-description"> -->
-            <!--                     <p> Satellite collisions are <i>rare events</i>, thus characterized by very low probabilities of occurrence, yet they stand as a significant concern due to their potential catastrophic consequences. The impact of a collision can be severe, leading to the generation of space debris that poses risk to operational spacecraft and human space activities.  </p> -->
-            <!--                     <p> The analysis of rare events in dynamical systems can be challenging, since standard Monte Carlo methods are often not suitable (it would require a ridiculously large amount of simulations to obtain any meaningful statistical information). Such analysis requires formulations that involve rare event tailored methods.  </p> -->
-            <!--                     <p>In particular, we borrow rigorous mathematical tools from the theory of large deviations to study the rare, but extreme, events of spacecraft collisions in orbit. Large deviations allows us to describe the limiting behaviour of the satellites with respect to some small parameter by modeling the uncertain motion of satellites using stochastic differential equations with small diffusion. Then, we extend this description so as to include the effects of having probabilistic initial conditions&mdash;a typical assumption in spacecrafts. This description enables the computation of the most likely fluctuations leading to an orbital collision, yielding the most likely samplepath realizing the rare event: the maximum likelihood path (or <i>instanton</i>) for deterministic initial conditions, and the maximum a posteriori path when the departing state is random.  </p> -->
-            <!--                     <p> <span class="summary">Related papers:</span> </p> -->
-            <!--                     <p><b> Gomez, A. R.</b> & Bujorianu, M. L., Wisniewski, R. <a target="_bank" href="">“Large Deviations in Hamiltonian Systems with Probabilistic Initial Conditions”</a>, <i>Automatica, 2024 (Submitted).</i></p> -->
-            <!--                     <p><b>Gomez, A. R.</b> & Wisniewski, R., <a target="_blank" href="https://ieeexplore.ieee.org/document/9992598" >“Stochastic Safety in Space Conjunctions”</a>, <i>IEEE Conference on Decision and Control (CDC), 2022.</i></p> -->
-            <!--                 </div> -->
-            <!--             </div> -->
-            <!--         </div> -->
-
-            <!--         <div id="lisa" class="project-box"> -->
-            <!--             <div class="project-display-container"> -->
-            <!--                 <div class="research-display-image" -->
-            <!--                      style="background-image: url(./gifs/LISA_GW.gif); -->
-            <!--                             background-size: contain; -->
-            <!--                             background-repeat: no-repeat; -->
-            <!--                             background-position: top left;"> -->
-            <!--                 </div> -->
-            <!--                 <div class="research-display-description"> -->
-            <!--                     <p> The Laser Interferometer Space Antenna (LISA) is an ambitious space mission led by NASA and ESA with the goal of detecting and understanding gravitational waves (GWs). This mission involves a trio of spacecraft positioned in an equilateral triangle formation, each linked by frequency-stabilized lasers. These spacecraft work together to detect gravitational waves by observing the fluctuations in the lasers' frequency, which are affected by the ripples in space-time that alter the distances between internal proof masses located in each spacecraft.  </p> -->
-            <!--                     <p> We designed a guidance algorithm that could potentially be employed for the Pointing Acquisition and Tracking (PAT) phase, namely, the challenge of aligning the spacecraft's internal interferometers with incoming lasers from the other two spacecraft. This alignment must meet exceptionally stringent accuracy requirements to enable scientific observations, with misalignments not exceeding 1 microrad. To that end, every spacecraft is equipped with two identical optical assemblies (OAs) as payload, each of which contain, among others, the proof mass, a telescope, a laser source and laser interferometer detectors.  </p> -->
-            <!--                     <p> The guidance system has been developed to manage this alignment process by solving a cooperative game problem with a new algorithm designed to provide precise tracking references to each of the spacecrafts' controller for a fast, simultaneous and accurate alignment of the laser beams into the interferometer detectors. -->
-            <!--                     <p> <span class="summary">Related papers:</span> </p> -->
-            <!--                     <p><b> Gomez, A. R.*</b> & Al Ahdab, M.*, <a target="_bank" href="https://arxiv.org/abs/2303.02743">“Momentum-Based Learning of Nash Equilibria for LISA Pointing Acquisition”</a>, <i>IFAC World Congress, 2023.</i></p> -->
-            <!--                 </div> -->
-            <!--             </div> -->
-            <!--         </div> -->
 
             <!--         <div id="robotics" class="project-box"> -->
             <!--             <div class="project-display-container"> -->
@@ -443,12 +336,10 @@
             <div class="row section-title">
                 <p class="section-note-talks"><span style="color: rgb(255,0,188);">[Future]</span><span style="color: rgb(0,255,255);">[Past] </span></p>TALKS
             </div>
-            <!-- <p class="section-note" style="color: rgb(255,0,188);">[Future Talks]</p> -->
-            <!-- <p class="section-note" style="color: rgb(0,255,255);">[Past Talks]</p> -->
 
             <div class="publications-container">
-                <p><span class="summary" style="color: rgb(255,0,188);">[07JUL2025]</span> Inter-Agency GNC V&V Workshop (IAGNC 2025) <span class="at">@</span> ISAE-SUPAERO, Toulouse, France</p>
-                <p><span class="summary" style="color: rgb(255,0,188);">[09APR2025]</span> Building Launcher Autonomy and Safety through New Technologies 2 (BLAST2 2025) <span class="at">@</span> ESA-ESTEC, Noordwijk, The Netherlands</p>
+                <p><span class="summary" style="color: rgb(255,0,188);">[XXJUL2025]</span> Inter-Agency GNC V&V Workshop (IAGNC 2025) <span class="at">@</span> ISAE-SUPAERO, Toulouse, France</p>
+                <p><span class="summary" style="color: rgb(255,0,188);">[XXAPR2025]</span> Building Launcher Autonomy and Safety through New Technologies 2 (BLAST2 2025) <span class="at">@</span> ESA-ESTEC, Noordwijk, The Netherlands</p>
                 <p><span class="summary" style="color: rgb(0,255,255);">[08MAR2024]</span> Building Launcher Autonomy and Safety through New Technologies (BLAST 2024) <span class="at">@</span> ESA-ESTEC, Noordwijk, The Netherlands</p>
                 <p><span class="summary" style="color: rgb(0,255,255);">[10NOV2023]</span> Conference on Decision and Control (CDC 2023) <span class="at">@</span> Cancun, Mexico</p>
             </div>

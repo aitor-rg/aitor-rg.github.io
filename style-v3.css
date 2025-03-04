@@ -113,6 +113,7 @@ body {
   content: "";
   clear: both;
   display: table;
+    margin-right: 10px;
 }
 .center {
     display: flex;
@@ -144,9 +145,9 @@ body {
     100% {  transform: rotate(360deg); }
 }
 .header {
-    top: 15px;
+    top: 10px;
     z-index: 3000;
-    position: fixed;
+    position: absolute;
     display: flex;
     width:100%;
     margin-left: 20px;
@@ -168,7 +169,6 @@ body {
     color: white;
     /* border: 1pt solid white; */
 }
-
 .me:hover {
     filter: blur(1px);
 }
@@ -178,7 +178,7 @@ body {
     position: absolute;
     z-index: -1;
     left: 0;
-    content: "AITOR GOMEZ";
+    content: "aitor gomez";
 }
 .me:hover::before,
 .me:hover::after{
@@ -214,8 +214,9 @@ body {
 }
 
 .header-link {
+    margin-top: 10px;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 400;
 }
 .header-link:hover {
     filter: blur(1px);
@@ -359,7 +360,7 @@ body {
     width: 100%;
     height: 40px;
     /* border: 1pt solid #555; */
-    margin-top: 10px;
+    margin-top: 0px;
 
     justify-content: right;
     color: white;
@@ -373,6 +374,7 @@ body {
     font-size: 15px;
     text-align: right;
     margin: 0;
+    margin-right: 10px;
 }
 .section-note-talks {
     width: 100px;
@@ -401,61 +403,49 @@ body {
 }
 .project-center {
     width: 100%;
-    /* margin-top: calc(50vh - 50% * 0.5 - 10% * 0.5 + 140px * 0.5 + 5px * 0.5 + 12.5% * 0.5); */
-    margin-top: calc(50vh - 67% * 0.58 * 0.5 + 40px);
     margin-right:0;
-    /* margin-left:10%; */
 }
 .project-container {
-    width: 100%;
-    margin-left: 12%;
-    /* height: calc(100vh - 10vh - 80px); */
-}
-.project-menu {
-    width: 280px;
-    min-width: 270px;
-    /* height: calc(100vh - 10vh - 80px); */
-    /* margin-bottom: 40px; */
-}
-.project-selector {
-    /* height: 200px; */
-    float: left;
-    cursor: pointer;
+    width: 70%;
+    max-height: 55px;
     display: inline-block;
-    height: 60px;
-    width: 100%;
-    /* border-right: 1pt solid #444; */
-    margin-left: auto;
-    margin-right: 0;
-}
-.project-title {
-    /* width: auto; */
-    height: auto;
     overflow: hidden;
-    margin-right: 10px;
-    margin-left: auto;
-    text-align: right;
+    margin-top: calc(50vh - 20px);
+    margin-left: 15%;
+    /* border: 1pt solid red; */
+}
 
-    background-image: linear-gradient( 45deg, #555 50%, #fff 50%);
-    background-size: 230%;
+.project-active {
+    max-height: 700px;
+    margin-top: calc(50vh - 350px);
+}
+.project-click {
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Roboto Mono', serif;
+    font-size: 20px;
+    font-weight: 400;
+    /* color: #777; */
+
+    background-image: linear-gradient( 45deg, #555 50%, #ccc 50%);
+    background-size: 150%;
+    background-position: 18.5% 0%;
     background-clip: text;
     color: transparent;
-    transition: background-position 0.5s ease-in-out;
+    transition: background-position 1s ease-in-out;
+
 }
-.project-title p {
-    width: auto;
-    /* border-bottom: 1pt solid white; */
-    font-family: sans-serif;
-    font-size: 10px;
-    margin-top: 5px;
-    text-align: right;
+.project-click:hover {
+    background-position: 50% 0%;
 }
-.project-title:hover {
-    background-position: 20% 0%;
-}
-.closed-project {
-    /* color: #777; */
-    background-position: left;
+.project-click p {
+    float: left;
+    width:100%;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    color: #bbb;
+    font-size: 9pt;
 }
 .opened-project {
     /* color: white; */
@@ -465,44 +455,21 @@ body {
     /* color: #777; */
     background-position: right;
 }
-.project-name {
-    /* height: 30px; */
-    /* font-family: 'Oswald', sans-serif; */
-    font-family: 'Roboto Mono', serif;
-    font-size: 15px;
-    font-weight: 400;
-    margin-left: 12px;
-}
 
-.project-box {
-    /* sec width - container l margin - menu width*/
-    width: calc(100% - 12% - 280px);
-    margin-top: 5px;
-    margin-left: 280px;
-    margin-right: 0;
-}
-.project-selected {
-    position: absolute;
-    z-index: 1;
-    width: calc(100% - 12% - 280px); /* same as box */
-    /* opacity: 0%; */
-    transform: translate(105%);
-    margin-left: 0px;
-    margin-right: 0;
-    transition: transform 0.8s ease-in-out;
-}
 .project-display-image {
     float: left;
     display: inline-block;
-    width: 67%;
-    aspect-ratio : 1.7 / 1;
-    /* transition: opacity 0.5s ease-in-out; */
+    width: 50%;
+    height: 650px;
+    margin-top: 50px;
 }
 .project-display-status {
     float: left;
-    width: calc(100% - 66% - 10px - 50px);
+    width: calc(50% - 10px);
+    height: 650px;
+    /* width: calc(100% - 66% - 10px - 50px); */
     /* height: 100px; */
-    margin-top: -8px;
+    margin-top: 50px;
     margin-left: 10px;
     text-align: left;
 }
@@ -532,11 +499,7 @@ body {
     font-size: 13px;
     margin-bottom: 2px;
 }
-.project-display-description {
-    float: left;
-    width: 65%;
-    /* margin-left: 25%; */
-}
+
 .research-container {
     width: 100%;
     /* height: calc(100vh - 168px * 4); */
@@ -672,34 +635,11 @@ body {
 }
 .downarrow p {
     width: 15px;
+    font-size: 30px;
     margin: auto;
     transform: rotate(90deg);
 }
-.collapsible {
-    transition: 0.5s;
-}
-.collapsible:hover {
-    /* color: #fdc666; */
-    /* color: #FF850E; */
-    color: #bbb;
 
-}
-.collapsed {
-    /* display: none; */
-    max-height: 0;
-    width:100%;
-    overflow: hidden;
-    /* margin-top: -30px; */
-    /* margin-bottom: 30px; */
-    transition: max-height 0.5s ease-out;
-    /* border-bottom: solid 1pt #333; */
-}
-.deactive {
-    color: #777;
-}
-.active {
-    color: #FFF;
-}
 .publications-container {
     margin-left: 400px;
     margin-right: 20px;
@@ -710,7 +650,7 @@ body {
 .publications-container p {
     background-color: #111;
     margin: 0;
-    margin-bottom: 5px;
+    padding: 5px;
 }
 .publications-container p:hover {
     background-color: #222;
@@ -721,27 +661,14 @@ body {
 }
 .hidden {
     opacity: 0;
-    transition: 2s;
+    transition: 1s;
     filter: blur(5px);
-    transform: translateY(20%);
-}
-.hidden-t {
-    opacity: 0;
-    transition: 3s;
-    /* filter: blur(5px); */
-    transform: translateY(20%);
-    transform: rotate(-5deg);
+    transform: translateX(20%);
 }
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateY(0%);
-}
-.show-t {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0%);
-    transform: rotate(0deg);
+    transform: translateX(0%);
 }
 .line {
     position: fixed;

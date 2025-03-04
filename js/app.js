@@ -87,10 +87,12 @@ function snapScroll() {
 
 function scrollToSec(id) {
 
-    const sectionList = ["about","projects","research","publications"];
+    const sectionList = ["about","projects","research","publications","talks"];
     const isSection = (element) => element === id;
 
     currentSection = sectionList.findIndex(isSection);
+    if (currentSection > 1) currentSection += 2; // sum the number of projects
+    if (currentSection > 2) currentSection += 0; // sum the number of research lines
     animateMenu(id);
 
 };
@@ -112,6 +114,12 @@ function animateMenu(id) {
         };
     });
 };
+
+// toggle project collapse
+function toggle_collapse(element) {
+    element.classList.toggle("project-active");
+    element.children[0].classList.toggle("opened-project");
+}
 
 
 /* horizontal (infinite) scroll behaviour */
@@ -165,30 +173,6 @@ function hide_presentation(myid) {
     el.style.opacity = ((el.style.opacity!="0%") ? "0%" : "100%");
 }
 
-/* toggle projects */
-function toggle_project(myid,el) {
-    var clicked_box = document.getElementById(myid);
-    //var clicked_img = document.getElementById(myid).children[0].children[0];
-    //var clicked_des = document.getElementById(myid).children[0].children[1];
-
-    var boxes = document.querySelectorAll(".project-selected");
-    boxes.forEach((box) => {
-        // box.style.opacity = "0%";
-        box.style.transform  = "translate(105%)";
-        box.style.zIndex = "1";
-    });
-    // clicked_box.style.opacity = ((clicked_box.style.opacity!="100%") ? "100%" : "0%");;
-    clicked_box.style.transform = ((clicked_box.style.transform!="translate(0%)") ? "translate(0%)" : "translate(105%)");
-    clicked_box.style.zIndex = "10";
-
-    var selectors = document.querySelectorAll(".project-title");
-    selectors.forEach((selector) => {
-        selector.classList.remove("opened-project");
-        selector.classList.add("closed-project");
-    });
-    el.classList.remove("closed-project");;
-    el.classList.add("opened-project");;
-}
 
 /* expand research description */
 function expand_description(el) {
