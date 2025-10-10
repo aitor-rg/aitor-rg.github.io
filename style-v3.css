@@ -54,6 +54,20 @@ body {
     overflow-x: hidden;
 }
 
+.hr {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #aaa;
+    padding: 0;
+    transition: width 0.5s ease-in-out;
+}
+.expanded-hr {
+    width: 100%;
+}
+
 /* For desktop: */
 .col-1 {width: 8.32%;}
 .col-2 {width: 16.65%;}
@@ -147,7 +161,7 @@ body {
 .header {
     top: 10px;
     z-index: 3000;
-    position: absolute;
+    position: fixed;
     display: flex;
     width:100%;
     margin-left: 20px;
@@ -169,55 +183,60 @@ body {
     color: white;
     /* border: 1pt solid white; */
 }
-.me:hover {
-    filter: blur(1px);
-}
-.me::before,
-.me::after{
-    /* visibility: hidden; */
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    content: "aitor gomez";
-}
-.me:hover::before,
-.me:hover::after{
-    visibility: visible;
-}
-.me:hover::before{
-    color: rgba(255,0,188,0.8);
-    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;
-}
-.me:hover::after{
-    color: rgba(0,255,255,0.8);
-    animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite;
-}
-@keyframes glitch {
-    0%{
-        transform: translate(0);
-    }
-    20%{
-        transform: translate(-2px,2px);
-    }
-    40%{
-        transform: translate(-2px,-2px);
-    }
-    60%{
-        transform: translate(2px,2px);
-    }
-    80%{
-        transform: translate(2px,-2px);
-    }
-    100%{
-        transform: translate(0);
-    }
-}
+/* .me:hover { */
+/*     filter: blur(1px); */
+/* } */
+/* .me::before, */
+/* .me::after{ */
+/*     /1* visibility: hidden; *1/ */
+/*     position: absolute; */
+/*     z-index: -1; */
+/*     left: 0; */
+/*     content: "aitor gomez"; */
+/* } */
+/* .me:hover::before, */
+/* .me:hover::after{ */
+/*     visibility: visible; */
+/* } */
+/* .me:hover::before{ */
+/*     color: rgba(255,0,188,0.8); */
+/*     animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite; */
+/* } */
+/* .me:hover::after{ */
+/*     color: rgba(0,255,255,0.8); */
+/*     animation: glitch .3s cubic-bezier(.25,.46,.45,.94) reverse both infinite; */
+/* } */
+/* @keyframes glitch { */
+/*     0%{ */
+/*         transform: translate(0); */
+/*     } */
+/*     20%{ */
+/*         transform: translate(-2px,2px); */
+/*     } */
+/*     40%{ */
+/*         transform: translate(-2px,-2px); */
+/*     } */
+/*     60%{ */
+/*         transform: translate(2px,2px); */
+/*     } */
+/*     80%{ */
+/*         transform: translate(2px,-2px); */
+/*     } */
+/*     100%{ */
+/*         transform: translate(0); */
+/*     } */
+/* } */
 
 .header-link {
     margin-top: 10px;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 13px;
 }
+.header-link a {
+    font-weight: 400;
+    font-size: 13px;
+    color: #ccc;
+}
+
 .header-link:hover {
     filter: blur(1px);
 }
@@ -298,13 +317,21 @@ body {
     margin-right:15px;
     transform: translate(0,-42px);
 }
-.about-in span {
+.about-in1 span {
     display: flex;
     color: #39ffd5;
     font-size: 20px;
     text-align: center;
     justify-content: center;
     animation: roll 10s ease infinite;
+}
+.about-in2 span {
+    display: flex;
+    color: #39ffd5;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    animation: roll 5s ease infinite;
 }
 @keyframes roll {
     0% {
@@ -361,6 +388,7 @@ body {
     height: 40px;
     /* border: 1pt solid #555; */
     margin-top: 0px;
+    /* margin-bottom: 100px; */
 
     justify-content: right;
     color: white;
@@ -390,7 +418,7 @@ body {
     top: 0;
     z-index: 2000;
     width: 100%;
-    height: 100px;
+    height: 300px;
     background: linear-gradient(0deg, rgba(255,0,0,0), black);
 }
 .fixed-gradient-2 {
@@ -398,84 +426,64 @@ body {
     bottom: 0;
     z-index: 2000;
     width: 100%;
-    height: 100px;
+    height: 300px;
     background: linear-gradient(180deg, rgba(255,0,0,0), black);
 }
 .project-center {
+    float: left;
     width: 100%;
+    margin-top: 150px;
     margin-right:0;
+    margin-left: 400px;
 }
 .project-container {
     width: 70%;
-    max-height: 165px;
+    /* max-height: 165px; */
     display: inline-block;
-    overflow: hidden;
-    margin-top: calc(50vh - 100px);
-    margin-left: 15%;
+    margin-top: 50px;
+    margin-left: 100px;
     /* border: 1pt solid red; */
 }
 
-.project-active {
-    max-height: 800px;
-    margin-top: calc(50vh - 400px);
-}
 .project-click {
-    cursor: pointer;
-    text-align: center;
+    /* cursor: pointer; */
     font-family: 'Roboto Mono', serif;
-    font-size: 55pt;
+    font-size: 20pt;
     font-weight: 400;
-    /* color: #777; */
-
-    background-image: linear-gradient( 45deg, #555 50%, #ccc 50%);
-    background-size: 150%;
-    background-position: 18.5% 0%;
-    background-clip: text;
-    color: transparent;
-    transition: background-position 1s ease-in-out;
-
+    text-align: right;
+    background-color: #111;
+    height: 55px;
+    /* border-bottom: 1pt solid white; */
+    /* border: 1pt solid red; */
 }
-/* .project-click::before { */
-/*     content: "+"; */
-/*     display: inline-block; */
-/*     transition: transform 1s ease-in-out; */
-/* } */
-.project-click:hover {
-    background-position: 50% 0%;
-}
-/* .project-click:hover::before { */
-/*     transform: rotate(360deg); */
-/* } */
 .project-click p {
     float: left;
     width:100%;
-    text-align: center;
+    text-align: right;
     margin: 0;
     margin-top: 30px;
     color: #777;
     font-size: 9pt;
 }
-.opened-project {
-    /* color: white; */
-    background-position: right;
-}
 
 .project-display-image {
     float: left;
     display: inline-block;
-    width: 50%;
-    height: 650px;
-    margin-top: 40px;
+    width: 550px;
+    height: 300px;
+    margin-top: 10px;
+    /* border: 1pt solid red; */
 }
 .project-display-status {
     float: left;
-    width: calc(50% - 10px);
-    height: 650px;
+    width: calc(100% - 550px - 20px);
+    height: auto;
     /* width: calc(100% - 66% - 10px - 50px); */
     /* height: 100px; */
-    margin-top: 40px;
+    margin-top: 10px;
     margin-left: 10px;
     text-align: left;
+    /* border: 1pt solid blue; */
 }
 .project-display-status p {
     margin: 0px;
@@ -502,6 +510,16 @@ body {
     list-style-position:inside;
     font-size: 13px;
     margin-bottom: 2px;
+}
+.project-display-item {
+    width: auto;
+    height: 30px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: left;
+    float: left;
+    /* border: 1pt solid red; */
 }
 
 .research-container {
@@ -896,5 +914,15 @@ body {
     }
     .line {
         visibility: hidden;
+    }
+}
+
+
+@media only screen and (min-width: 3200px) {
+
+    .project-container {
+        float:left;
+        width: 35%;
+
     }
 }

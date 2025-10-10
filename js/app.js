@@ -119,6 +119,7 @@ function animateMenu(id) {
 function toggle_collapse(element) {
     element.classList.toggle("project-active");
     element.children[0].classList.toggle("opened-project");
+    element.children[1].classList.toggle("expanded-hr");
 }
 
 
