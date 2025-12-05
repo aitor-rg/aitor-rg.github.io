@@ -7,95 +7,81 @@ const observer1 = new IntersectionObserver((entries) => {
     });
 });
 
+const hiddenElements1 = document.querySelectorAll('.hidden');
+hiddenElements1.forEach((el) => observer1.observe(el));
+
+
+/* left menu animations on vertical scrolling */
+const sectionList = ["about","projects","research","publications","talks"];
+let sections = document.querySelectorAll('.section');
+let navLinks = document.querySelectorAll('.menu a');
+
+// Smooth scrolling on click
+navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+// var timer = null;
+// var currentPos = 0;
+// var currentSection = 0;
+
+// let scrollDir = 0;
+// window.addEventListener('wheel', (event) => {
+
+//     event.preventDefault();
+//     event.stopPropagation();
+//     scrollDir = event.deltaY > 0 ? 1 : -1;
+
+//     if (timer !== null) {
+//         clearTimeout(timer);
+//     }
+//     timer = setTimeout(snapScroll, 75);
+
+// }, { passive: false });
+
+
+// // snap to next section and animate menu
+// function snapScroll() {
+//     currentSection += scrollDir;
+//     if (currentSection < 0) currentSection = 0;
+//     if (currentSection >= sections.length) currentSection = sections.length - 1;
+//     sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+
+//     let id = sections[currentSection].getAttribute('id');
+//     animateMenu(id);
+// };
+
+// function scrollToSec(id) {
+
+//     const sectionList = ["about","projects","research","publications","talks"];
+//     const isSection = (element) => element === id;
+
+//     currentSection = sectionList.findIndex(isSection);
+//     if (currentSection > 1) currentSection += 2; // sum the number of projects
+//     if (currentSection > 2) currentSection += 0; // sum the number of research lines
+//     animateMenu(id);
+
+// };
+
 const observer2 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
         if (entry.isIntersecting) {
-            entry.target.classList.add('show-t');
+            const id = entry.target.getAttribute('id');
+            animateMenu(id);
         }
     });
+}, {
+    rootMargin: '-20% 0px -70% 0px',  // Triggers when section is roughly in the upper-middle of viewport
+    threshold: 0
 });
 
-const hiddenElements1 = document.querySelectorAll('.hidden');
-hiddenElements1.forEach((el) => observer1.observe(el));
-
-const hiddenElements2 = document.querySelectorAll('.hidden-t');
-hiddenElements2.forEach((el) => observer2.observe(el));
-
-
-/* enable smooth vertical scroll behavior for all browsers */
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (500) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 500, function(){
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-
-    } // End if
-
-  });
-});
-
-
-/* left menu animations on vertical scrolling */
-let sections = document.querySelectorAll('.section');
-let navLinks = document.querySelectorAll('.menu a');
-
-var timer = null;
-var currentPos = 0;
-var currentSection = 0;
-
-let scrollDir = 0;
-window.addEventListener('wheel', (event) => {
-
-    event.preventDefault();
-    event.stopPropagation();
-    scrollDir = event.deltaY > 0 ? 1 : -1;
-
-    if (timer !== null) {
-        clearTimeout(timer);
-    }
-    timer = setTimeout(snapScroll, 75);
-
-}, { passive: false });
-
-
-// snap to next section and animate menu
-function snapScroll() {
-    currentSection += scrollDir;
-    if (currentSection < 0) currentSection = 0;
-    if (currentSection >= sections.length) currentSection = sections.length - 1;
-    sections[currentSection].scrollIntoView({ behavior: 'smooth' });
-
-    let id = sections[currentSection].getAttribute('id');
-    animateMenu(id);
-};
-
-function scrollToSec(id) {
-
-    const sectionList = ["about","projects","research","publications","talks"];
-    const isSection = (element) => element === id;
-
-    currentSection = sectionList.findIndex(isSection);
-    if (currentSection > 1) currentSection += 2; // sum the number of projects
-    if (currentSection > 2) currentSection += 0; // sum the number of research lines
-    animateMenu(id);
-
-};
+// Observe all sections
+sections.forEach(section => observer2.observe(section));
 
 function animateMenu(id) {
 
