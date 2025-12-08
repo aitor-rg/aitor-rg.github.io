@@ -289,9 +289,9 @@ body {
 }
 .about-image {
     /* position: absolute; */
-    height: 18rem;
-    width: 18rem;
-    margin-top: calc(50vh - 9rem);
+    height: 9rem;
+    width: 9rem;
+    margin-top: calc(50vh - 4.5rem);
     margin-left: auto;
     margin-right: 9rem;
 }
