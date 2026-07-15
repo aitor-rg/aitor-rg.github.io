@@ -143,39 +143,19 @@ body {
     display: flex;
     align-items: center;
     background-color: white;
+    /* border-bottom: 1pt solid black; */
 }
 .header-link {
     font-size: 0.8rem;
     margin-right: 100px;
+    transition: filter 0.5s ease-in-out;
 }
 .header-link a {
     font-size: 0.9rem;
-    color: #333;
+    color: black;
 }
 .header-link:hover {
-    filter: blur(1px);
-}
-.header-link::before,
-.header-link::after{
-    content: attr(data-text);
-    visibility: hidden;
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    transition: transform 0.2s ease-in-out;
-}
-.header-link:hover::before,
-.header-link:hover::after{
-    visibility: visible;
-    transition: transform 0.2s ease-in-out, visibility 0s;
-}
-.header-link:hover::before{
-    color: rgba(255,0,188,0.8);
-    transform: translate(-10px,10px);
-}
-.header-link:hover::after{
-    color: rgba(0,255,255,0.8);
-    transform: translate(10px,-10px);
+    filter: blur(2px);
 }
 
 .section {
@@ -190,7 +170,8 @@ body {
 .section-title p {
     width: 100%;
     font-size: 50pt;
-    font-family: 'Roboto Mono', serif;
+    /* font-family: 'Roboto Mono', serif; */
+    font-family: 'Oswald', sans-serif;
     font-weight: 400;
     color: black;
     margin: 0;
@@ -355,7 +336,7 @@ about-text p {
     display: flex;
     clear: both;
     /* margin-bottom: 5px; */
-    border-top: 1pt solid black;
+    /* border-top: 1pt solid black; */
 }
 
 .project-acron {
@@ -380,7 +361,7 @@ about-text p {
 }
 .project-acron .date {
     font-size: 12px;
-    color: #777;
+    color: black;
 }
 .project-display-carousel {
     float: left;
@@ -583,11 +564,24 @@ about-text p {
     transform: rotate(90deg);
 }
 
+.talks-container {
+    width: 95%;
+    padding-top: 50px;
+    margin-left: 0;
+    /* border: solid 1pt black; */
+}
+.inverted {
+    background-color: black;
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+}
+
 .publications-container {
     /* position: absolute; */
     width: 60%;
     padding-top: 50px;
-    margin-left: 10%;
+    margin-left: 0;
     margin-right: 25%;
     /* border: solid 1pt black; */
 }
@@ -628,11 +622,12 @@ about-text p {
 }
 .name {
     height: 50px;
+    /* margin-left: 10px; */
     margin-bottom: 50px;
 }
 .name p {
-    /* font-family: 'Oswald', sans-serif; */
     font-family: 'Roboto Mono', serif;
+    /* font-family: 'Oswald', sans-serif; */
     margin: 0;
     padding-left: 10px;
     text-align: center;
